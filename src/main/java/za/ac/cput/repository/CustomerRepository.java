@@ -1,4 +1,4 @@
 package za.ac.cput.repository;
 
-public class GuestRepository {
+public class CustomerRepository {
 }

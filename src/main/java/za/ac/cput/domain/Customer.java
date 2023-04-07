@@ -1,71 +1,91 @@
 package za.ac.cput.domain;
 
 public class Customer {
-    private String guestID;
-    private String guestTitle;
-    private String firstName;
-    private String lastName;
-    private String gender;
-    private String phoneNo;
-    private String email;
-    private String password;
-
-    public Customer() {
+    private String custID;
+    private String custFirstName;
+    private String custLastName;
+    private String custAddress;
+    private boolean hasMembership;
+    private Customer(Builder builder){
+        this.custID = builder.custID;
+        this.custFirstName = builder.custFirstName;
+        this.custLastName = builder.custLastName;
+        this.custAddress = builder.custAddress;
+        this.hasMembership = builder.hasMembership;
     }
 
-    public Customer(String guestID, String guestTitle, String firstName, String lastName, String gender, String phoneNo, String email, String password) {
-        this.guestID = guestID;
-        this.guestTitle = guestTitle;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.gender = gender;
-        this.phoneNo = phoneNo;
-        this.email = email;
-        this.password = password;
+    public String getCustID() {
+        return custID;
     }
 
-    public String getGuestID() {
-        return guestID;
+    public String getCustFirstName() {
+        return custFirstName;
     }
 
-    public String getGuestTitle() {
-        return guestTitle;
+    public String getCustLastName() {
+        return custLastName;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getCustAddress() {
+        return custAddress;
     }
 
-    public String getLastName() {
-        return lastName;
+    public boolean HasMembership() {
+        return hasMembership;
     }
 
-    public String getGender() {
-        return gender;
-    }
-
-    public String getPhoneNo() {
-        return phoneNo;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public String getPassword() {
-        return password;
-    }
     @Override
     public String toString() {
-        return "Guest{" +
-                "guestID='" + guestID + '\'' +
-                ", guestTitle='" + guestTitle + '\'' +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", gender='" + gender + '\'' +
-                ", phoneNo='" + phoneNo + '\'' +
-                ", email='" + email + '\'' +
-                ", password='" + password + '\'' +
+        return "Customer{" +
+                "custID='" + custID + '\'' +
+                ", custFirstName='" + custFirstName + '\'' +
+                ", custLastName='" + custLastName + '\'' +
+                ", custAddress='" + custAddress + '\'' +
+                ", hasMembership=" + hasMembership +
                 '}';
+    }
+
+    public static class Builder{
+        private String custID;
+        private String custFirstName;
+        private String custLastName;
+
+        private String custAddress;
+        private  Boolean hasMembership;
+
+        public Builder setCustID(String custID) {
+            this.custID = custID;
+            return this;
+        }
+
+        public Builder setCustFirstName(String custFirstName) {
+            this.custFirstName = custFirstName;
+            return this;
+        }
+        public Builder setCustLastName(String custLastName) {
+            this.custLastName = custLastName;
+            return this;
+        }
+
+        public Builder setCustAddress(String custAddress) {
+            this.custAddress = custAddress;
+            return this;
+        }
+
+        public Builder hasMembership(Boolean hasMembership) {
+            this.hasMembership = hasMembership;
+            return this;
+        }
+        public Builder copy(Customer customer){
+            this.custID = customer.custID;
+            this.custFirstName = customer.custFirstName;
+            this.custLastName = customer.custLastName;
+            this.custAddress = customer.custAddress;
+            this.hasMembership = customer.hasMembership;
+            return this;
+        }
+        public Customer build(){
+            return new Customer(this);
+        }
     }
 }

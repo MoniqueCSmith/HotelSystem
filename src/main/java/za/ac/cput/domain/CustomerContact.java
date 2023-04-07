@@ -1,49 +1,47 @@
 package za.ac.cput.domain;
 
 public class CustomerContact {
-    private String guestAddressID;
-    private String guestStreetAddress;
-    private String guestCity;
-    private String guestZipCode;
-    private String guestProvince;
-    private String guestCountry;
+    private String custPhoneNo;
+    private String custEmail;
 
-    public CustomerContact() {
+    private CustomerContact(Builder builder){
+        this.custPhoneNo = builder.custPhoneNo;
+        this.custEmail = builder.custEmail;
     }
-
-    public String getGuestAddressID() {
-        return guestAddressID;
+    public String getCustPhoneNo() {
+        return custPhoneNo;
     }
-
-    public String getGuestStreetAddress() {
-        return guestStreetAddress;
+    public String getCustEmail() {
+        return custEmail;
     }
-
-    public String getGuestCity() {
-        return guestCity;
-    }
-
-    public String getGuestZipCode() {
-        return guestZipCode;
-    }
-
-    public String getGuestProvince() {
-        return guestProvince;
-    }
-
-    public String getGuestCountry() {
-        return guestCountry;
-    }
-
     @Override
     public String toString() {
-        return "GuestAddress{" +
-                "guestAddressID='" + guestAddressID + '\'' +
-                ", guestStreetAddress='" + guestStreetAddress + '\'' +
-                ", guestCity='" + guestCity + '\'' +
-                ", guestZipCode='" + guestZipCode + '\'' +
-                ", guestProvince='" + guestProvince + '\'' +
-                ", guestCountry='" + guestCountry + '\'' +
+        return "CustomerContact{" +
+                "custPhoneNo=" + custPhoneNo +
+                ", custEmail='" + custEmail + '\'' +
                 '}';
+    }
+
+    public static class Builder{
+        private String custPhoneNo;
+        private String custEmail;
+
+        public CustomerContact.Builder setCustPhoneNo(String custPhoneNo) {
+            this.custPhoneNo = custPhoneNo;
+            return this;
+        }
+
+        public CustomerContact.Builder setCustEmail(String custEmail) {
+            this.custEmail = custEmail;
+            return this;
+        }
+        public CustomerContact.Builder copy(CustomerContact customerContact){
+            this.custPhoneNo = customerContact.custPhoneNo;
+            this.custEmail = customerContact.custEmail;
+            return this;
+        }
+        public CustomerContact build(){
+            return new CustomerContact(this);
+        }
     }
 }

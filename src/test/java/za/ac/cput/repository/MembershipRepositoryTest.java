@@ -15,9 +15,12 @@ import za.ac.cput.factory.MembershipFactory;
 import static org.junit.jupiter.api.Assertions.*;
 
 @TestMethodOrder(MethodOrderer.MethodName.class)
+
 class MembershipRepositoryTest {
+
     private static MembershipRepository repository = MembershipRepository.getRepository();
-    private static Membership membership = MembershipFactory.buildMembership("cconner@gmail.com","fishie","Corrie","Conner", "13-08-1999", "0874561549", "Male");
+    private static Membership membership = MembershipFactory.buildMembership("cconner@gmail.com", "fish", "Corrie", "Conner", "0874561549", "Male");
+
 
     @Test
     void a_create() {
@@ -40,7 +43,6 @@ class MembershipRepositoryTest {
                 .setEmail("tthomas@gmail.com")
                 .setMembFirstName("Tommy")
                 .setMembLastName("Thomas")
-                .setDateOfBirth("13-02-1997")
                 .setPhoneNumber("0864798415")
                 .setGender("Male")
                 .build();

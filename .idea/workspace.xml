@@ -4,6 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+    <list default="true" id="ce7d189a-7d81-4d9b-b48a-d723a5a067bb" name="Changes" comment="Domain, Factory, Repository, and Test classes for MealPlan and DietaryRequirement.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/DietaryRequirement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/MealPlan.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/factory/DietaryRequirementFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/factory/MealPlanFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/repository/DietaryRequirementRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/repository/IDietaryRequirementRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/repository/IMealPlanRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/repository/MealPlanRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/factory/DietaryRequirementFactoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/factory/MealPlanFactoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/repository/DietaryRequirementRepositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/repository/MealPlanRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/util/Helper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/util/Helper.java" afterDir="false" />
     <list default="true" id="ce7d189a-7d81-4d9b-b48a-d723a5a067bb" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/HotelLocation.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Invoice.java" afterDir="false" />
@@ -32,6 +47,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Class" />
         <option value="JUnit5 Test Class" />
         <option value="Interface" />
         <option value="Interface" />
@@ -41,6 +57,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="217041701" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -80,6 +101,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/moniq/IdeaProjects/HotelSystem&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Brandon/IdeaProjects/HotelBookingSystem&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -88,6 +110,8 @@
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   <component name="PropertiesComponent"><![CDATA[{
@@ -109,7 +133,7 @@
     "settings.editor.selected.configurable": "advanced.settings",
     "vue.rearranger.settings.migration": "true"
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -130,6 +154,17 @@
       <recent name="za.ac.cput.domain" />
     </key>
   </component>
+  <component name="RunManager" selected="JUnit.MealPlanRepositoryTest">
+    <configuration name="DietaryRequirementFactoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HotelBookingSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="za.ac.cput.factory.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="za.ac.cput.factory" />
+      <option name="MAIN_CLASS_NAME" value="za.ac.cput.factory.DietaryRequirementFactoryTest" />
   <component name="RunManager" selected="JUnit.HotelLocationRepositoryTest.update">
     <configuration name="HotelLocationRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
   <component name="RunManager" selected="JUnit.MembershipRepositoryTest">
@@ -148,6 +183,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DietaryRequirementRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
     <configuration name="HotelLocationRepositoryTest.create" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
     <configuration name="CustomerQueryRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HotelBookingSystem" />
@@ -158,6 +194,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="za.ac.cput.repository" />
+      <option name="MAIN_CLASS_NAME" value="za.ac.cput.repository.DietaryRequirementRepositoryTest" />
       <option name="MAIN_CLASS_NAME" value="za.ac.cput.repository.HotelLocationRepositoryTest" />
       <option name="METHOD_NAME" value="create" />
       <option name="TEST_OBJECT" value="method" />
@@ -167,6 +204,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MealPlanFactoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HotelBookingSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="za.ac.cput.factory.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="za.ac.cput.factory" />
+      <option name="MAIN_CLASS_NAME" value="za.ac.cput.factory.MealPlanFactoryTest" />
     <configuration name="HotelLocationRepositoryTest.read" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
     <configuration name="CustomerRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HotelBookingSystem" />
@@ -186,6 +233,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MealPlanRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
     <configuration name="HotelLocationRepositoryTest.update" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
     <configuration name="MembershipRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HotelBookingSystem" />
@@ -196,6 +244,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="za.ac.cput.repository" />
+      <option name="MAIN_CLASS_NAME" value="za.ac.cput.repository.MealPlanRepositoryTest" />
       <option name="MAIN_CLASS_NAME" value="za.ac.cput.repository.HotelLocationRepositoryTest" />
       <option name="METHOD_NAME" value="update" />
       <option name="TEST_OBJECT" value="method" />
@@ -205,6 +254,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MealPlanRepositoryTest.c_update" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
     <configuration name="InvoiceRepositoryTest.getAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
     <configuration name="ReviewRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HotelBookingSystem" />
@@ -215,6 +265,9 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="za.ac.cput.repository" />
+      <option name="MAIN_CLASS_NAME" value="za.ac.cput.repository.MealPlanRepositoryTest" />
+      <option name="METHOD_NAME" value="c_update" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="MAIN_CLASS_NAME" value="za.ac.cput.repository.InvoiceRepositoryTest" />
       <option name="METHOD_NAME" value="getAll" />
       <option name="TEST_OBJECT" value="method" />
@@ -226,6 +279,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MealPlanRepositoryTest" />
+        <item itemvalue="JUnit.DietaryRequirementRepositoryTest" />
+        <item itemvalue="JUnit.MealPlanRepositoryTest.c_update" />
+        <item itemvalue="JUnit.DietaryRequirementFactoryTest" />
+        <item itemvalue="JUnit.MealPlanFactoryTest" />
         <item itemvalue="JUnit.HotelLocationRepositoryTest.update" />
         <item itemvalue="JUnit.HotelLocationRepositoryTest.create" />
         <item itemvalue="JUnit.HotelLocationRepositoryTest.read" />
@@ -251,6 +309,11 @@
       <workItem from="1679844782209" duration="352000" />
       <workItem from="1679845160835" duration="20000" />
       <workItem from="1679845189409" duration="1813000" />
+      <workItem from="1680030656927" duration="129000" />
+      <workItem from="1680966999425" duration="84000" />
+      <workItem from="1681051426050" duration="1941000" />
+      <workItem from="1681053393325" duration="6380000" />
+      <workItem from="1681059799729" duration="3075000" />
       <workItem from="1680186634802" duration="951000" />
       <workItem from="1680610508979" duration="268000" />
       <workItem from="1680727299842" duration="4000" />
@@ -323,6 +386,7 @@
                   <entry key="branch">
                     <value>
                       <list>
+                        <option value="origin/master" />
                         <option value="218053762" />
                       </list>
                     </value>
@@ -336,6 +400,8 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="Domain, Factory, Repository, and Test classes for MealPlan and DietaryRequirement." />
+    <option name="LAST_COMMIT_MESSAGE" value="Domain, Factory, Repository, and Test classes for MealPlan and DietaryRequirement." />
     <MESSAGE value="Initial Commit. Base classes added" />
     <MESSAGE value="Helper class updated" />
     <MESSAGE value="Entities updated." />

@@ -1,3 +1,9 @@
+/**
+ * CustomerQuery.java
+ * POJO class for the CustomerQuery
+ * Author: Brandon Wise - 220049173
+ * Date: 5 April 2023
+ */
 package za.ac.cput.domain;
 
 public class CustomerQuery {

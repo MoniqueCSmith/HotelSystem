@@ -26,40 +26,20 @@ public class Amenity {
         return amenityID;
     }
 
-    public void setAmenityID(String amenityID) {
-        this.amenityID = amenityID;
-    }
-
     public String getAmenityName() {
         return amenityName;
-    }
-
-    public void setAmenityName(String amenityName) {
-        this.amenityName = amenityName;
     }
 
     public String getAmenityDesc() {
         return amenityDesc;
     }
 
-    public void setAmenityDesc(String amenityDesc) {
-        this.amenityDesc = amenityDesc;
-    }
-
     public Boolean getAmenityAvailable() {
         return isAmenityAvailable;
     }
 
-    public void setAmenityAvailable(Boolean amenityAvailable) {
-        isAmenityAvailable = amenityAvailable;
-    }
-
     public Double getAmenityPrice() {
         return amenityPrice;
-    }
-
-    public void setAmenityPrice(Double amenityPrice) {
-        this.amenityPrice = amenityPrice;
     }
 
     @Override

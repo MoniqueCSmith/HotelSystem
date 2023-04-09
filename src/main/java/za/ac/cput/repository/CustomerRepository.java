@@ -1,44 +1,68 @@
+/**
+ * CustomerRepository.java
+ * Repository class for the Customer
+ * Author: Brandon Wise - 220049173
+ * Date: 07 April 2023
+ */
 package za.ac.cput.repository;
 
 import za.ac.cput.domain.Customer;
+import java.util.HashSet;
+import java.util.Set;
 
-import java.util.ArrayList;
-import java.util.List;
+public class CustomerRepository implements ICustomerRepository {
+    private static CustomerRepository repository = null;
+    private Set<Customer> customerDB = null;
 
-public class CustomerRepository {
-    private static List<Customer> customers = new ArrayList<>();
+    private CustomerRepository(){
+        customerDB = new HashSet<Customer>();
+    }
 
-    public static Customer create(Customer customer) {
-        customers.add(customer);
+    public static CustomerRepository getRepository(){
+        if(repository == null) {
+            repository = new CustomerRepository();
+        }
+        return repository;
+    }
+    @Override
+    public Customer create(Customer customer) {
+        boolean success = customerDB.add(customer);
+        if(!success)
+            return null;
         return customer;
     }
 
-    public static Customer read(String id) {
-        return customers.stream()
-                .filter(customer -> customer.getCustID().equals(id))
-                .findFirst()
-                .orElse(null);
+    @Override
+    public Customer read(String custID) {
+        for (Customer c : customerDB) {
+            if (c.getCustID().equals(custID))
+                return c;
+        }
+        return null;
     }
 
-    public static Customer update(Customer customer) {
+    @Override
+    public Customer update(Customer customer) {
         Customer oldCustomer = read(customer.getCustID());
-        if (oldCustomer != null) {
-            customers.remove(oldCustomer);
-            customers.add(customer);
+        if(oldCustomer != null){
+            customerDB.remove(oldCustomer);
+            customerDB.add(customer);
             return customer;
         }
         return null;
     }
 
-    public static boolean delete(String id) {
-        Customer customer = read(id);
-        if (customer != null) {
-            return customers.remove(customer);
-        }
-        return false;
+    @Override
+    public boolean delete(String custID) {
+        Customer customerToDelete = read(custID);
+        if(customerToDelete == null)
+            return false;
+        customerDB.remove(customerToDelete);
+        return true;
     }
 
-    public static List<Customer> getAll() {
-        return customers;
+    @Override
+    public Set<Customer> getAll() {
+        return customerDB;
     }
 }

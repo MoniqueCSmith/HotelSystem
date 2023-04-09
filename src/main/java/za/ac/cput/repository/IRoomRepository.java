@@ -7,10 +7,8 @@
 package za.ac.cput.repository;
 
 import za.ac.cput.domain.Room;
-
 import java.util.Set;
 
 public interface IRoomRepository extends IRepository<Room, String> {
-
     public Set<Room> getAll();
 }

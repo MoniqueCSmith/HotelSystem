@@ -17,7 +17,6 @@ class AmenityFactoryTest {
         Amenity amenity = AmenityFactory.buildAmenity("hair dyer", "Personal Care", true, 50.00);
         assertNotNull(amenity);
         System.out.println(amenity);
-
     }
 
 }

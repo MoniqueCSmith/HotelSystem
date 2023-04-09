@@ -27,14 +27,12 @@ class AmenityRepositoryTest {
         assertEquals(amenity.getAmenityID(), created.getAmenityID());
         System.out.println("Create:" + created);
     }
-
     @Test
     void b_read() {
         Amenity read = repository.read(amenity.getAmenityID());
         assertNotNull(read);
         System.out.println("Read:" + read);
     }
-
     @Test
     void c_update() {
         Amenity updated = new Amenity.Builder().copy(amenity).setAmenityName("Conditioner")
@@ -45,14 +43,12 @@ class AmenityRepositoryTest {
         assertNotNull(repository.update(updated));
         System.out.println("Updated:" + updated);
     }
-
     @Test
     void d_delete() {
         boolean success = repository.delete(amenity.getAmenityID());
         assertTrue(success);
         System.out.println("Deleted:" + success);
     }
-
     @Test
     void e_getAll() {
         System.out.println("Show all:");

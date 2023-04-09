@@ -1,3 +1,9 @@
+/**
+ * Customer.java
+ * POJO class for the Customer
+ * Author: Brandon Wise - 220049173
+ * Date: 5 April 2023
+ */
 package za.ac.cput.domain;
 
 public class Customer {
@@ -6,12 +12,15 @@ public class Customer {
     private String custLastName;
     private String custAddress;
     private boolean hasMembership;
-    private Customer(Builder builder){
+    private CustomerContact customerContact;
+
+    public Customer(Builder builder){
         this.custID = builder.custID;
         this.custFirstName = builder.custFirstName;
         this.custLastName = builder.custLastName;
         this.custAddress = builder.custAddress;
         this.hasMembership = builder.hasMembership;
+        this.customerContact = builder.customerContact;
     }
 
     public String getCustID() {
@@ -42,6 +51,7 @@ public class Customer {
                 ", custLastName='" + custLastName + '\'' +
                 ", custAddress='" + custAddress + '\'' +
                 ", hasMembership=" + hasMembership +
+                ", customerContact=" + customerContact +
                 '}';
     }
 
@@ -49,9 +59,10 @@ public class Customer {
         private String custID;
         private String custFirstName;
         private String custLastName;
-
         private String custAddress;
         private  Boolean hasMembership;
+
+        private CustomerContact customerContact;
 
         public Builder setCustID(String custID) {
             this.custID = custID;
@@ -72,8 +83,12 @@ public class Customer {
             return this;
         }
 
-        public Builder hasMembership(Boolean hasMembership) {
+        public Builder setHasMembership(Boolean hasMembership) {
             this.hasMembership = hasMembership;
+            return this;
+        }
+        public Builder setCustomerContact(CustomerContact customerContact) {
+            this.customerContact = customerContact;
             return this;
         }
         public Builder copy(Customer customer){
@@ -82,6 +97,7 @@ public class Customer {
             this.custLastName = customer.custLastName;
             this.custAddress = customer.custAddress;
             this.hasMembership = customer.hasMembership;
+            this.customerContact = customer.customerContact;
             return this;
         }
         public Customer build(){

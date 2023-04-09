@@ -10,7 +10,5 @@ import za.ac.cput.domain.Amenity;
 
 import java.util.Set;
 public interface IAmenityRepository extends IRepository<Amenity, String> {
-
-
     public Set<Amenity> getAll();
 }

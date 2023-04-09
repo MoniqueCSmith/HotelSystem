@@ -12,7 +12,6 @@ public class Membership {
     private String password;
     private String membFirstName;
     private String membLastName;
-    private String dateOfBirth;
     private String phoneNumber;
     private String gender;
 
@@ -22,7 +21,6 @@ public class Membership {
         this.password = builder.password;
         this.membFirstName = builder.membFirstName;
         this.membLastName = builder.membLastName;
-        this.dateOfBirth = builder.build().dateOfBirth;
         this.phoneNumber = builder.phoneNumber;
         this.gender = builder.gender;
     }
@@ -67,14 +65,6 @@ public class Membership {
         this.membLastName = membLastName;
     }
 
-    public String getDateOfBirth() {
-        return dateOfBirth;
-    }
-
-    public void setDateOfBirth(String dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
-    }
-
     public String getPhoneNumber() {
         return phoneNumber;
     }
@@ -99,7 +89,6 @@ public class Membership {
                 ", password='" + password + '\'' +
                 ", membFirstName='" + membFirstName + '\'' +
                 ", membLastName='" + membLastName + '\'' +
-                ", dateOfBirth=" + dateOfBirth +
                 ", phoneNumber='" + phoneNumber + '\'' +
                 ", gender='" + gender + '\'' +
                 '}';
@@ -111,7 +100,6 @@ public class Membership {
         private String password;
         private String membFirstName;
         private String membLastName;
-        private String dateOfBirth;
         private String phoneNumber;
         private String gender;
 
@@ -137,10 +125,6 @@ public class Membership {
             this.membLastName = membLastName;
             return this;
         }
-        public Builder setDateOfBirth(String dateOfBirth){
-            this.dateOfBirth = dateOfBirth;
-            return this;
-        }
         public Builder setPhoneNumber(String phoneNumber){
             this.phoneNumber = phoneNumber;
             return this;
@@ -156,7 +140,6 @@ public class Membership {
             this.password = memberships.password;
             this.membFirstName = memberships.membFirstName;
             this.membLastName = memberships.membLastName;
-            this.dateOfBirth = memberships.dateOfBirth;
             this.phoneNumber = memberships.phoneNumber;
             this.gender = memberships.gender;
             return this;

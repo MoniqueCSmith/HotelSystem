@@ -1,3 +1,9 @@
+/**
+ * Membership.java
+ * Entity class for the Membership
+ * Author: Shanlynn Courtney Thomas (218053762)
+ * Date: 08 April 2023
+ */
 package za.ac.cput.domain;
 
 public class Membership {

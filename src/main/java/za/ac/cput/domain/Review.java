@@ -1,3 +1,9 @@
+/**
+ * Review.java
+ * Entity class for the Review
+ * Author: Shanlynn Courtney Thomas (218053762)
+ * Date: 08 April 2023
+ */
 package za.ac.cput.domain;
 
 public class Review {

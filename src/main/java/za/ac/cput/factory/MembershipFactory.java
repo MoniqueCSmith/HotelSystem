@@ -1,3 +1,9 @@
+/**
+ * MembershipFactory.java
+ * Factory class for the Membership
+ * Author: Shanlynn Courtney Thomas (218053762)
+ * Date: 08 April 2023
+ */
 package za.ac.cput.factory;
 
 import za.ac.cput.domain.Membership;

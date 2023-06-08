@@ -4,11 +4,11 @@ import za.ac.cput.domain.CustomerQuery;
 import za.ac.cput.util.Helper;
 
 public class CustomerQueryFactory {
-    public static CustomerQuery buildCustomerQuery(String queryTitle, String queryEmail, String queryDescription){
-        if(Helper.isNullOrEmpty(queryTitle) || Helper.isNullOrEmpty(queryEmail) || Helper.isNullOrEmpty(queryDescription)) {
+    public static CustomerQuery buildCustomerQuery(String title, String email, String description){
+        if(Helper.isNullOrEmpty(title) || Helper.isNullOrEmpty(email) || Helper.isNullOrEmpty(description)) {
             return null;
         }
-        if(!Helper.isValidEmail(queryEmail)){
+        if(!Helper.isValidEmail(email)){
             return null;
         }
 
@@ -16,9 +16,9 @@ public class CustomerQueryFactory {
 
         return new CustomerQuery.Builder()
                 .setQueryID(queryID)
-                .setQueryTitle(queryTitle)
-                .setQueryEmail(queryEmail)
-                .setQueryDescription(queryDescription)
+                .setTitle(title)
+                .setEmail(email)
+                .setDescription(description)
                 .build();
     }
 }

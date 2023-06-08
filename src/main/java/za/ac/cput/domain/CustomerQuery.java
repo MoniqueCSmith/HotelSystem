@@ -8,69 +8,69 @@ package za.ac.cput.domain;
 
 public class CustomerQuery {
     private String queryID;
-    private String queryTitle;
-    private String queryEmail;
-    private String queryDescription;
+    private String title;
+    private String email;
+    private String description;
     private CustomerQuery(Builder builder) {
         this.queryID = builder.queryID;
-        this.queryTitle = builder.queryTitle;
-        this.queryEmail = builder.queryEmail;
-        this.queryDescription = builder.queryDescription;
+        this.title = builder.title;
+        this.email = builder.email;
+        this.description = builder.description;
     }
     public String getQueryID() {
         return queryID;
     }
 
-    public String getQueryTitle() {
-        return queryTitle;
+    public String getTitle() {
+        return title;
     }
 
-    public String getQueryEmail() {
-        return queryEmail;
+    public String getEmail() {
+        return email;
     }
 
-    public String getQueryDescription() {
-        return queryDescription;
+    public String getDescription() {
+        return description;
     }
 
     @Override
     public String toString() {
         return "CustomerQuery{" +
                 "queryID='" + queryID + '\'' +
-                ", queryTitle='" + queryTitle + '\'' +
-                ", queryEmail='" + queryEmail + '\'' +
-                ", queryDescription='" + queryDescription + '\'' +
+                ", Title='" + title + '\'' +
+                ", Email='" + email + '\'' +
+                ", Description='" + description + '\'' +
                 '}';
     }
 
     public static class Builder{
         private String queryID;
-        private String queryTitle;
-        private String queryEmail;
-        private String queryDescription;
+        private String title;
+        private String email;
+        private String description;
 
         public CustomerQuery.Builder setQueryID(String queryID) {
             this.queryID = queryID;
             return this;
         }
 
-        public CustomerQuery.Builder setQueryTitle(String queryTitle) {
-            this.queryTitle = queryTitle;
+        public CustomerQuery.Builder setTitle(String title) {
+            this.title = title;
             return this;
         }
-        public CustomerQuery.Builder setQueryEmail(String queryEmail) {
-            this.queryEmail = queryEmail;
+        public CustomerQuery.Builder setEmail(String email) {
+            this.email = email;
             return this;
         }
-        public CustomerQuery.Builder setQueryDescription(String queryDescription) {
-            this.queryDescription = queryDescription;
+        public CustomerQuery.Builder setDescription(String description) {
+            this.description = description;
             return this;
         }
         public CustomerQuery.Builder copy(CustomerQuery customerQuery){
             this.queryID = customerQuery.queryID;
-            this.queryTitle = customerQuery.queryTitle;
-            this.queryEmail = customerQuery.queryEmail;
-            this.queryDescription = customerQuery.queryDescription;
+            this.title = customerQuery.title;
+            this.email = customerQuery.email;
+            this.description = customerQuery.description;
             return this;
         }
         public CustomerQuery build(){

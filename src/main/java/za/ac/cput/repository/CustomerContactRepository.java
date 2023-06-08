@@ -32,16 +32,16 @@ public class CustomerContactRepository implements ICustomerContactRepository {
          return customerContact;
      }
      @Override
-     public CustomerContact read(String custContactID) {
+     public CustomerContact read(String customerContactID) {
          for (CustomerContact c : customerContactDB) {
-             if (c.getCustContactID().equals(custContactID))
+             if (c.getCustomerContactID().equals(customerContactID))
                  return c;
          }
          return null;
      }
      @Override
      public CustomerContact update(CustomerContact customerContact) {
-         CustomerContact oldCustomerContact = read(customerContact.getCustContactID());
+         CustomerContact oldCustomerContact = read(customerContact.getCustomerContactID());
          if(oldCustomerContact != null){
              customerContactDB.remove(oldCustomerContact);
              customerContactDB.add(customerContact);
@@ -50,8 +50,8 @@ public class CustomerContactRepository implements ICustomerContactRepository {
          return null;
      }
      @Override
-     public boolean delete(String custContactID) {
-         CustomerContact customerContactToDelete = read(custContactID);
+     public boolean delete(String customerContactID) {
+         CustomerContact customerContactToDelete = read(customerContactID);
          if(customerContactToDelete == null)
              return false;
          customerContactDB.remove(customerContactToDelete);

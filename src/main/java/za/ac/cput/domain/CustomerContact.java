@@ -7,56 +7,56 @@
 package za.ac.cput.domain;
 
 public class CustomerContact {
-    private String custContactID;
-    private String custPhoneNo;
-    private String custEmail;
+    private String customerContactID;
+    private String cellNo;
+    private String email;
 
     private CustomerContact(Builder builder){
-        this.custContactID = builder.custContactID;
-        this.custPhoneNo = builder.custPhoneNo;
-        this.custEmail = builder.custEmail;
+        this.customerContactID = builder.customerContactID;
+        this.cellNo = builder.cellNo;
+        this.email = builder.email;
     }
-    public String getCustContactID() {
-        return custContactID;
+    public String getCustomerContactID() {
+        return customerContactID;
     }
-    public String getCustPhoneNo() {
-        return custPhoneNo;
+    public String getCellNo() {
+        return cellNo;
     }
-    public String getCustEmail() {
-        return custEmail;
+    public String getEmail() {
+        return email;
     }
 
     @Override
     public String toString() {
         return "CustomerContact{" +
-                "custContactID='" + custContactID + '\'' +
-                ", custPhoneNo='" + custPhoneNo + '\'' +
-                ", custEmail='" + custEmail + '\'' +
+                "customerContactID='" + customerContactID + '\'' +
+                ", cellNo='" + cellNo + '\'' +
+                ", email='" + email + '\'' +
                 '}';
     }
 
     public static class Builder{
-        private String custContactID;
-        private String custPhoneNo;
-        private String custEmail;
+        private String customerContactID;
+        private String cellNo;
+        private String email;
 
-        public CustomerContact.Builder setCustContactID(String custContactID) {
-            this.custContactID = custContactID;
+        public CustomerContact.Builder setCustomerContactID(String customerContactID) {
+            this.customerContactID = customerContactID;
             return this;
         }
-        public CustomerContact.Builder setCustPhoneNo(String custPhoneNo) {
-            this.custPhoneNo = custPhoneNo;
+        public CustomerContact.Builder setCellNo(String cellNo) {
+            this.cellNo = cellNo;
             return this;
         }
 
-        public CustomerContact.Builder setCustEmail(String custEmail) {
-            this.custEmail = custEmail;
+        public CustomerContact.Builder setEmail(String email) {
+            this.email = email;
             return this;
         }
         public CustomerContact.Builder copy(CustomerContact customerContact){
-            this.custContactID = customerContact.custContactID;
-            this.custPhoneNo = customerContact.custPhoneNo;
-            this.custEmail = customerContact.custEmail;
+            this.customerContactID = customerContact.customerContactID;
+            this.cellNo = customerContact.cellNo;
+            this.email = customerContact.email;
             return this;
         }
         public CustomerContact build(){

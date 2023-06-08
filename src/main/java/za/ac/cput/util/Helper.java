@@ -8,10 +8,6 @@ import org.apache.commons.validator.routines.EmailValidator;
 import za.ac.cput.domain.HotelLocation;
 
 public class Helper {
-
-public static boolean isNullOrEmpty (String s) {
-        return (s == null || s.equals("") || s.isEmpty() || s.equalsIgnoreCase("null"));
-
     private static final int idSize = 10;
     private static final int dateSize = 6;
     private static final String currentDate = "ddMMyy";
@@ -31,9 +27,6 @@ public static boolean isNullOrEmpty (String s) {
         return invoiceID;
     }
 
-    public static String generateID() {
-        return UUID.randomUUID().toString();
-    }
     private static String generateRandomID(int length) {
         StringBuilder builder = new StringBuilder(length);
         for (int i = 0; i < length; i++) {
@@ -105,11 +98,7 @@ public static boolean isNullOrEmpty (String s) {
         EmailValidator ev = EmailValidator.getInstance();
         return ev.isValid(email);
     }
-    public static boolean isNullorEmpty(String s) {
-        return (s == null || s.equals("") || s.isEmpty() || s.equalsIgnoreCase("null")) ;
-    }
    public static String reservationID(){
         return UUID.randomUUID().toString();
-
 }
 }

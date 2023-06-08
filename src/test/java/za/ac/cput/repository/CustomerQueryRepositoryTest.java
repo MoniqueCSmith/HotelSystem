@@ -32,9 +32,9 @@ class CustomerQueryRepositoryTest {
     }
     @Test
     void c_update() {
-        CustomerQuery updated = new CustomerQuery.Builder().copy(customerQuery).setQueryTitle("Reservation Cancellation")
-                .setQueryEmail("JoshBrown1@gmail.com")
-                .setQueryDescription("Good day, how can I cancel my reservation for Friday 12 May? I can no longer make it for then.")
+        CustomerQuery updated = new CustomerQuery.Builder().copy(customerQuery).setTitle("Reservation Cancellation")
+                .setEmail("JoshBrown1@gmail.com")
+                .setDescription("Good day, how can I cancel my reservation for Friday 12 May? I can no longer make it for then.")
                 .build();
         assertNotNull(repository.update(updated));
         System.out.println("Updated:" + updated);

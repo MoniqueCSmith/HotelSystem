@@ -33,9 +33,9 @@ public class CustomerRepository implements ICustomerRepository {
     }
 
     @Override
-    public Customer read(String custID) {
+    public Customer read(String customerID) {
         for (Customer c : customerDB) {
-            if (c.getCustID().equals(custID))
+            if (c.getCustomerID().equals(customerID))
                 return c;
         }
         return null;
@@ -43,7 +43,7 @@ public class CustomerRepository implements ICustomerRepository {
 
     @Override
     public Customer update(Customer customer) {
-        Customer oldCustomer = read(customer.getCustID());
+        Customer oldCustomer = read(customer.getCustomerID());
         if(oldCustomer != null){
             customerDB.remove(oldCustomer);
             customerDB.add(customer);
@@ -53,8 +53,8 @@ public class CustomerRepository implements ICustomerRepository {
     }
 
     @Override
-    public boolean delete(String custID) {
-        Customer customerToDelete = read(custID);
+    public boolean delete(String customerID) {
+        Customer customerToDelete = read(customerID);
         if(customerToDelete == null)
             return false;
         customerDB.remove(customerToDelete);

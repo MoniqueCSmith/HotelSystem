@@ -22,26 +22,26 @@ class CustomerContactRepositoryTest {
     @Test
     void a_create() {
         CustomerContact created = repository.create(customerContact);
-        assertEquals(customerContact.getCustContactID(), created.getCustContactID());
+        assertEquals(customerContact.getCustomerContactID(), created.getCustomerContactID());
         System.out.println("Create:" + created);
     }
     @Test
     void b_read() {
-        CustomerContact read = repository.read(customerContact.getCustContactID());
+        CustomerContact read = repository.read(customerContact.getCustomerContactID());
         assertNotNull(read);
         System.out.println("Read:" + read);
     }
     @Test
     void c_update() {
-        CustomerContact updated = new CustomerContact.Builder().copy(customerContact).setCustPhoneNo("0814859275")
-                .setCustEmail("JoshBrown1@gmail.com")
+        CustomerContact updated = new CustomerContact.Builder().copy(customerContact).setCellNo("0814859275")
+                .setEmail("JoshBrown1@gmail.com")
                 .build();
         assertNotNull(repository.update(updated));
         System.out.println("Updated:" + updated);
     }
     @Test
     void d_delete() {
-        boolean success = repository.delete(customerContact.getCustContactID());
+        boolean success = repository.delete(customerContact.getCustomerContactID());
         assertTrue(success);
         System.out.println("Deleted:" + success);
     }

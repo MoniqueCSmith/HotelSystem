@@ -5,18 +5,18 @@ import za.ac.cput.domain.CustomerContact;
 import za.ac.cput.util.Helper;
 
 public class CustomerFactory {
-    public static Customer buildCustomer(String custFirstName, String custLastName, String custAddress, boolean hasMembership, CustomerContact customerContact){
-        if(Helper.isNullOrEmpty(custFirstName) || Helper.isNullOrEmpty(custLastName) || Helper.isNullOrEmpty(custAddress) || Helper.isNullOrEmpty(String.valueOf(hasMembership)) || Helper.isNullOrEmpty(String.valueOf(customerContact))){
+    public static Customer buildCustomer(String firstName, String lastName, String address, boolean hasMembership, CustomerContact customerContact){
+        if(Helper.isNullOrEmpty(firstName) || Helper.isNullOrEmpty(lastName) || Helper.isNullOrEmpty(address) || Helper.isNullOrEmpty(String.valueOf(hasMembership)) || Helper.isNullOrEmpty(String.valueOf(customerContact))){
             return null;
         }
 
-        String custID = Helper.generateID();
+        String customerID = Helper.generateID();
 
         return new Customer.Builder()
-                .setCustID(custID)
-                .setCustFirstName(custFirstName)
-                .setCustLastName(custLastName)
-                .setCustAddress(custAddress)
+                .setCustomerID(customerID)
+                .setFirstName(firstName)
+                .setLastName(lastName)
+                .setAddress(address)
                 .setHasMembership(hasMembership)
                 .setCustomerContact(customerContact)
                 .build();

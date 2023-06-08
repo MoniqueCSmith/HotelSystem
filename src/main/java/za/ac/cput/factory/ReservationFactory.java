@@ -31,11 +31,11 @@ public class ReservationFactory {
 
              return null;*/
 
-             if (Helper.isNullorEmpty(String.valueOf(reservationID))||
-                     Helper.isNullorEmpty(String.valueOf(reservationTimeCreated)) ||
-                     Helper.isNullorEmpty(String.valueOf(reservationStatus)) ||
-                     Helper.isNullorEmpty(String.valueOf(termsAndConditions)) ||
-                     Helper.isNullorEmpty(String.valueOf(reservationDate)))
+             if (Helper.isNullOrEmpty(String.valueOf(reservationID))||
+                     Helper.isNullOrEmpty(String.valueOf(reservationTimeCreated)) ||
+                     Helper.isNullOrEmpty(String.valueOf(reservationStatus)) ||
+                     Helper.isNullOrEmpty(String.valueOf(termsAndConditions)) ||
+                     Helper.isNullOrEmpty(String.valueOf(reservationDate)))
                  return null;
 
              return new Reservation.Builder()

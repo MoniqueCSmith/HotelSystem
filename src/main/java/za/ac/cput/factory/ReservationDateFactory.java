@@ -18,11 +18,10 @@ public class ReservationDateFactory {
 
 
     public static ReservationDate createReservationDate(String reservationID , LocalDate checkInDate , LocalDate checkOutDate , LocalDateTime estCheckInTime ){
-        if (Helper.isNullorEmpty(String.valueOf(reservationID))||
-                Helper.isNullorEmpty(String.valueOf(checkInDate)) ||
-                Helper.isNullorEmpty(String.valueOf(checkOutDate)) ||
-                Helper.isNullorEmpty(String.valueOf(estCheckInTime))) return null;
-
+        if (Helper.isNullOrEmpty(String.valueOf(reservationID))||
+                Helper.isNullOrEmpty(String.valueOf(checkInDate)) ||
+                Helper.isNullOrEmpty(String.valueOf(checkOutDate)) ||
+                Helper.isNullOrEmpty(String.valueOf(estCheckInTime))) return null;
 
         return new ReservationDate.Builder()
                 .setReservationID(reservationID)

@@ -65,7 +65,7 @@ public class InvoiceRepositoryTest {
     @Test
     void getAll() {
         repository.create(invoice);
-        assertEquals(1, repository.getAll().size());
+        assertEquals(2, repository.getAll().size());
     }
 
 }

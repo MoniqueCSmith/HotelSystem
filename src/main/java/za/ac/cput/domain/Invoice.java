@@ -16,8 +16,6 @@ public class Invoice {
    private double VAT;
    private double totalPrice;
 
-
-
    private Invoice(Builder builder){
       this.invoiceID= builder.invoiceID;
       this.typeOfRoomBooked= builder.typeOfRoomBooked;
@@ -27,6 +25,7 @@ public class Invoice {
       this.unitPrice= builder.unitPrice;
       this.VAT= builder.VAT;
       this.totalPrice= builder.totalPrice;
+
    }
 
    public String getInvoiceID() {
@@ -84,6 +83,7 @@ public class Invoice {
    public void setVAT(double VAT) {
       this.VAT = VAT;
    }
+
    public double getTotalPrice() {
       return totalPrice;
    }
@@ -97,17 +97,16 @@ public class Invoice {
       return "Invoice{" +
               "invoiceID='" + invoiceID + '\'' +
               ", typeOfRoomBooked='" + typeOfRoomBooked + '\'' +
-              ", numRoomsBooked=" + numRoomsBooked + '\'' +
-              ", numAdults=" + numAdults + '\'' +
-              ", numChildren=" + numChildren + '\'' +
-              ", unitPrice=" + unitPrice + '\'' +
-              ", VAT=" + VAT +  '\'' +
+              ", numRoomsBooked=" + numRoomsBooked +
+              ", numAdults=" + numAdults +
+              ", numChildren=" + numChildren +
+              ", unitPrice=" + unitPrice +
+              ", VAT=" + VAT +
               ", totalPrice=" + totalPrice +
               '}';
    }
 
    public static class Builder{
-
       private String invoiceID;
       private String typeOfRoomBooked;
       private int numRoomsBooked;
@@ -158,6 +157,7 @@ public class Invoice {
       }
 
       public Builder copy(Invoice invoice){
+
          this.invoiceID= invoice.invoiceID;
          this.typeOfRoomBooked= invoice.typeOfRoomBooked;
          this.numRoomsBooked= invoice.numRoomsBooked;
@@ -166,7 +166,6 @@ public class Invoice {
          this.unitPrice= invoice.unitPrice;
          this.VAT= invoice.VAT;
          this.totalPrice= invoice.totalPrice;
-
          return this;
       }
 
@@ -174,4 +173,5 @@ public class Invoice {
          return new Invoice(this);
       }
    }
+
 }

@@ -25,7 +25,7 @@ public class InvoiceFactory {
            return null;
         }
 
-        String invoiceID = Helper.generateUniqueID();
+        String invoiceID = Helper.generateID();
 
         return new Invoice.Builder()
 

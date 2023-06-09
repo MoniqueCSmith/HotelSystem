@@ -5,138 +5,114 @@
 */
 
 package za.ac.cput.domain;
+public class HotelLocation{
+    private String ID;
+    private String Address;
+    private String City;
+    private String Province;
+    private int ZipCode;
 
-import java.util.Objects;
-
-public class HotelLocation {
-    private static String hotelCode;
-    private String hotelAddress;
-    private String hotelCity;
-    private String hotelProvince;
-    private int hotelZipCode;
-
-    public HotelLocation(Builder builder){
-        this.hotelCode= builder.hotelCode;
-        this.hotelAddress= builder.hotelAddress;
-        this.hotelCity= builder.hotelCity;
-        this.hotelProvince= builder.hotelProvince;
-       this.hotelZipCode= builder.hotelZipCode;
+    private HotelLocation(Builder builder) {
+        this.ID=builder.ID;
+        this.Address= builder.Address;
+        this.City= builder.City;
+        this.Province= builder.Province;
+        this.ZipCode=builder.ZipCode;
+    }
+    public String getID() {
+        return ID;
     }
 
-    public static String getHotelCode() {
-        return hotelCode;
+    public void setID(String ID) {
+        this.ID = ID;
     }
 
-    public void setHotelCode(String hotelCode) {
-        this.hotelCode = hotelCode;
+    public String getAddress() {
+        return Address;
     }
 
-    public String getHotelAddress() {
-        return hotelAddress;
+    public void setAddress(String address) {
+        Address = address;
     }
 
-    public void setHotelAddress(String hotelAddress) {
-        this.hotelAddress = hotelAddress;
+    public String getCity() {
+        return City;
     }
 
-    public String getHotelCity() {
-        return hotelCity;
+    public void setCity(String city) {
+        City = city;
     }
 
-    public void setHotelCity(String hotelCity) {
-        this.hotelCity = hotelCity;
+    public String getProvince() {
+        return Province;
     }
 
-    public String getHotelProvince() {
-        return hotelProvince;
+    public void setProvince(String province) {
+        Province = province;
     }
 
-    public void setHotelProvince(String hotelProvince) {
-        this.hotelProvince = hotelProvince;
+    public int getZipCode() {
+        return ZipCode;
     }
 
-    public int getHotelZipCode() {
-        return hotelZipCode;
-    }
-
-    public void setHotelZipCode(int hotelZipCode) {
-        this.hotelZipCode = hotelZipCode;
+    public void setZipCode(int zipCode) {
+        ZipCode = zipCode;
     }
 
     @Override
     public String toString() {
         return "HotelLocation{" +
-                "hotelCode='" + hotelCode + '\'' +
-                ", hotelAddress='" + hotelAddress + '\'' +
-                ", hotelCity='" + hotelCity + '\'' +
-                ", hotelProvince='" + hotelProvince + '\'' +
-                ", hotelZipCode=" + hotelZipCode +
+                "ID='" + ID + '\'' +
+                ", Address='" + Address + '\'' +
+                ", City='" + City + '\'' +
+                ", Province='" + Province + '\'' +
+                ", ZipCode='" + ZipCode + '\'' +
                 '}';
     }
 
     public static class Builder{
+        private String ID;
+        private String Address;
+        private String City;
+        private String Province;
+        private int ZipCode;
 
-        private String hotelCode;
-        private String hotelAddress;
-        private String hotelCity;
-        private String hotelProvince;
-        private int hotelZipCode;
-
-        public Builder setHotelCode(String hotelCode) {
-            this.hotelCode = hotelCode;
+        public Builder setID(String ID) {
+            this.ID = ID;
             return this;
         }
 
-        public Builder setHotelAddress(String hotelAddress) {
-            this.hotelAddress = hotelAddress;
+        public Builder setAddress(String address) {
+            Address = address;
             return this;
         }
 
-        public Builder setHotelCity(String hotelCity) {
-            this.hotelCity = hotelCity;
+        public Builder setCity(String city) {
+            City = city;
+            return this;
+        }
+        public Builder setProvince(String province) {
+            Province = province;
             return this;
         }
 
-        public Builder setHotelProvince(String hotelProvince) {
-            this.hotelProvince = hotelProvince;
+        public Builder setZipCode(int zipCode) {
+            ZipCode = zipCode;
             return this;
         }
 
-        public Builder setHotelZipCode(int hotelZipCode) {
-            this.hotelZipCode = hotelZipCode;
-            return this;
-        }
-
-        public Builder copy(HotelLocation HotelLocation){
-            this.hotelCode= HotelLocation.hotelCode;
-            this.hotelAddress= HotelLocation.hotelAddress;
-            this.hotelCity= HotelLocation.hotelCity;
-            this.hotelProvince= HotelLocation.hotelProvince;
-            this.hotelZipCode= HotelLocation.hotelZipCode;
-
+        public Builder copy(HotelLocation hotelLocation){
+            this.ID= hotelLocation.ID;
+            this.Address= hotelLocation.Address;
+            this.City= hotelLocation.City;
+            this.Province= hotelLocation.Province;
+            this.ZipCode=hotelLocation.ZipCode;
             return this;
         }
 
         public HotelLocation build(){
             return new HotelLocation(this);
         }
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (obj == this) {
-            return true;
-        }
-        if (!(obj instanceof HotelLocation)) {
-            return false;
-        }
-        HotelLocation hotelLocation = (HotelLocation) obj;
-
-        return Objects.equals(hotelCode, hotelLocation.hotelCode) &&
-                Objects.equals(hotelAddress, hotelLocation.hotelAddress) &&
-                Objects.equals(hotelCity, hotelLocation.hotelCity) &&
-                Objects.equals(hotelProvince, hotelLocation.hotelProvince) &&
-                Objects.equals(hotelZipCode, hotelLocation.hotelZipCode);
     }
 
 }

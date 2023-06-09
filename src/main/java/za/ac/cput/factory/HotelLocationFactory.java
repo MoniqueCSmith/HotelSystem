@@ -6,79 +6,33 @@ Factory for Hotel Location class
 
 package za.ac.cput.factory;
 
-
 import za.ac.cput.domain.HotelLocation;
-import java.util.ArrayList;
-import java.util.List;
+import za.ac.cput.util.Helper;
+import static za.ac.cput.util.Helper.generateID;
 
-import static za.ac.cput.util.Helper.generateHotelCode;
 
 public class HotelLocationFactory {
-    public static List<HotelLocation> possibleLocations;
 
-    static {
-        possibleLocations = new ArrayList<>();
+    public static HotelLocation createHotelLocation(String Address, String City,
+                                                        String Province, int ZipCode){
 
-        possibleLocations.add(new HotelLocation.Builder()
-                .setHotelCode(generateHotelCode("Western Cape"))
-                .setHotelAddress("123 Main Street")
-                .setHotelCity("Cape Town")
-                .setHotelProvince("Western Cape")
-                .setHotelZipCode(8000)
-                .build());
+        String ID = generateID();
 
-        possibleLocations.add(new HotelLocation.Builder()
-                .setHotelCode(generateHotelCode("Western Cape"))
-                .setHotelAddress("789 Long Street")
-                .setHotelCity("Cape Town")
-                .setHotelProvince("Western Cape")
-                .setHotelZipCode(8001)
-                .build());
-
-        possibleLocations.add(new HotelLocation.Builder()
-                .setHotelCode(generateHotelCode("Gauteng"))
-                .setHotelAddress("456 Main Road")
-                .setHotelCity("Johannesburg")
-                .setHotelProvince("Gauteng")
-                .setHotelZipCode(2000)
-                .build());
-
-        possibleLocations.add(new HotelLocation.Builder()
-                .setHotelCode(generateHotelCode("Gauteng"))
-                .setHotelAddress("101 Oxford Street")
-                .setHotelCity("Sandton")
-                .setHotelProvince("Gauteng")
-                .setHotelZipCode(2196)
-                .build());
-
-        possibleLocations.add(new HotelLocation.Builder()
-                .setHotelCode(generateHotelCode("Gauteng"))
-                .setHotelAddress("15 Market Street")
-                .setHotelCity("Johannesburg")
-                .setHotelProvince("Gauteng")
-                .setHotelZipCode(2001)
-                .build());
-    }
-
-    public static List<HotelLocation> getPossibleLocations() {
-        return possibleLocations;
-    }
-
-    public static HotelLocation createHotelLocation(String hotelAddress, String hotelCity,
-                                                    String hotelProvince, int hotelZipCode){
-
-        String hotelCode = generateHotelCode(hotelProvince);
+        if(Helper.isNullOrEmpty(ID)||Helper.isNullOrEmpty(Address)||Helper.isNullOrEmpty(City) ||
+                Helper.isNullOrEmpty(Province)){
+            return null;
+        }
+        if(Helper.isValidInt(ZipCode)){
+            return null;
+        }
 
         return new HotelLocation.Builder()
-                .setHotelCode(hotelCode)
-                .setHotelAddress(hotelAddress)
-                .setHotelCity(hotelCity)
-                .setHotelProvince(hotelProvince)
-                .setHotelZipCode(hotelZipCode)
+
+                .setID(ID)
+                .setAddress(Address)
+                .setCity(City)
+                .setProvince(Province)
+                .setZipCode(ZipCode)
                 .build();
-    }
-
-}
-
-
-
+            }
+        }

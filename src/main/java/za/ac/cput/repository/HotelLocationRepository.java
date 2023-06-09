@@ -12,15 +12,15 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class HotelLocationRepository implements IHotelLocationRepository {
-    private final Set<HotelLocation> hotelLocationDB;
-    private HotelLocationRepository() {
-        hotelLocationDB = new HashSet<HotelLocation>();
+
+    private static HotelLocationRepository repository= null;
+    private Set<HotelLocation> hotelLocationDB= null;
+
+    private HotelLocationRepository(){
+        hotelLocationDB= new HashSet<HotelLocation>();
     }
-
-    private static HotelLocationRepository repository = null;
-
-    public static HotelLocationRepository getRepository() {
-        if (repository == null) {
+    public static HotelLocationRepository getRepository(){
+        if(repository==null){
             repository = new HotelLocationRepository();
         }
         return repository;
@@ -28,40 +28,41 @@ public class HotelLocationRepository implements IHotelLocationRepository {
 
     @Override
     public HotelLocation create(HotelLocation hotelLocation) {
-        boolean pass = hotelLocationDB.add(hotelLocation);
-        if(!pass)
-            return null;
-        return hotelLocation;
+        boolean success = hotelLocationDB.add(hotelLocation);
+            if(!success)
+                return null;
+
+                return hotelLocation;
     }
 
     @Override
-    public HotelLocation read(String hotelCode) {
-        for (HotelLocation hotelLocation : hotelLocationDB) {
-            if (hotelLocation.getHotelCode().equals(hotelCode)){
-                return hotelLocation;
+    public HotelLocation read(String ID) {
+            for (HotelLocation h: hotelLocationDB){
+                if(h.getID().equals(ID))
+                    return h;
             }
-        }
-        return null;
+            return null;
     }
 
     @Override
     public HotelLocation update(HotelLocation hotelLocation) {
-        HotelLocation oldHotelLocation = read(HotelLocation.getHotelCode());
+
+        HotelLocation oldHotelLocation= read(hotelLocation.getID());
         if(oldHotelLocation != null){
             hotelLocationDB.remove(oldHotelLocation);
             hotelLocationDB.add(hotelLocation);
             return hotelLocation;
         }
-        return null;
+            return null;
     }
 
     @Override
-    public boolean delete(String hotelCode) {
-        HotelLocation hotelToDelete = read(hotelCode);
-        if(hotelToDelete == null)
-            return false;
-        hotelLocationDB.remove(hotelToDelete);
-        return true;
+    public boolean delete(String ID) {
+        HotelLocation hotelLocationToDelete = read(ID);
+            if(hotelLocationToDelete== null)
+                return false;
+            hotelLocationDB.remove(hotelLocationToDelete);
+            return true;
     }
 
     @Override

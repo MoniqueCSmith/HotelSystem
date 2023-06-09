@@ -3,12 +3,11 @@ package za.ac.cput.util;
 import java.util.UUID;
 import java.text.SimpleDateFormat;
 import java.util.*;
-import static za.ac.cput.factory.HotelLocationFactory.possibleLocations;
 import org.apache.commons.validator.routines.EmailValidator;
-import za.ac.cput.domain.HotelLocation;
 
 public class Helper {
-    private static final int idSize = 10;
+
+    /*private static final int idSize = 10;
     private static final int dateSize = 6;
     private static final String currentDate = "ddMMyy";
     private static final String charAmount = "0123456789";
@@ -34,7 +33,7 @@ public class Helper {
             builder.append(charAmount.charAt(index));
         }
         return builder.toString();
-    }
+    }*/
 
     private static int nextId = 1;
     public static String generateRoomNo(){
@@ -72,7 +71,7 @@ public class Helper {
         return false;
     }
 
-    public static List<String> getHotelLocations(List<String> hotels) {
+    /*public static List<String> getHotelLocations(List<String> hotels) {
         List<String> locations = new ArrayList<>();
         for (String hotel : hotels) {
             String hotelCode = hotel.substring(0, 3);
@@ -92,7 +91,7 @@ public class Helper {
             }
         }
         return prefix + String.format("%03d", count);
-    }
+    }*/
 
     public static boolean isValidEmail(String email) {
         EmailValidator ev = EmailValidator.getInstance();

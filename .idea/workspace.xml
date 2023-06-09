@@ -4,25 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce7d189a-7d81-4d9b-b48a-d723a5a067bb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/HotelLocation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Invoice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/factory/HotelLocationFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/factory/InvoiceFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/repository/HotelLocationRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/repository/IHotelLocationRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/repository/IInvoiceRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/repository/InvoiceRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/factory/HotelLocationFactoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/factory/InvoiceFactoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/repository/HotelLocationRepositoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/repository/InvoiceRepositoryTest.java" afterDir="false" />
+    <list default="true" id="4695b42c-07a8-450d-8386-b3948fda5b11" name="Changes" comment="Minor fixes made on required classes.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/HotelLocation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/HotelLocation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Invoice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Invoice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/factory/HotelLocationFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/factory/HotelLocationFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/factory/InvoiceFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/factory/InvoiceFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/repository/HotelLocationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/repository/HotelLocationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/repository/InvoiceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/repository/InvoiceRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/util/Helper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/util/Helper.java" afterDir="false" />
-    <list default="true" id="ce7d189a-7d81-4d9b-b48a-d723a5a067bb" name="Changes" comment="Domain classes completed. Entities updated">
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Membership.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Membership.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Review.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/factory/MembershipFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/factory/MembershipFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/factory/HotelLocationFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/factory/HotelLocationFactoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/factory/InvoiceFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/factory/InvoiceFactoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/repository/HotelLocationRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/repository/HotelLocationRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/repository/InvoiceRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/repository/InvoiceRepositoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,42 +26,34 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
         <option value="Interface" />
-        <option value="Interface" />
-        <option value="JUnit5 Test Class" />
-        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;
-  }
-}</component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="selectedUrlAndAccountId">
-      <UrlAndAccount>
-        <option name="accountId" value="59e2ebfc-1304-46b9-9e56-8757229fab07" />
-        <option name="url" value="https://github.com/Brandon-Donovan-Wise/HotelSystem" />
-      </UrlAndAccount>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
     </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
     <option name="importingSettings">
       <MavenImportingSettings>
         <option name="workspaceImportEnabled" value="true" />
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectId" id="2NSQCgVTuzoCkvWsBpIU2PkXlHR" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="2QpPeImkqP2JPHw8To8jOqFVdNd" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -76,64 +62,41 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Brandon/IdeaProjects/HotelBookingSystem&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ashto/IdeaProjects/HotelSystem&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "last_opened_file_path": "C:/Users/Brandon/IdeaProjects/HotelBookingSystem",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "advanced.settings",
-    "vue.rearranger.settings.migration": "true"
   }
-}]]></component>
-  <component name="RecentsManager">
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\ashto\IdeaProjects\HotelSystem\src\test\java\za\ac\cput\repository" />
-      <recent name="C:\Users\ashto\IdeaProjects\HotelSystem\src\test\java\za\ac\cput\factory" />
-      <recent name="C:\Users\ashto\IdeaProjects\HotelSystem\src\main\java\za\ac\cput\repository" />
-      <recent name="C:\Users\ashto\IdeaProjects\HotelSystem\src\main\java\za\ac\cput\factory" />
-      <recent name="C:\Users\ashto\IdeaProjects\HotelSystem\src\main\java\za\ac\cput\domain" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="za.ac.cput.repository" />
-    </key>
-    <key name="CreateTestDialog.RecentsKey">
-      <recent name="za.ac.cput.repository" />
-      <recent name="za.ac.cput.factory" />
-      <recent name="za.ac.cput.domain" />
-    </key>
-  </component>
-  <component name="RunManager" selected="JUnit.HotelLocationRepositoryTest.update">
+}</component>
+  <component name="RunManager" selected="JUnit.All in HotelBookingSystem">
+    <configuration name="All in HotelBookingSystem" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HotelBookingSystem" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HotelLocationFactoryTest.createHotelLocation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HotelBookingSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="za.ac.cput.factory.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="za.ac.cput.factory" />
+      <option name="MAIN_CLASS_NAME" value="za.ac.cput.factory.HotelLocationFactoryTest" />
+      <option name="METHOD_NAME" value="createHotelLocation" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="HotelLocationRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-  <component name="RunManager" selected="JUnit.MembershipRepositoryTest">
-    <configuration name="CustomerContactRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HotelBookingSystem" />
       <extension name="coverage">
         <pattern>
@@ -148,65 +111,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HotelLocationRepositoryTest.create" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-    <configuration name="CustomerQueryRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="InvoiceFactoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HotelBookingSystem" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="za.ac.cput.repository.*" />
+          <option name="PATTERN" value="za.ac.cput.factory.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="za.ac.cput.repository" />
-      <option name="MAIN_CLASS_NAME" value="za.ac.cput.repository.HotelLocationRepositoryTest" />
-      <option name="METHOD_NAME" value="create" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="MAIN_CLASS_NAME" value="za.ac.cput.repository.CustomerQueryRepositoryTest" />
+      <option name="PACKAGE_NAME" value="za.ac.cput.factory" />
+      <option name="MAIN_CLASS_NAME" value="za.ac.cput.factory.InvoiceFactoryTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HotelLocationRepositoryTest.read" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-    <configuration name="CustomerRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="HotelBookingSystem" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="za.ac.cput.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="za.ac.cput.repository" />
-      <option name="MAIN_CLASS_NAME" value="za.ac.cput.repository.HotelLocationRepositoryTest" />
-      <option name="METHOD_NAME" value="read" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="MAIN_CLASS_NAME" value="za.ac.cput.repository.CustomerRepositoryTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="HotelLocationRepositoryTest.update" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-    <configuration name="MembershipRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="HotelBookingSystem" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="za.ac.cput.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="za.ac.cput.repository" />
-      <option name="MAIN_CLASS_NAME" value="za.ac.cput.repository.HotelLocationRepositoryTest" />
-      <option name="METHOD_NAME" value="update" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="MAIN_CLASS_NAME" value="za.ac.cput.repository.MembershipRepositoryTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="InvoiceRepositoryTest.getAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-    <configuration name="ReviewRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="InvoiceRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HotelBookingSystem" />
       <extension name="coverage">
         <pattern>
@@ -216,9 +136,6 @@
       </extension>
       <option name="PACKAGE_NAME" value="za.ac.cput.repository" />
       <option name="MAIN_CLASS_NAME" value="za.ac.cput.repository.InvoiceRepositoryTest" />
-      <option name="METHOD_NAME" value="getAll" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="MAIN_CLASS_NAME" value="za.ac.cput.repository.ReviewRepositoryTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -226,87 +143,28 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.HotelLocationRepositoryTest.update" />
-        <item itemvalue="JUnit.HotelLocationRepositoryTest.create" />
-        <item itemvalue="JUnit.HotelLocationRepositoryTest.read" />
+        <item itemvalue="JUnit.All in HotelBookingSystem" />
+        <item itemvalue="JUnit.InvoiceRepositoryTest" />
         <item itemvalue="JUnit.HotelLocationRepositoryTest" />
-        <item itemvalue="JUnit.InvoiceRepositoryTest.getAll" />
-        <item itemvalue="JUnit.MembershipRepositoryTest" />
-        <item itemvalue="JUnit.ReviewRepositoryTest" />
-        <item itemvalue="JUnit.CustomerRepositoryTest" />
-        <item itemvalue="JUnit.CustomerQueryRepositoryTest" />
-        <item itemvalue="JUnit.CustomerContactRepositoryTest" />
+        <item itemvalue="JUnit.InvoiceFactoryTest" />
+        <item itemvalue="JUnit.HotelLocationFactoryTest.createHotelLocation" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="ce7d189a-7d81-4d9b-b48a-d723a5a067bb" name="Changes" comment="" />
-      <created>1679654878079</created>
+      <changelist id="4695b42c-07a8-450d-8386-b3948fda5b11" name="Changes" comment="" />
+      <created>1686047645413</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1679654878079</updated>
-      <workItem from="1679654879228" duration="1031000" />
-      <workItem from="1679844782209" duration="352000" />
-      <workItem from="1679845160835" duration="20000" />
-      <workItem from="1679845189409" duration="1813000" />
-      <workItem from="1680186634802" duration="951000" />
-      <workItem from="1680610508979" duration="268000" />
-      <workItem from="1680727299842" duration="4000" />
-      <workItem from="1680858337929" duration="2722000" />
-      <workItem from="1680873519929" duration="11731000" />
-      <workItem from="1680904953501" duration="652000" />
-      <workItem from="1680925079635" duration="33953000" />
-      <workItem from="1680985861373" duration="326000" />
-      <workItem from="1680986457343" duration="3469000" />
-      <workItem from="1681016962998" duration="13515000" />
-      <workItem from="1681031983673" duration="8870000" />
-      <workItem from="1681046821471" duration="7860000" />
-      <workItem from="1681055552204" duration="505000" />
-      <workItem from="1681056160754" duration="3984000" />
+      <updated>1686047645413</updated>
+      <workItem from="1686047648376" duration="5101000" />
+      <workItem from="1686226289735" duration="4052000" />
+      <workItem from="1686236041788" duration="80000" />
+      <workItem from="1686236182150" duration="26380000" />
+      <workItem from="1686305420507" duration="2021000" />
     </task>
-      <workItem from="1680888645086" duration="818000" />
-      <workItem from="1679845189409" duration="3022000" />
-      <workItem from="1680185548494" duration="2856000" />
-      <workItem from="1680871006665" duration="12257000" />
-      <workItem from="1680947192265" duration="123000" />
-      <workItem from="1680947322779" duration="459000" />
-      <workItem from="1680947813522" duration="455000" />
-      <workItem from="1680948308629" duration="11623000" />
-      <workItem from="1680979756468" duration="11671000" />
-      <workItem from="1681039567891" duration="3235000" />
-      <workItem from="1681060389642" duration="2243000" />
-    </task>
-    <task id="LOCAL-00001" summary="Initial Commit. Base classes added">
-      <created>1679847085518</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1679847085519</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Helper class updated">
-      <created>1679847353421</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1679847353421</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Entities updated.">
-      <created>1680873203805</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1680873203805</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Domain classes completed. Entities updated">
-      <created>1681062339315</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1681062339315</updated>
-    </task>
-    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -323,7 +181,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="218053762" />
+                        <option value="origin/220468478" />
                       </list>
                     </value>
                   </entry>
@@ -336,10 +194,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Initial Commit. Base classes added" />
-    <MESSAGE value="Helper class updated" />
-    <MESSAGE value="Entities updated." />
-    <MESSAGE value="Domain classes completed. Entities updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="Domain classes completed. Entities updated" />
+    <MESSAGE value="Minor fixes made on required classes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor fixes made on required classes." />
   </component>
 </project>

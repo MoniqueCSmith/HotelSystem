@@ -25,20 +25,20 @@ class CustomerRepositoryTest {
         @Test
         void a_create() {
             Customer created = repository.create(customer);
-            assertEquals(customer.getCustID(), created.getCustID());
+            assertEquals(customer.getCustomerID(), created.getCustomerID());
             System.out.println("Create:" + created);
         }
         @Test
         void b_read() {
-            Customer read = repository.read(customer.getCustID());
+            Customer read = repository.read(customer.getCustomerID());
             assertNotNull(read);
             System.out.println("Read:" + read);
         }
         @Test
         void c_update() {
-            Customer updated = new Customer.Builder().copy(customer).setCustFirstName("Josh")
-                    .setCustLastName("Brown")
-                    .setCustAddress("11 King Street, Edgemead")
+            Customer updated = new Customer.Builder().copy(customer).setFirstName("Josh")
+                    .setLastName("Brown")
+                    .setAddress("11 King Street, Edgemead")
                     .setHasMembership(true)
                     .setCustomerContact(customerContact)
                     .build();
@@ -47,7 +47,7 @@ class CustomerRepositoryTest {
         }
         @Test
         void d_delete() {
-            boolean success = repository.delete(customer.getCustID());
+            boolean success = repository.delete(customer.getCustomerID());
             assertTrue(success);
             System.out.println("Deleted:" + success);
         }

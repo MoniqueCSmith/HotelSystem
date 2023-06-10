@@ -4,19 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4695b42c-07a8-450d-8386-b3948fda5b11" name="Changes" comment="Minor fixes made on required classes.">
+    <list default="true" id="4695b42c-07a8-450d-8386-b3948fda5b11" name="Changes" comment="Small fixes to customer-related classes. POM file and Helper Class fixed. .Idea file removed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/HotelLocation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/HotelLocation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Invoice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Invoice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/factory/HotelLocationFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/factory/HotelLocationFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/factory/InvoiceFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/factory/InvoiceFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/repository/HotelLocationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/repository/HotelLocationRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/repository/InvoiceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/repository/InvoiceRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/util/Helper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/util/Helper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/factory/HotelLocationFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/factory/HotelLocationFactoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/factory/InvoiceFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/factory/InvoiceFactoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/repository/HotelLocationRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/repository/HotelLocationRepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/repository/InvoiceRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/repository/InvoiceRepositoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +16,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -63,7 +54,8 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/ashto/IdeaProjects/HotelSystem&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -71,83 +63,90 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.All in HotelBookingSystem">
-    <configuration name="All in HotelBookingSystem" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="za.ac.cput.service.impl" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.InvoiceServiceImplTest">
+    <configuration name="HotelLocationServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HotelBookingSystem" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="za.ac.cput.service.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="za.ac.cput.service.impl" />
+      <option name="MAIN_CLASS_NAME" value="za.ac.cput.service.impl.HotelLocationServiceImplTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HotelLocationFactoryTest.createHotelLocation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HotelLocationServiceImplTest.a_create" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HotelBookingSystem" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="za.ac.cput.factory.*" />
+          <option name="PATTERN" value="za.ac.cput.service.impl.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="za.ac.cput.factory" />
-      <option name="MAIN_CLASS_NAME" value="za.ac.cput.factory.HotelLocationFactoryTest" />
-      <option name="METHOD_NAME" value="createHotelLocation" />
+      <option name="PACKAGE_NAME" value="za.ac.cput.service.impl" />
+      <option name="MAIN_CLASS_NAME" value="za.ac.cput.service.impl.HotelLocationServiceImplTest" />
+      <option name="METHOD_NAME" value="a_create" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HotelLocationRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="InvoiceServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HotelBookingSystem" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="za.ac.cput.repository.*" />
+          <option name="PATTERN" value="za.ac.cput.service.impl.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="za.ac.cput.repository" />
-      <option name="MAIN_CLASS_NAME" value="za.ac.cput.repository.HotelLocationRepositoryTest" />
+      <option name="PACKAGE_NAME" value="za.ac.cput.service.impl" />
+      <option name="MAIN_CLASS_NAME" value="za.ac.cput.service.impl.InvoiceServiceImplTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InvoiceFactoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="cput in HotelBookingSystem" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HotelBookingSystem" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="za.ac.cput.factory.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="za.ac.cput.factory" />
-      <option name="MAIN_CLASS_NAME" value="za.ac.cput.factory.InvoiceFactoryTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java/za/ac/cput" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InvoiceRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="za.ac.cput in HotelBookingSystem" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HotelBookingSystem" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="za.ac.cput.repository.*" />
+          <option name="PATTERN" value="za.ac.cput.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="za.ac.cput.repository" />
-      <option name="MAIN_CLASS_NAME" value="za.ac.cput.repository.InvoiceRepositoryTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="za.ac.cput" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.All in HotelBookingSystem" />
-        <item itemvalue="JUnit.InvoiceRepositoryTest" />
-        <item itemvalue="JUnit.HotelLocationRepositoryTest" />
-        <item itemvalue="JUnit.InvoiceFactoryTest" />
-        <item itemvalue="JUnit.HotelLocationFactoryTest.createHotelLocation" />
+        <item itemvalue="JUnit.InvoiceServiceImplTest" />
+        <item itemvalue="JUnit.za.ac.cput in HotelBookingSystem" />
+        <item itemvalue="JUnit.HotelLocationServiceImplTest" />
+        <item itemvalue="JUnit.HotelLocationServiceImplTest.a_create" />
+        <item itemvalue="JUnit.cput in HotelBookingSystem" />
       </list>
     </recent_temporary>
   </component>
@@ -161,9 +160,12 @@
       <updated>1686047645413</updated>
       <workItem from="1686047648376" duration="5101000" />
       <workItem from="1686226289735" duration="4052000" />
-      <workItem from="1686236041788" duration="80000" />
-      <workItem from="1686236182150" duration="26380000" />
-      <workItem from="1686305420507" duration="2021000" />
+      <workItem from="1686320739979" duration="5260000" />
+      <workItem from="1686391397584" duration="613000" />
+      <workItem from="1686393711084" duration="848000" />
+      <workItem from="1686394599772" duration="1903000" />
+      <workItem from="1686399423439" duration="13995000" />
+      <workItem from="1686429121721" duration="4197000" />
     </task>
     <servers />
   </component>
@@ -181,7 +183,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/220468478" />
+                        <option value="HEAD" />
                       </list>
                     </value>
                   </entry>
@@ -192,9 +194,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Minor fixes made on required classes." />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor fixes made on required classes." />
   </component>
 </project>

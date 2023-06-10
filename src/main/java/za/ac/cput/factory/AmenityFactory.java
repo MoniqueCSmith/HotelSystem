@@ -11,12 +11,12 @@ import za.ac.cput.util.Helper;
 
 public class AmenityFactory {
 
-    public static Amenity buildAmenity(String amenityName, String amenityDesc,
-                                       Boolean isAmenityAvailable,Double amenityPrice){
+    public static Amenity buildAmenity(String name, String description,
+                                       Boolean isAmenityAvailable,Double price){
 
-        if(Helper.isNullOrEmpty(amenityName) || Helper.isNullOrEmpty(amenityDesc) ||
+        if(Helper.isNullOrEmpty(name) || Helper.isNullOrEmpty(description) ||
                 Helper.isNullOrEmpty(String.valueOf(isAmenityAvailable)) ||
-                Helper.isNullOrEmpty(String.valueOf(amenityPrice))) {
+                Helper.isNullOrEmpty(String.valueOf(price))) {
             return null;
         }
 
@@ -24,10 +24,10 @@ public class AmenityFactory {
 
         return new Amenity.Builder()
                 .setAmenityID(amenityID)
-                .setAmenityName(amenityName)
-                .setAmenityDesc(amenityDesc)
+                .setName(name)
+                .setDescription(description)
                 .setAmenityAvailable(isAmenityAvailable)
-                .setAmenityPrice(amenityPrice)
+                .setPrice(price)
                 .build();
     }
 }

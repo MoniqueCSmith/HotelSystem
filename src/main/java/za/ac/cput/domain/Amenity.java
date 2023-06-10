@@ -8,17 +8,17 @@ package za.ac.cput.domain;
 
 public class Amenity {
     private String amenityID;
-    private String amenityName;
-    private String amenityDesc;
+    private String name;
+    private String description;
     private Boolean isAmenityAvailable;
-    private Double amenityPrice;
+    private Double price;
 
     private Amenity(Builder builder){
         this.amenityID = builder.amenityID;
-        this.amenityName = builder.amenityName;
-        this.amenityDesc = builder.amenityDesc;
+        this.name = builder.name;
+        this.description = builder.description;
         this.isAmenityAvailable = builder.isAmenityAvailable;
-        this.amenityPrice = builder.amenityPrice;
+        this.price = builder.price;
 
     }
 
@@ -26,52 +26,52 @@ public class Amenity {
         return amenityID;
     }
 
-    public String getAmenityName() {
-        return amenityName;
+    public String getName() {
+        return name;
     }
 
-    public String getAmenityDesc() {
-        return amenityDesc;
+    public String getDescription() {
+        return description;
     }
 
     public Boolean getAmenityAvailable() {
         return isAmenityAvailable;
     }
 
-    public Double getAmenityPrice() {
-        return amenityPrice;
+    public Double getPrice() {
+        return price;
     }
 
     @Override
     public String toString() {
         return "Amenity{" +
                 "amenityID='" + amenityID + '\'' +
-                ", amenityName='" + amenityName + '\'' +
-                ", amenityDesc='" + amenityDesc + '\'' +
+                ", name='" + name + '\'' +
+                ", description='" + description + '\'' +
                 ", isAmenityAvailable=" + isAmenityAvailable +
-                ", amenityPrice=" + amenityPrice +
+                ", price=" + price +
                 '}';
     }
 
     public static class Builder{
         private String amenityID;
-        private String amenityName;
-        private String amenityDesc;
+        private String name;
+        private String description;
         private  Boolean isAmenityAvailable;
-        private Double amenityPrice;
+        private Double price;
 
         public Builder setAmenityID(String amenityID) {
             this.amenityID = amenityID;
             return this;
         }
 
-        public Builder setAmenityName(String amenityName) {
-            this.amenityName = amenityName;
+        public Builder setName(String name) {
+            this.name = name;
             return this;
         }
 
-        public Builder setAmenityDesc(String amenityDesc) {
-            this.amenityDesc = amenityDesc;
+        public Builder setDescription(String description) {
+            this.description = description;
             return this;
         }
 
@@ -80,16 +80,16 @@ public class Amenity {
             return this;
         }
 
-        public Builder setAmenityPrice(Double amenityPrice) {
-            this.amenityPrice = amenityPrice;
+        public Builder setPrice(Double price) {
+            this.price = price;
             return this;
         }
         public Builder copy(Amenity amenities){
             this.amenityID = amenities.amenityID;
-            this.amenityName = amenities.amenityName;
-            this.amenityDesc = amenities.amenityDesc;
+            this.name = amenities.name;
+            this.description = amenities.description;
             this.isAmenityAvailable = amenities.isAmenityAvailable;
-            this.amenityPrice = amenities.amenityPrice;
+            this.price = amenities.price;
             return this;
         }
         public Amenity build(){

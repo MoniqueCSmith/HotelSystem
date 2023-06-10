@@ -35,10 +35,10 @@ class AmenityRepositoryTest {
     }
     @Test
     void c_update() {
-        Amenity updated = new Amenity.Builder().copy(amenity).setAmenityName("Conditioner")
-                .setAmenityDesc("Toiletries")
+        Amenity updated = new Amenity.Builder().copy(amenity).setName("Conditioner")
+                .setDescription("Toiletries")
                 .setAmenityAvailable(false)
-                .setAmenityPrice(20.00)
+                .setPrice(20.00)
                 .build();
         assertNotNull(repository.update(updated));
         System.out.println("Updated:" + updated);

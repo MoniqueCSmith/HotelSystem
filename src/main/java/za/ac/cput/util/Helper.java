@@ -42,15 +42,15 @@ public class Helper {
         String digit = String.valueOf((int)(Math.random() * 9) + 1);
         return digit + letter;
     }
-        public static String generateID() {
-            String id = String.format("%06d", nextId);
-            if (nextId == 999999) {
-                nextId = 1;
-            } else {
-                nextId++;
-            }
-            return id;
+    public static String generateID() {
+        String id = String.format("%06d", nextId);
+        if (nextId == 999999) {
+            nextId = 1;
+        } else {
+            nextId++;
         }
+        return id;
+    }
 
     public static boolean isNullOrEmpty(String str){
         if(str == null || str.isEmpty()){
@@ -97,7 +97,7 @@ public class Helper {
         EmailValidator ev = EmailValidator.getInstance();
         return ev.isValid(email);
     }
-   public static String reservationID(){
+    public static String reservationID(){
         return UUID.randomUUID().toString();
-}
+    }
 }

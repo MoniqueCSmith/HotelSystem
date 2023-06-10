@@ -16,7 +16,7 @@ import java.time.LocalDateTime;
 public class ReservationFactory {
 
      //user objects
-     public static Reservation createReservation(String reservationID, LocalDateTime reservationTimeCreated, String reservationStatus , Boolean termsAndConditions, ReservationDate reservationDate) {
+     public static Reservation buildReservation(String reservationID, LocalDateTime reservationTimeCreated, String reservationStatus , Boolean termsAndConditions, ReservationDate reservationDate) {
 
 
          /*if (reservationID.equals("") || reservationID == null)
@@ -30,6 +30,7 @@ public class ReservationFactory {
          if (reservationStatus.equals("") || reservationStatus == null)
 
              return null;*/
+         String ReservationId=Helper.generateID();
 
              if (Helper.isNullOrEmpty(String.valueOf(reservationID))||
                      Helper.isNullOrEmpty(String.valueOf(reservationTimeCreated)) ||

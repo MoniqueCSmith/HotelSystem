@@ -2,7 +2,7 @@
 ReservationDateFactory.java
 ReservationDate factory class
 Author : Kyra Petersen (219474559)
-Date : 5 April 2023
+Date : 5 June 2023
 */
 
 
@@ -17,7 +17,9 @@ import java.time.LocalDateTime;
 public class ReservationDateFactory {
 
 
-    public static ReservationDate createReservationDate(String reservationID , LocalDate checkInDate , LocalDate checkOutDate , LocalDateTime estCheckInTime ){
+    public static ReservationDate buildReservationDate(String reservationID , LocalDate checkInDate , LocalDate checkOutDate , LocalDateTime estCheckInTime ){
+        String reservationId = Helper.generateID();
+
         if (Helper.isNullOrEmpty(String.valueOf(reservationID))||
                 Helper.isNullOrEmpty(String.valueOf(checkInDate)) ||
                 Helper.isNullOrEmpty(String.valueOf(checkOutDate)) ||

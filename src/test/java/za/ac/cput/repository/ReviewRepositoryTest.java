@@ -33,16 +33,24 @@ class ReviewRepositoryTest {
         System.out.println("Read:" + read);
     }
 
-
     @Test
-    void c_delete() {
+    void c_update() {
+        Review updated = new Review.Builder().copy(review).setRating(5)
+                .setReviewComment("Great experience. If I could give it a higher rating, I would. 10/10 service.")
+                .build();
+        assertNotNull(repository.update(updated));
+        System.out.println("Updated:" + updated);
+    }
+
+        @Test
+    void d_delete() {
         boolean success = repository.delete(review.getReviewID());
         assertTrue(success);
         System.out.println("Deleted" + success);
     }
 
     @Test
-    void d_getAll() {
+    void e_getAll() {
         System.out.println("Show all:");
         System.out.println(repository.getAll());
     }

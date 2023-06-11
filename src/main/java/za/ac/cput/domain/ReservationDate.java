@@ -69,7 +69,30 @@ public class ReservationDate {
         }
 
 
+        @Override
+        public String toString() {
+            return "ReservationDate{" +
+                    "reservationID='" + reservationID + '\'' +
+                    ", checkInDate=" + checkInDate +
+                    ", checkOutDate=" + checkOutDate +
+                    ", estCheckInTime=" + estCheckInTime +
+                    '}';
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+            ReservationDate that = (ReservationDate) o;
+            return Objects.equals(reservationID, that.reservationID) && Objects.equals(checkInDate, that.checkInDate) && Objects.equals(checkOutDate, that.checkOutDate) && Objects.equals(estCheckInTime, that.estCheckInTime);
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(reservationID, checkInDate, checkOutDate, estCheckInTime);
+        }
         public Builder copy(ReservationDate reservationDate) {
+
             this.reservationID = reservationDate.reservationID;
             this.checkInDate = reservationDate.checkInDate;
             this.checkOutDate = reservationDate.checkOutDate;
@@ -83,28 +106,6 @@ public class ReservationDate {
         }
     }
 
-    @Override
-    public String toString() {
-        return "ReservationDate{" +
-                "reservationID='" + reservationID + '\'' +
-                ", checkInDate=" + checkInDate +
-                ", checkOutDate=" + checkOutDate +
-                ", estCheckInTime=" + estCheckInTime +
-                '}';
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        ReservationDate that = (ReservationDate) o;
-        return Objects.equals(reservationID, that.reservationID) && Objects.equals(checkInDate, that.checkInDate) && Objects.equals(checkOutDate, that.checkOutDate) && Objects.equals(estCheckInTime, that.estCheckInTime);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(reservationID, checkInDate, checkOutDate, estCheckInTime);
-    }
 }
 
 

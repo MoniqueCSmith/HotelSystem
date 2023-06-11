@@ -20,8 +20,8 @@ class ReservationFactoryTest {
      @Test
 
      public void test(){
-         ReservationDate reservationDate = ReservationDateFactory.createReservationDate("REF1527256171" , LocalDate.of(2023, 9 , 1),  LocalDate.of(2023,9,4),     LocalDateTime.of(2023, 6, 7, 15, 30));
-    Reservation reservation = ReservationFactory.createReservation("REF9827265343", LocalDateTime.now(), "Booking confirmed" , true, reservationDate);
+         ReservationDate reservationDate = ReservationDateFactory.buildReservationDate("REF1527256171" , LocalDate.of(2023, 9 , 1),  LocalDate.of(2023,9,4),     LocalDateTime.of(2023, 6, 7, 15, 30));
+    Reservation reservation = ReservationFactory.buildReservation("REF9827265343", LocalDateTime.now(), "Booking confirmed" , true, reservationDate);
     assertNotNull(reservation);
     System.out.println(reservation);
 }

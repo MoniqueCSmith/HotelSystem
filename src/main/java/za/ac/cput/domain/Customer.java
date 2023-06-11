@@ -14,7 +14,7 @@ public class Customer {
     private boolean hasMembership;
     private CustomerContact customerContact;
 
-    public Customer(Builder builder){
+    private Customer(Builder builder){
         this.customerID = builder.customerID;
         this.firstName = builder.firstName;
         this.lastName = builder.lastName;

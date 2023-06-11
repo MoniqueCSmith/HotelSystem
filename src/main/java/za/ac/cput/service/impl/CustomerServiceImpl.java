@@ -1,3 +1,9 @@
+/**
+ * CustomerServiceImpl.java
+ * Service class for the CustomerImpl
+ * Author: Brandon Wise (220049173)
+ * Date: 09 June 2023
+ */
 package za.ac.cput.service.impl;
 
 import za.ac.cput.domain.Customer;

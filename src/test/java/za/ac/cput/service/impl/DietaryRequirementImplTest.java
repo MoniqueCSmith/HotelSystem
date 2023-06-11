@@ -41,7 +41,6 @@ class DietaryRequirementImplTest {
     @Test
     void c_update() {
         DietaryRequirement updated = new DietaryRequirement.Builder().copy(dietaryRequirement)
-                .setDietaryRequirementID("307")
                 .setName("Lactose intolerant")
                 .setSpecialRequirements("Substitute dairy ingredients with vegan options.")
                 .build();

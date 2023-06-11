@@ -44,7 +44,6 @@ class MealPlanImplTest {
     void c_update() {
         MealPlan updated = new MealPlan.Builder()
                 .copy(mealPlan)
-                .setMealPlanID("104")
                 .setName("Vegan")
                 .setDescription("Vegan omelette with mushrooms and spinach.")
                 .setMealType("Breakfast")

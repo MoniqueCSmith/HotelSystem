@@ -43,7 +43,6 @@ class MealPlanRepositoryTest {
     void c_update() {
         MealPlan updated = new MealPlan.Builder()
                 .copy(mealPlan)
-                .setMealPlanID("102")
                 .setName("Vegetarian")
                 .setDescription("Greek salad with a side of corn.")
                 .setMealType("Lunch")

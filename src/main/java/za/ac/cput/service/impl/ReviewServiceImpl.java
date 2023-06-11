@@ -33,17 +33,10 @@ public class ReviewServiceImpl implements ReviewService {
     @Override
     public Review create(Review review) {return repository.create(review);
     }
-
     @Override
     public Review read(Review id) {
         return repository.read(id.getReviewID());
     }
-
-    @Override
-    public Review update(Review review) {
-        return repository.update(review);
-    }
-
     @Override
     public boolean delete(Review id) {
         return repository.delete(id.getReviewID());

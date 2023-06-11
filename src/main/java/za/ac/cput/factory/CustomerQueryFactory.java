@@ -1,3 +1,9 @@
+/**
+ * CustomerQueryFactory.java
+ * Factory class for the CustomerQuery
+ * Author: Brandon Wise - 220049173
+ * Date: 5 April 2023
+ */
 package za.ac.cput.factory;
 
 import za.ac.cput.domain.CustomerQuery;

@@ -14,13 +14,14 @@ import java.util.Objects;
 public class Reservation {
 
     private String reservationID;
-    private LocalDateTime reservationTimeCreated ;
+    private LocalDateTime reservationTimeCreated;
     private String reservationStatus;
-    private  Boolean termsAndConditions;
+    private Boolean termsAndConditions;
     private ReservationDate reservationDate;
-    private Reservation() {
-    }
+
+
     private Reservation(Builder builder) {
+
         this.reservationID = builder.reservationID;
         this.reservationTimeCreated = builder.reservationTimeCreated;
         this.reservationStatus = builder.reservationStatus;
@@ -43,6 +44,11 @@ public class Reservation {
     public Boolean getTermsAndConditions() {
         return termsAndConditions;
     }
+
+    public ReservationDate getReservationDate() {
+        return reservationDate;
+    }
+
     public static class Builder {
         private String reservationID;
         private LocalDateTime reservationTimeCreated;
@@ -86,8 +92,8 @@ public class Reservation {
         }
 
 
-        public Reservation build(){
-            return new Reservation (this);
+        public Reservation build() {
+            return new Reservation(this);
         }
     }
 
@@ -96,7 +102,7 @@ public class Reservation {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Reservation that = (Reservation) o;
-        return reservationID.equals(that.reservationID) && reservationTimeCreated.equals(that.reservationTimeCreated) && reservationStatus.equals(that.reservationStatus) && termsAndConditions.equals(that.termsAndConditions) && reservationDate.equals(that.reservationDate);
+        return Objects.equals(reservationID, that.reservationID) && Objects.equals(reservationTimeCreated, that.reservationTimeCreated) && Objects.equals(reservationStatus, that.reservationStatus) && Objects.equals(termsAndConditions, that.termsAndConditions) && Objects.equals(reservationDate, that.reservationDate);
     }
 
     @Override

@@ -6,6 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="4695b42c-07a8-450d-8386-b3948fda5b11" name="Changes" comment="Small fixes to customer-related classes. POM file and Helper Class fixed. .Idea file removed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="ce7d189a-7d81-4d9b-b48a-d723a5a067bb" name="Changes" comment="Service for Membership and Review completed.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/repository/ReviewRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/repository/ReviewRepositoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +48,9 @@
     </option>
   </component>
   <component name="ProjectId" id="2QpPeImkqP2JPHw8To8jOqFVdNd" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="false" id="Update" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -56,6 +62,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/HP/IdeaProjects/AloneHotelSystem&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -64,15 +71,17 @@
   }
 }</component>
   <component name="RecentsManager">
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\HP\IdeaProjects\HotelSystem\src\main\java\za\ac\cput\service\impl" />
     </key>
-    <key name="CreateTestDialog.RecentsKey">
-      <recent name="za.ac.cput.service.impl" />
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="za.ac.cput.service" />
     </key>
   </component>
   <component name="RunManager" selected="JUnit.InvoiceServiceImplTest">
     <configuration name="HotelLocationServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ReviewRepositoryTest">
+    <configuration name="MembershipServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HotelBookingSystem" />
       <extension name="coverage">
         <pattern>
@@ -82,12 +91,14 @@
       </extension>
       <option name="PACKAGE_NAME" value="za.ac.cput.service.impl" />
       <option name="MAIN_CLASS_NAME" value="za.ac.cput.service.impl.HotelLocationServiceImplTest" />
+      <option name="MAIN_CLASS_NAME" value="za.ac.cput.service.impl.MembershipServiceImplTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="HotelLocationServiceImplTest.a_create" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MembershipServiceImplTest.c_update" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HotelBookingSystem" />
       <extension name="coverage">
         <pattern>
@@ -98,6 +109,8 @@
       <option name="PACKAGE_NAME" value="za.ac.cput.service.impl" />
       <option name="MAIN_CLASS_NAME" value="za.ac.cput.service.impl.HotelLocationServiceImplTest" />
       <option name="METHOD_NAME" value="a_create" />
+      <option name="MAIN_CLASS_NAME" value="za.ac.cput.service.impl.MembershipServiceImplTest" />
+      <option name="METHOD_NAME" value="c_update" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -113,6 +126,16 @@
       </extension>
       <option name="PACKAGE_NAME" value="za.ac.cput.service.impl" />
       <option name="MAIN_CLASS_NAME" value="za.ac.cput.service.impl.InvoiceServiceImplTest" />
+    <configuration name="ReviewRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HotelBookingSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="za.ac.cput.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="za.ac.cput.repository" />
+      <option name="MAIN_CLASS_NAME" value="za.ac.cput.repository.ReviewRepositoryTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -122,6 +145,17 @@
       <module name="HotelBookingSystem" />
       <option name="TEST_OBJECT" value="directory" />
       <dir value="$PROJECT_DIR$/src/test/java/za/ac/cput" />
+    <configuration name="ReviewServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HotelBookingSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="za.ac.cput.service.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="za.ac.cput.service.impl" />
+      <option name="MAIN_CLASS_NAME" value="za.ac.cput.service.impl.ReviewServiceImplTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -136,6 +170,18 @@
       </extension>
       <option name="PACKAGE_NAME" value="za.ac.cput" />
       <option name="TEST_OBJECT" value="package" />
+    <configuration name="ReviewServiceImplTest.b_read" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HotelBookingSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="za.ac.cput.service.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="za.ac.cput.service.impl" />
+      <option name="MAIN_CLASS_NAME" value="za.ac.cput.service.impl.ReviewServiceImplTest" />
+      <option name="METHOD_NAME" value="b_read" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -147,13 +193,18 @@
         <item itemvalue="JUnit.HotelLocationServiceImplTest" />
         <item itemvalue="JUnit.HotelLocationServiceImplTest.a_create" />
         <item itemvalue="JUnit.cput in HotelBookingSystem" />
+        <item itemvalue="JUnit.ReviewRepositoryTest" />
+        <item itemvalue="JUnit.ReviewServiceImplTest" />
+        <item itemvalue="JUnit.MembershipServiceImplTest" />
+        <item itemvalue="JUnit.MembershipServiceImplTest.c_update" />
+        <item itemvalue="JUnit.ReviewServiceImplTest.b_read" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="4695b42c-07a8-450d-8386-b3948fda5b11" name="Changes" comment="" />
+      <changelist id="ce7d189a-7d81-4d9b-b48a-d723a5a067bb" name="Changes" comment="Domain classes completed. Entities updated" />
       <created>1686047645413</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -166,7 +217,21 @@
       <workItem from="1686394599772" duration="1903000" />
       <workItem from="1686399423439" duration="13995000" />
       <workItem from="1686429121721" duration="4197000" />
+      <workItem from="1686236041788" duration="80000" />
+      <workItem from="1686236182150" duration="26380000" />
+      <workItem from="1686305420507" duration="2021000" />
+      <workItem from="1686394894597" duration="3718000" />
+      <workItem from="1686421664908" duration="6190000" />
+      <workItem from="1686430624856" duration="318000" />
     </task>
+    <task id="LOCAL-00001" summary="Service for Membership and Review completed.">
+      <created>1686428201947</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1686428201947</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,6 +249,7 @@
                     <value>
                       <list>
                         <option value="HEAD" />
+                        <option value="origin/220468478" />
                       </list>
                     </value>
                   </entry>
@@ -194,5 +260,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Minor fixes made on required classes." />
+    <MESSAGE value="Service for Membership and Review completed." />
+    <option name="LAST_COMMIT_MESSAGE" value="Service for Membership and Review completed." />
   </component>
 </project>

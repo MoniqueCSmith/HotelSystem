@@ -39,7 +39,6 @@ class DietaryRequirementRepositoryTest {
     @Test
     void c_update() {
         DietaryRequirement updated = new DietaryRequirement.Builder().copy(dietaryRequirement)
-                .setDietaryRequirementID("302")
                 .build();
         assertNotNull(repository.update(updated));
         System.out.println("Updated: " + updated);

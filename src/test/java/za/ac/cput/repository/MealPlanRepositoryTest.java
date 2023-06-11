@@ -21,8 +21,8 @@ import static org.junit.jupiter.api.Assertions.*;
 class MealPlanRepositoryTest {
     private static MealPlanRepository repository = MealPlanRepository.getRepository();
     private static DietaryRequirement dietaryRequirement = DietaryRequirementFactory.createDietaryRequirement
-            ("204", "Vegan", "Allergic to eggs");
-    private static MealPlan mealPlan = MealPlanFactory.createMealPlan("102", "Vegetarian",
+            ("Vegan", "Allergic to eggs");
+    private static MealPlan mealPlan = MealPlanFactory.createMealPlan("Vegetarian",
             "Greek salad with a side of corn.", "Lunch", 65.00, dietaryRequirement);
 
     @Test

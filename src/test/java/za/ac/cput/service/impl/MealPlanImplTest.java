@@ -23,9 +23,9 @@ class MealPlanImplTest {
 
     private static MealPlanImpl service = MealPlanImpl.getService();
     private static DietaryRequirement dietaryRequirement = DietaryRequirementFactory.createDietaryRequirement
-            ("204", "Vegan", "Allergic to eggs");
+            ("Vegan", "Allergic to eggs");
     private static MealPlan mealPlan = MealPlanFactory.createMealPlan
-            ("104", "Vegan", "Vegan omelette with mushrooms and spinach.", "Breakfast", 62.00, dietaryRequirement);
+            ("Vegan", "Vegan omelette with mushrooms and spinach.", "Breakfast", 62.00, dietaryRequirement);
     @Test
     void a_create() {
         MealPlan created = service.create(mealPlan);

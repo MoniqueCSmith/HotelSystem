@@ -20,7 +20,7 @@ class DietaryRequirementImplTest {
 
     private static DietaryRequirementImpl service = DietaryRequirementImpl.getService();
     private static DietaryRequirement dietaryRequirement = DietaryRequirementFactory.createDietaryRequirement
-            ("307", "Lactose intolerant", "No dairy products.");
+            ("Lactose intolerant", "No dairy products.");
     @Test
     void a_create() {
         DietaryRequirement created = service.create(dietaryRequirement);

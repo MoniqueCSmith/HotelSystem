@@ -20,7 +20,7 @@ class DietaryRequirementRepositoryTest {
 
     private static DietaryRequirementRepository repository = DietaryRequirementRepository.getRepository();
     private static DietaryRequirement dietaryRequirement = DietaryRequirementFactory.createDietaryRequirement
-            ("301", "Vegan", "Allergic to eggs.");
+            ("Vegan", "Allergic to eggs.");
 
     @Test
     void a_create() {

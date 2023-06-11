@@ -13,11 +13,13 @@ import za.ac.cput.util.Helper;
 
 public class MealPlanFactory {
 
-    public static MealPlan createMealPlan (String mealPlanID, String name, String description, String mealType, double price, DietaryRequirement dietaryRequirement) {
+    public static MealPlan createMealPlan (String name, String description, String mealType, double price, DietaryRequirement dietaryRequirement) {
 
-        if (Helper.isNullOrEmpty(mealPlanID) || Helper.isNullOrEmpty(name) || Helper.isNullOrEmpty(description)
+        if (Helper.isNullOrEmpty(name) || Helper.isNullOrEmpty(description)
                 || Helper.isNullOrEmpty(mealType) || Helper.isNullOrEmpty(String.valueOf(price)))
             return null;
+
+        String mealPlanID = Helper.generateID();
 
         return new MealPlan.Builder().setMealPlanID(mealPlanID)
                 .setName(name)

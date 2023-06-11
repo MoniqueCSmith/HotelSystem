@@ -12,12 +12,12 @@ import za.ac.cput.util.Helper;
 
 public class DietaryRequirementFactory {
 
-    public static DietaryRequirement createDietaryRequirement(String dietaryRequirementID, String name, String specialRequirements) {
+    public static DietaryRequirement createDietaryRequirement(String name, String specialRequirements) {
 
-        if (Helper.isNullOrEmpty(dietaryRequirementID) || Helper.isNullOrEmpty(name) || Helper.isNullOrEmpty(specialRequirements))
+        if (Helper.isNullOrEmpty(name) || Helper.isNullOrEmpty(specialRequirements))
             return null;
 
-        String dietaryRequirementsID = Helper.generateID();
+        String dietaryRequirementID = Helper.generateID();
 
         return new DietaryRequirement.Builder().setDietaryRequirementID(dietaryRequirementID)
                 .setDietaryRequirementID(dietaryRequirementID)

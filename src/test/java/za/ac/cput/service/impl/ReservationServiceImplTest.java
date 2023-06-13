@@ -42,7 +42,7 @@ public class ReservationServiceImplTest {
 
     @Test
     void b_read() {
-        Reservation read = service.read(reservation);
+        Reservation read = service.read(reservation.getReservationID());
         assertNotNull(read);
         System.out.println("Read: "+ read);
     }
@@ -63,7 +63,7 @@ public class ReservationServiceImplTest {
 
     @Test
     void e_delete() {
-        boolean success = service.delete(reservation);
+        boolean success = service.delete(reservation.getReservationID());
         assertTrue(success);
         System.out.println("Deleted " + success);
 

@@ -40,9 +40,9 @@ public class ReservationDateServiceImpl implements ReservationDateService {
     }
 
     @Override
-    public ReservationDate read(ReservationDate reservationDate){
+    public ReservationDate read(String reservationDate){
 
-        return repository.read(reservationDate.getReservationID());
+        return repository.read(reservationDate);
     }
 
 
@@ -52,8 +52,8 @@ public class ReservationDateServiceImpl implements ReservationDateService {
     }
 
     @Override
-    public boolean delete(ReservationDate reservationID) {
-        return repository.delete(reservationID.getReservationID());
+    public boolean delete(String reservationID) {
+        return repository.delete(reservationID);
     }
 
     public Set<ReservationDate> getAll() {

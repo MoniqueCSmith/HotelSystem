@@ -6,13 +6,14 @@
  */
 package za.ac.cput.service.impl;
 
+import org.springframework.stereotype.Service;
 import za.ac.cput.domain.Amenity;
 import za.ac.cput.repository.AmenityRepository;
 import za.ac.cput.service.AmenityService;
 
 
 import java.util.Set;
-
+@Service
 public class AmenityServiceImpl implements AmenityService {
 
     private static AmenityServiceImpl service = null;
@@ -35,7 +36,7 @@ public class AmenityServiceImpl implements AmenityService {
     public Amenity create(Amenity amenity){return repository.create(amenity);}
 
     @Override
-    public Amenity read(Amenity id){return repository.read(id.getAmenityID());}
+    public Amenity read(String id){return repository.read(id);}
 
     @Override
     public Amenity update(Amenity amenity) {
@@ -43,8 +44,8 @@ public class AmenityServiceImpl implements AmenityService {
     }
 
     @Override
-    public boolean delete(Amenity id) {
-        return repository.delete(id.getAmenityID());
+    public boolean delete(String id) {
+        return repository.delete(id);
     }
     @Override
     public Set<Amenity> getAll() {

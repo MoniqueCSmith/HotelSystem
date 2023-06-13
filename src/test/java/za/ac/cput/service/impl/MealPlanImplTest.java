@@ -35,7 +35,7 @@ class MealPlanImplTest {
 
     @Test
     void b_read() {
-        MealPlan read = service.read(mealPlan);
+        MealPlan read = service.read(mealPlan.getMealPlanID());
         assertNotNull(read);
         System.out.println("Read: " + read);
     }
@@ -56,7 +56,7 @@ class MealPlanImplTest {
 
     @Test
     void d_delete() {
-        boolean success = service.delete(mealPlan);
+        boolean success = service.delete(mealPlan.getMealPlanID());
         assertTrue(success);
         System.out.println("Deleted: " + success);
     }

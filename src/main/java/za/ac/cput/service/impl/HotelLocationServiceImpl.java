@@ -35,8 +35,8 @@ public class HotelLocationServiceImpl implements HotelLocationService {
     }
 
     @Override
-    public HotelLocation read(HotelLocation id) {
-        return repository.read(id.getID());
+    public HotelLocation read(String id) {
+        return repository.read(id);
     }
 
     @Override
@@ -45,8 +45,8 @@ public class HotelLocationServiceImpl implements HotelLocationService {
     }
 
     @Override
-    public boolean delete(HotelLocation id) {
-        return repository.delete(id.getID());
+    public boolean delete(String id) {
+        return repository.delete(id);
     }
 
     @Override

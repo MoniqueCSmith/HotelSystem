@@ -34,12 +34,12 @@ public class ReviewServiceImpl implements ReviewService {
     public Review create(Review review) {return repository.create(review);
     }
     @Override
-    public Review read(Review id) {
-        return repository.read(id.getReviewID());
+    public Review read(String id) {
+        return repository.read(id);
     }
     @Override
-    public boolean delete(Review id) {
-        return repository.delete(id.getReviewID());
+    public boolean delete(String id) {
+        return repository.delete(id);
     }
     @Override
     public Set<Review> getAll() {return repository.getAll();

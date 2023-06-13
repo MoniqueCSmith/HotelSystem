@@ -35,8 +35,8 @@ public class MembershipServiceImpl implements MembershipService {
     }
 
     @Override
-    public Membership read(Membership id) {
-        return repository.read(id.getMemberID());
+    public Membership read(String id) {
+        return repository.read(id);
     }
 
     @Override
@@ -45,8 +45,8 @@ public class MembershipServiceImpl implements MembershipService {
     }
 
     @Override
-    public boolean delete(Membership id) {
-        return repository.delete(id.getMemberID());
+    public boolean delete(String id) {
+        return repository.delete(id);
     }
     @Override
     public Set<Membership> getAll() {

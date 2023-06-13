@@ -38,13 +38,18 @@ public class DietaryRequirementImpl implements DietaryRequirementService {
     }
 
     @Override
-    public DietaryRequirement read(DietaryRequirement id) {
-        return repository.read(id.getDietaryRequirementID());
+    public DietaryRequirement read(String name) {
+        return repository.read(name);
     }
 
     @Override
     public DietaryRequirement update(DietaryRequirement specialRequirements) {
         return repository.update(specialRequirements);
+    }
+
+    @Override
+    public boolean delete(String dietaryRequirementID) {
+        return repository.delete(dietaryRequirementID);
     }
 
     @Override

@@ -34,8 +34,8 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public Customer read(Customer id) {
-        return repository.read(id.getCustomerID());
+    public Customer read(String id) {
+        return repository.read(id);
     }
 
     @Override
@@ -44,8 +44,8 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public boolean delete(Customer id) {
-        return repository.delete(id.getCustomerID());
+    public boolean delete(String id) {
+        return repository.delete(id);
     }
     @Override
     public Set<Customer> getAll() {

@@ -38,8 +38,8 @@ public class MealPlanImpl implements MealPlanService {
     }
 
     @Override
-    public MealPlan read(MealPlan mealPlanID) {
-        return repository.read(mealPlanID.getMealPlanID());
+    public MealPlan read(String mealPlanID) {
+        return repository.read(mealPlanID);
     }
 
     @Override
@@ -48,8 +48,8 @@ public class MealPlanImpl implements MealPlanService {
     }
 
     @Override
-    public boolean delete(MealPlan mealPlanID) {
-        return repository.delete(mealPlanID.getMealPlanID());
+    public boolean delete(String mealPlanID) {
+        return repository.delete(mealPlanID);
     }
 
     @Override

@@ -47,10 +47,6 @@ public class DietaryRequirementImpl implements DietaryRequirementService {
         return repository.update(specialRequirements);
     }
 
-    @Override
-    public boolean delete(String dietaryRequirementID) {
-        return repository.delete(dietaryRequirementID);
-    }
 
     @Override
     public Set<DietaryRequirement> getAll() {

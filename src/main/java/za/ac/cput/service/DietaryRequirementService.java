@@ -15,7 +15,7 @@ import java.util.Set;
 
 public interface DietaryRequirementService {
     DietaryRequirement create(DietaryRequirement dietaryRequirement);
-    DietaryRequirement read(DietaryRequirement id);
+    DietaryRequirement read(String id);
     DietaryRequirement update(DietaryRequirement dietaryRequirement);
     Set<DietaryRequirement> getAll();
 }

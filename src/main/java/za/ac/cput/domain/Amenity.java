@@ -6,6 +6,8 @@
  */
 package za.ac.cput.domain;
 
+import java.util.Objects;
+
 public class Amenity {
     private String amenityID;
     private String name;
@@ -13,6 +15,7 @@ public class Amenity {
     private Boolean isAmenityAvailable;
     private Double price;
 
+    private Amenity(){}
     private Amenity(Builder builder){
         this.amenityID = builder.amenityID;
         this.name = builder.name;
@@ -41,6 +44,7 @@ public class Amenity {
     public Double getPrice() {
         return price;
     }
+
 
     @Override
     public String toString() {

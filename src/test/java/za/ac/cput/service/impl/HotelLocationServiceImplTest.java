@@ -27,7 +27,7 @@ class HotelLocationServiceImplTest {
 
     @Test
     void b_read() {
-        HotelLocation read= service.read(hotelLocation);
+        HotelLocation read= service.read(hotelLocation.getID());
         assertNotNull(read);
         System.out.println("This has been read: " + read);
     }
@@ -46,7 +46,7 @@ class HotelLocationServiceImplTest {
 
     @Test
     void d_delete() {
-        boolean success= service.delete(hotelLocation);
+        boolean success= service.delete(hotelLocation.getID());
         assertTrue(success);
         System.out.println("Deleted: " + success);
     }

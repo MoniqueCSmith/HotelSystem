@@ -29,7 +29,7 @@ public class MembershipServiceImplTest {
 
     @Test
     void b_read() {
-        Membership read = service.read(membership);
+        Membership read = service.read(membership.getMemberID());
         assertNotNull(read);
         System.out.println("Read:" + read);
     }
@@ -51,7 +51,7 @@ public class MembershipServiceImplTest {
 
     @Test
     void d_delete() {
-        boolean success = service.delete(membership);
+        boolean success = service.delete(membership.getMemberID());
         assertTrue(success);
         System.out.println("Deleted:" + success);
     }

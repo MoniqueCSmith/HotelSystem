@@ -29,14 +29,14 @@ public class ReviewServiceImplTest {
 
     @Test
     void b_read() {
-        Review read = service.read(review);
+        Review read = service.read(review.getReviewID());
         assertNotNull(read);
         System.out.println("Read:" + read);
     }
 
     @Test
     void c_delete() {
-        boolean success = service.delete(review);
+        boolean success = service.delete(review.getReviewID());
         assertTrue(success);
         System.out.println("Deleted:" + success);
     }

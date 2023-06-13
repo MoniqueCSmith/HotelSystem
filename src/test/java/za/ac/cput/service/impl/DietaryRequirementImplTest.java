@@ -31,7 +31,7 @@ class DietaryRequirementImplTest {
     @Test
     void b_read() {
         if (service != null) {
-            DietaryRequirement read = service.read(dietaryRequirement);
+            DietaryRequirement read = service.read(dietaryRequirement.getDietaryRequirementID());
             System.out.println("Read: " + read);
         } else {
             System.out.println("Service is null. Cannot read dietary requirement.");

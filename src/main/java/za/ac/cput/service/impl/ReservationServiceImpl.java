@@ -40,8 +40,8 @@ public class ReservationServiceImpl implements ReservationService {
     }
 
     @Override
-    public Reservation read(Reservation reservationID){
-        return repository.read(reservationID.getReservationID());
+    public Reservation read(String reservationID){
+        return repository.read(reservationID);
     }
 
 
@@ -52,8 +52,8 @@ public class ReservationServiceImpl implements ReservationService {
     }
 
     @Override
-    public boolean delete(Reservation reservationID) {
-        return repository.delete(reservationID.getReservationID());
+    public boolean delete(String reservationID) {
+        return repository.delete(reservationID);
     }
 
     public Set<Reservation> getAll() {

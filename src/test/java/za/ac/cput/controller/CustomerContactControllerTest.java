@@ -1,6 +1,11 @@
+/**
+ * CustomerContactControllerTest.java
+ * Test class for the CustomerContactController
+ * Author: Brandon Wise (220049173)
+ * Date: 15 June 2023
+ */
 package za.ac.cput.controller;
 
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
@@ -11,58 +16,54 @@ import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
-import za.ac.cput.domain.Room;
-import za.ac.cput.factory.RoomFactory;
+import za.ac.cput.domain.CustomerContact;
+import za.ac.cput.factory.CustomerContactFactory;
 
 import static org.junit.jupiter.api.Assertions.*;
 @TestMethodOrder(MethodOrderer.MethodName.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-class RoomControllerTest {
-    private static Room room = RoomFactory.buildRoom("Standard", true);
-
+class CustomerContactControllerTest {
+    private static CustomerContact customerContact = CustomerContactFactory.buildCustomerContact("0812685242","Ashtonw1234@gmail.com");
     @Autowired
     private TestRestTemplate restTemplate;
-
-    private final String baseURL = "http://localhost:8080/room";
-
+    private final String baseURL = "http://localhost:8080/customerContact";
     @Test
     void a_create() {
         String url = baseURL + "/create";
-        ResponseEntity<Room> postResponse = restTemplate.postForEntity(url, room, Room.class);
+        ResponseEntity<CustomerContact> postResponse = restTemplate.postForEntity(url, customerContact, CustomerContact.class);
         assertNotNull(postResponse);
         assertNotNull(postResponse.getBody());
-        Room savedRoom = postResponse.getBody();
-        System.out.println("Saved data:" + savedRoom);
-        assertEquals(room.getRoomNo(), savedRoom.getRoomNo());
+        CustomerContact savedCustomerContact = postResponse.getBody();
+        System.out.println("Saved data:" + savedCustomerContact);
+        assertEquals(customerContact.getCustomerContactID(), customerContact.getCustomerContactID());
     }
 
     @Test
     void b_read() {
-        String url = baseURL + "/read/" + room.getRoomNo();
+        String url = baseURL + "/read/" + customerContact.getCustomerContactID();
         System.out.println("URL:" + url);
-        ResponseEntity<Room> response = restTemplate.getForEntity(url, Room.class);
-        assertEquals(room.getRoomNo(),response.getBody().getRoomNo());
+        ResponseEntity<CustomerContact> response = restTemplate.getForEntity(url, CustomerContact.class);
+        assertEquals(customerContact.getCustomerContactID(),response.getBody().getCustomerContactID());
         System.out.println(response.getBody());
-
     }
 
     @Test
     void c_update() {
-        Room updated = new Room.Builder().copy(room).setRoomType("Deluxe").build();
+        CustomerContact updated = new CustomerContact.Builder().copy(customerContact).setCellNo("0762466432").build();
         String url = baseURL + "/update";
         System.out.println("URL:" + url);
         System.out.println("Post data:" + updated);
-        ResponseEntity<Room> response = restTemplate.postForEntity(url, updated, Room.class);
+        ResponseEntity<CustomerContact> response = restTemplate.postForEntity(url, updated, CustomerContact.class);
         assertNotNull(response.getBody());
     }
 
     @Test
-    @Disabled
     void d_delete() {
-        String url = baseURL + "/delete/" + room.getRoomNo();
+        String url = baseURL + "/delete/" + customerContact.getCustomerContactID();
         System.out.println("URL:" + url);
         restTemplate.delete(url);
     }
+
     @Test
     void e_getall() {
         String url = baseURL + "/getall";

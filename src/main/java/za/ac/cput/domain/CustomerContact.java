@@ -11,6 +11,9 @@ public class CustomerContact {
     private String cellNo;
     private String email;
 
+    public CustomerContact() {
+    }
+
     private CustomerContact(Builder builder){
         this.customerContactID = builder.customerContactID;
         this.cellNo = builder.cellNo;

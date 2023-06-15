@@ -6,11 +6,12 @@
  */
 package za.ac.cput.service.impl;
 
+import org.springframework.stereotype.Service;
 import za.ac.cput.domain.Customer;
 import za.ac.cput.repository.impl.CustomerRepositoryImpl;
 import za.ac.cput.service.CustomerService;
 import java.util.Set;
-
+@Service
 public class CustomerServiceImpl implements CustomerService {
     private static CustomerServiceImpl service = null;
     private CustomerRepositoryImpl repository = null;

@@ -1,3 +1,9 @@
+/**
+ * AmenityServiceTest.java
+ * Service Test for the Amenity
+ * Author: Alison Shirlene Williams (219140987)
+ * Date: 09 June 2023
+ */
 package za.ac.cput.service.impl;
 
 import org.junit.jupiter.api.MethodOrderer;
@@ -22,7 +28,7 @@ public class AmenityServiceImplTest {
 
     @Test
     void b_read() {
-        Amenity read = service.read(amenity);
+        Amenity read = service.read(amenity.getAmenityID());
         assertNotNull(read);
         System.out.println("Read:" + read);
     }
@@ -40,7 +46,7 @@ public class AmenityServiceImplTest {
 
     @Test
     void d_delete() {
-        boolean success = service.delete(amenity);
+        boolean success = service.delete(amenity.getAmenityID());
         assertTrue(success);
         System.out.println("Deleted:" + success);
     }

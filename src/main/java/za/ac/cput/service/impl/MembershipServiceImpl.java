@@ -8,18 +8,18 @@
 package za.ac.cput.service.impl;
 
 import za.ac.cput.domain.Membership;
-import za.ac.cput.repository.MembershipRepository;
+import za.ac.cput.repository.impl.MembershipRepositoryImpl;
 import za.ac.cput.service.MembershipService;
 import java.util.Set;
 
 public class MembershipServiceImpl implements MembershipService {
 
     private static MembershipServiceImpl service = null;
-    private MembershipRepository repository = null;
+    private MembershipRepositoryImpl repository = null;
 
     private MembershipServiceImpl(){
         if(repository == null) {
-            repository = MembershipRepository.getRepository();
+            repository = MembershipRepositoryImpl.getRepository();
         }
     }
     public static MembershipServiceImpl getService() {
@@ -35,8 +35,8 @@ public class MembershipServiceImpl implements MembershipService {
     }
 
     @Override
-    public Membership read(Membership id) {
-        return repository.read(id.getMemberID());
+    public Membership read(String id) {
+        return repository.read(id);
     }
 
     @Override
@@ -45,8 +45,8 @@ public class MembershipServiceImpl implements MembershipService {
     }
 
     @Override
-    public boolean delete(Membership id) {
-        return repository.delete(id.getMemberID());
+    public boolean delete(String id) {
+        return repository.delete(id);
     }
     @Override
     public Set<Membership> getAll() {

@@ -1,17 +1,23 @@
+/**
+ * CustomerServiceImpl.java
+ * Service class for the CustomerImpl
+ * Author: Brandon Wise (220049173)
+ * Date: 09 June 2023
+ */
 package za.ac.cput.service.impl;
 
 import za.ac.cput.domain.Customer;
-import za.ac.cput.repository.CustomerRepository;
+import za.ac.cput.repository.impl.CustomerRepositoryImpl;
 import za.ac.cput.service.CustomerService;
 import java.util.Set;
 
 public class CustomerServiceImpl implements CustomerService {
     private static CustomerServiceImpl service = null;
-    private CustomerRepository repository = null;
+    private CustomerRepositoryImpl repository = null;
 
     private CustomerServiceImpl() {
         if(repository == null) {
-            repository = CustomerRepository.getRepository();
+            repository = CustomerRepositoryImpl.getRepository();
         }
     }
 
@@ -28,8 +34,8 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public Customer read(Customer id) {
-        return repository.read(id.getCustomerID());
+    public Customer read(String id) {
+        return repository.read(id);
     }
 
     @Override
@@ -38,8 +44,8 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public boolean delete(Customer id) {
-        return repository.delete(id.getCustomerID());
+    public boolean delete(String id) {
+        return repository.delete(id);
     }
     @Override
     public Set<Customer> getAll() {

@@ -10,7 +10,7 @@ package za.ac.cput.service.impl;
 
 
 import za.ac.cput.domain.ReservationDate;
-import za.ac.cput.repository.ReservationDateRepository;
+import za.ac.cput.repository.impl.ReservationDateRepositoryImpl;
 import za.ac.cput.service.ReservationDateService;
 
 
@@ -18,11 +18,11 @@ import java.util.Set;
 
 public class ReservationDateServiceImpl implements ReservationDateService {
     private static ReservationDateService service = null;
-    private static ReservationDateRepository repository=null;
+    private static ReservationDateRepositoryImpl repository=null;
 
     private ReservationDateServiceImpl() {
         if (repository == null) {
-            repository = ReservationDateRepository.getRepository();
+            repository = ReservationDateRepositoryImpl.getRepository();
 
         }
     }
@@ -40,9 +40,9 @@ public class ReservationDateServiceImpl implements ReservationDateService {
     }
 
     @Override
-    public ReservationDate read(ReservationDate reservationDate){
+    public ReservationDate read(String reservationDate){
 
-        return repository.read(reservationDate.getReservationID());
+        return repository.read(reservationDate);
     }
 
 
@@ -52,8 +52,8 @@ public class ReservationDateServiceImpl implements ReservationDateService {
     }
 
     @Override
-    public boolean delete(ReservationDate reservationID) {
-        return repository.delete(reservationID.getReservationID());
+    public boolean delete(String reservationID) {
+        return repository.delete(reservationID);
     }
 
     public Set<ReservationDate> getAll() {

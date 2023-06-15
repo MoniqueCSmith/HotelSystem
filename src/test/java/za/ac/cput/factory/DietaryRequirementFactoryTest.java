@@ -16,7 +16,7 @@ class DietaryRequirementFactoryTest {
 
     @Test
     public void test() {
-        DietaryRequirement dietaryRequirement = DietaryRequirementFactory.createDietaryRequirement("501", "Vegan", "Allergic to seafood.");
+        DietaryRequirement dietaryRequirement = DietaryRequirementFactory.createDietaryRequirement("Vegan", "Allergic to seafood.");
         assertNotNull(dietaryRequirement);
         System.out.println(dietaryRequirement.toString());
     }

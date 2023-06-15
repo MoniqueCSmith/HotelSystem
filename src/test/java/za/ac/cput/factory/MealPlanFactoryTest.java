@@ -17,8 +17,8 @@ class MealPlanFactoryTest {
 
     @Test
     public void test() {
-        DietaryRequirement dietaryRequirement = DietaryRequirementFactory.createDietaryRequirement("204", "Vegan", "Allergic to eggs");
-        MealPlan mealPlan = MealPlanFactory.createMealPlan("101", "Vegan",
+        DietaryRequirement dietaryRequirement = DietaryRequirementFactory.createDietaryRequirement("Vegan", "Allergic to eggs");
+        MealPlan mealPlan = MealPlanFactory.createMealPlan("Vegan",
                 "Breakfast burritos made with tofu.", "Breakfast", 80.00, dietaryRequirement);
         assertNotNull(mealPlan);
         System.out.println(mealPlan.toString());

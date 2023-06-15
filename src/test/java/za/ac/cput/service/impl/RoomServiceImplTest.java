@@ -1,9 +1,15 @@
+/**
+ * RoomServiceTest.java
+ * Service Test for the Room
+ * Author: Alison Shirlene Williams (219140987)
+ * Date: 09 June 2023
+ */
+
 package za.ac.cput.service.impl;
 
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
-import za.ac.cput.domain.Amenity;
 import za.ac.cput.domain.Room;
 import za.ac.cput.factory.RoomFactory;
 
@@ -24,7 +30,7 @@ public class RoomServiceImplTest {
 
     @Test
     void b_read() {
-        Room read = service.read(room);
+        Room read = service.read(room.getRoomNo());
         assertNotNull(read);
         System.out.println("Read:" + read);
     }
@@ -40,7 +46,7 @@ public class RoomServiceImplTest {
 
     @Test
     void d_delete() {
-        boolean success = service.delete(room);
+        boolean success = service.delete(room.getRoomNo());
         assertTrue(success);
         System.out.println("Deleted:" + success);
     }

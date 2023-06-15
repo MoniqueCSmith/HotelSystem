@@ -11,6 +11,7 @@ public class Room {
     private String roomType;
     private boolean isRoomAvailable;
 
+    private Room(){}
     private Room(Builder builder){
         this.roomNo = builder.roomNo;
         this.roomType = builder.roomType;

@@ -36,12 +36,7 @@ public class Helper {
     }*/
 
     private static int nextId = 1;
-    public static String generateRoomNo(){
-        String letters = "ABC";
-        String letter = String.valueOf(letters.charAt((int)(Math.random() * letters.length())));
-        String digit = String.valueOf((int)(Math.random() * 9) + 1);
-        return digit + letter;
-    }
+
     public static String generateID() {
         String id = String.format("%06d", nextId);
         if (nextId == 999999) {
@@ -50,6 +45,26 @@ public class Helper {
             nextId++;
         }
         return id;
+    }
+
+    private static int building = 1;
+    private static int floor = 0;
+    private static int room = 1;
+    public static String generateRoomNo() {
+
+        String roomNo = String.format("%d%02d", building, room);
+
+        room++;
+        if (room > 5) {
+            room = 1;
+            floor++;
+            if (floor > 3) {
+                floor = 1;
+                building++;
+            }
+        }
+
+        return roomNo;
     }
 
     public static boolean isNullOrEmpty(String str){
@@ -71,28 +86,6 @@ public class Helper {
         return false;
     }
 
-    /*public static List<String> getHotelLocations(List<String> hotels) {
-        List<String> locations = new ArrayList<>();
-        for (String hotel : hotels) {
-            String hotelCode = hotel.substring(0, 3);
-            locations.add(hotelCode);
-        }
-        return locations;
-    }
-    public static List<HotelLocation> getPossibleLocations() {
-        return possibleLocations;
-    }
-    public static String generateHotelCode(String province) {
-        String prefix = province.substring(0, 3).toUpperCase();
-        int count = 0;
-        for (HotelLocation location : possibleLocations) {
-            if (location.getHotelProvince().equals(province)) {
-                count++;
-            }
-        }
-        return prefix + String.format("%03d", count);
-    }*/
-
     public static boolean isValidEmail(String email) {
         EmailValidator ev = EmailValidator.getInstance();
         return ev.isValid(email);
@@ -100,4 +93,6 @@ public class Helper {
     public static String reservationID(){
         return UUID.randomUUID().toString();
     }
+
 }
+

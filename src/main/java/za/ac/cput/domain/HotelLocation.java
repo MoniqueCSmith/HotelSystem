@@ -5,13 +5,18 @@
 */
 
 package za.ac.cput.domain;
-public class HotelLocation{
+
+import java.io.Serializable;
+import java.util.Objects;
+
+public class HotelLocation implements Serializable {
     private String ID;
     private String Address;
     private String City;
     private String Province;
     private int ZipCode;
 
+private HotelLocation(){}
     private HotelLocation(Builder builder) {
         this.ID=builder.ID;
         this.Address= builder.Address;
@@ -57,6 +62,19 @@ public class HotelLocation{
 
     public void setZipCode(int zipCode) {
         ZipCode = zipCode;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        HotelLocation that = (HotelLocation) o;
+        return ZipCode == that.ZipCode && Objects.equals(ID, that.ID) && Objects.equals(Address, that.Address) && Objects.equals(City, that.City) && Objects.equals(Province, that.Province);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(ID, Address, City, Province, ZipCode);
     }
 
     @Override

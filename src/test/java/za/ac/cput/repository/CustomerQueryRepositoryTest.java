@@ -11,11 +11,12 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 import za.ac.cput.domain.CustomerQuery;
 import za.ac.cput.factory.CustomerQueryFactory;
+import za.ac.cput.repository.impl.CustomerQueryRepositoryImpl;
 
 import static org.junit.jupiter.api.Assertions.*;
 @TestMethodOrder(MethodOrderer.MethodName.class)
 class CustomerQueryRepositoryTest {
-    private static CustomerQueryRepository repository = CustomerQueryRepository.getRepository();
+    private static CustomerQueryRepositoryImpl repository = CustomerQueryRepositoryImpl.getRepository();
     private static CustomerQuery customerQuery = CustomerQueryFactory.buildCustomerQuery("Reservation Cancellation","JoshBrown@gmail.com", "Good day, how can I cancel my reservation for Friday 12 May? I can no longer make it for then.");
 
     @Test

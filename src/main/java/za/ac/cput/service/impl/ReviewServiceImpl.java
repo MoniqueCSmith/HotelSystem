@@ -8,18 +8,18 @@
 package za.ac.cput.service.impl;
 
 import za.ac.cput.domain.Review;
-import za.ac.cput.repository.ReviewRepository;
+import za.ac.cput.repository.impl.ReviewRepositoryImpl;
 import za.ac.cput.service.ReviewService;
 import java.util.Set;
 
 public class ReviewServiceImpl implements ReviewService {
 
     private static ReviewServiceImpl service = null;
-    private ReviewRepository repository = null;
+    private ReviewRepositoryImpl repository = null;
 
     private ReviewServiceImpl(){
         if(repository == null) {
-            repository = ReviewRepository.getRepository();
+            repository = ReviewRepositoryImpl.getRepository();
         }
     }
     public static ReviewServiceImpl getService() {
@@ -33,20 +33,13 @@ public class ReviewServiceImpl implements ReviewService {
     @Override
     public Review create(Review review) {return repository.create(review);
     }
-
     @Override
-    public Review read(Review id) {
-        return repository.read(id.getReviewID());
+    public Review read(String id) {
+        return repository.read(id);
     }
-
     @Override
-    public Review update(Review review) {
-        return repository.update(review);
-    }
-
-    @Override
-    public boolean delete(Review id) {
-        return repository.delete(id.getReviewID());
+    public boolean delete(String id) {
+        return repository.delete(id);
     }
     @Override
     public Set<Review> getAll() {return repository.getAll();

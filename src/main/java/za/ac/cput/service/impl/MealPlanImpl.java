@@ -9,7 +9,7 @@
 package za.ac.cput.service.impl;
 
 import za.ac.cput.domain.MealPlan;
-import za.ac.cput.repository.MealPlanRepository;
+import za.ac.cput.repository.impl.MealPlanRepositoryImpl;
 import za.ac.cput.service.MealPlanService;
 
 import java.util.Set;
@@ -17,11 +17,11 @@ import java.util.Set;
 public class MealPlanImpl implements MealPlanService {
 
     private static MealPlanImpl service = null;
-    private static MealPlanRepository repository = null;
+    private static MealPlanRepositoryImpl repository = null;
 
     private MealPlanImpl() {
         if(repository == null) {
-            repository = MealPlanRepository.getRepository();
+            repository = MealPlanRepositoryImpl.getRepository();
         }
     }
 
@@ -38,8 +38,8 @@ public class MealPlanImpl implements MealPlanService {
     }
 
     @Override
-    public MealPlan read(MealPlan mealPlanID) {
-        return repository.read(mealPlanID.getMealPlanID());
+    public MealPlan read(String mealPlanID) {
+        return repository.read(mealPlanID);
     }
 
     @Override
@@ -48,8 +48,8 @@ public class MealPlanImpl implements MealPlanService {
     }
 
     @Override
-    public boolean delete(MealPlan mealPlanID) {
-        return repository.delete(mealPlanID.getMealPlanID());
+    public boolean delete(String mealPlanID) {
+        return repository.delete(mealPlanID);
     }
 
     @Override

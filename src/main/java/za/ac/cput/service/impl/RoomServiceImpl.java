@@ -1,19 +1,27 @@
+/**
+ * RoomServiceImpl.java
+ * Service class for the Room
+ * Author: Alison Shirlene Williams (219140987)
+ * Date: 09 June 2023
+ */
 package za.ac.cput.service.impl;
 
 
+import org.springframework.stereotype.Service;
 import za.ac.cput.domain.Room;
-import za.ac.cput.repository.RoomRepository;
+import za.ac.cput.repository.impl.RoomRepositoryImpl;
 import za.ac.cput.service.RoomService;
 
 import java.util.Set;
 
+@Service
 public class RoomServiceImpl implements RoomService {
     private static RoomServiceImpl service = null;
-    private RoomRepository repository = null;
+    private RoomRepositoryImpl repository = null;
 
     private RoomServiceImpl(){
         if(repository == null) {
-            repository = RoomRepository.getRepository();
+            repository = RoomRepositoryImpl.getRepository();
         }
     }
     public static RoomServiceImpl getService() {
@@ -29,8 +37,8 @@ public class RoomServiceImpl implements RoomService {
     }
 
     @Override
-    public Room read(Room id) {
-        return repository.read(id.getRoomNo());
+    public Room read(String id) {
+        return repository.read(id);
     }
 
     @Override
@@ -39,8 +47,8 @@ public class RoomServiceImpl implements RoomService {
     }
 
     @Override
-    public boolean delete(Room id) {
-        return repository.delete(id.getRoomNo());
+    public boolean delete(String id) {
+        return repository.delete(id);
     }
     @Override
     public Set<Room> getAll() {

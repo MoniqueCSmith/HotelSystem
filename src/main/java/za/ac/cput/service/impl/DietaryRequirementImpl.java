@@ -9,7 +9,7 @@
 package za.ac.cput.service.impl;
 
 import za.ac.cput.domain.DietaryRequirement;
-import za.ac.cput.repository.DietaryRequirementRepository;
+import za.ac.cput.repository.impl.DietaryRequirementRepositoryImpl;
 import za.ac.cput.service.DietaryRequirementService;
 
 import java.util.Set;
@@ -17,11 +17,11 @@ import java.util.Set;
 public class DietaryRequirementImpl implements DietaryRequirementService {
 
     private static DietaryRequirementImpl service = null;
-    private static DietaryRequirementRepository repository = null;
+    private static DietaryRequirementRepositoryImpl repository = null;
 
     private DietaryRequirementImpl() {
         if(repository == null) {
-            repository = DietaryRequirementRepository.getRepository();
+            repository = DietaryRequirementRepositoryImpl.getRepository();
         }
     }
 
@@ -38,8 +38,8 @@ public class DietaryRequirementImpl implements DietaryRequirementService {
     }
 
     @Override
-    public DietaryRequirement read(DietaryRequirement name) {
-        return repository.read(name.getName());
+    public DietaryRequirement read(String name) {
+        return repository.read(name);
     }
 
     @Override
@@ -47,10 +47,6 @@ public class DietaryRequirementImpl implements DietaryRequirementService {
         return repository.update(specialRequirements);
     }
 
-    @Override
-    public boolean delete(DietaryRequirement dietaryRequirementID) {
-        return repository.delete(dietaryRequirementID.getDietaryRequirementID());
-    }
 
     @Override
     public Set<DietaryRequirement> getAll() {

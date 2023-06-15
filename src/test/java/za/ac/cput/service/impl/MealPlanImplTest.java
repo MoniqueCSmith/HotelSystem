@@ -23,9 +23,9 @@ class MealPlanImplTest {
 
     private static MealPlanImpl service = MealPlanImpl.getService();
     private static DietaryRequirement dietaryRequirement = DietaryRequirementFactory.createDietaryRequirement
-            ("204", "Vegan", "Allergic to eggs");
+            ("Vegan", "Allergic to eggs");
     private static MealPlan mealPlan = MealPlanFactory.createMealPlan
-            ("104", "Vegan", "Vegan omelette with mushrooms and spinach.", "Breakfast", 62.00, dietaryRequirement);
+            ("Vegan", "Vegan omelette with mushrooms and spinach.", "Breakfast", 62.00, dietaryRequirement);
     @Test
     void a_create() {
         MealPlan created = service.create(mealPlan);
@@ -35,7 +35,7 @@ class MealPlanImplTest {
 
     @Test
     void b_read() {
-        MealPlan read = service.read(mealPlan);
+        MealPlan read = service.read(mealPlan.getMealPlanID());
         assertNotNull(read);
         System.out.println("Read: " + read);
     }
@@ -44,7 +44,6 @@ class MealPlanImplTest {
     void c_update() {
         MealPlan updated = new MealPlan.Builder()
                 .copy(mealPlan)
-                .setMealPlanID("104")
                 .setName("Vegan")
                 .setDescription("Vegan omelette with mushrooms and spinach.")
                 .setMealType("Breakfast")
@@ -57,7 +56,7 @@ class MealPlanImplTest {
 
     @Test
     void d_delete() {
-        boolean success = service.delete(mealPlan);
+        boolean success = service.delete(mealPlan.getMealPlanID());
         assertTrue(success);
         System.out.println("Deleted: " + success);
     }

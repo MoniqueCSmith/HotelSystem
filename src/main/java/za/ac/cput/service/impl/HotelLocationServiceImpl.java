@@ -5,20 +5,22 @@
 */
 package za.ac.cput.service.impl;
 
+import org.springframework.stereotype.Service;
 import za.ac.cput.domain.HotelLocation;
-import za.ac.cput.repository.HotelLocationRepository;
+import za.ac.cput.repository.impl.HotelLocationRepositoryImpl;
 import za.ac.cput.service.HotelLocationService;
 
 import java.util.Set;
 
+@Service
 public class HotelLocationServiceImpl implements HotelLocationService {
 
     private static HotelLocationServiceImpl service= null;
-    private HotelLocationRepository repository= null;
+    private HotelLocationRepositoryImpl repository= null;
 
     private HotelLocationServiceImpl(){
         if(repository== null){
-            repository= HotelLocationRepository.getRepository();
+            repository= HotelLocationRepositoryImpl.getRepository();
         }
     }
 
@@ -35,8 +37,8 @@ public class HotelLocationServiceImpl implements HotelLocationService {
     }
 
     @Override
-    public HotelLocation read(HotelLocation id) {
-        return repository.read(id.getID());
+    public HotelLocation read(String id) {
+        return repository.read(id);
     }
 
     @Override
@@ -45,8 +47,8 @@ public class HotelLocationServiceImpl implements HotelLocationService {
     }
 
     @Override
-    public boolean delete(HotelLocation id) {
-        return repository.delete(id.getID());
+    public boolean delete(String id) {
+        return repository.delete(id);
     }
 
     @Override

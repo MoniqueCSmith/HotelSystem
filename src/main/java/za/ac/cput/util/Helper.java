@@ -86,28 +86,6 @@ public class Helper {
         return false;
     }
 
-    /*public static List<String> getHotelLocations(List<String> hotels) {
-        List<String> locations = new ArrayList<>();
-        for (String hotel : hotels) {
-            String hotelCode = hotel.substring(0, 3);
-            locations.add(hotelCode);
-        }
-        return locations;
-    }
-    public static List<HotelLocation> getPossibleLocations() {
-        return possibleLocations;
-    }
-    public static String generateHotelCode(String province) {
-        String prefix = province.substring(0, 3).toUpperCase();
-        int count = 0;
-        for (HotelLocation location : possibleLocations) {
-            if (location.getHotelProvince().equals(province)) {
-                count++;
-            }
-        }
-        return prefix + String.format("%03d", count);
-    }*/
-
     public static boolean isValidEmail(String email) {
         EmailValidator ev = EmailValidator.getInstance();
         return ev.isValid(email);
@@ -115,4 +93,6 @@ public class Helper {
     public static String reservationID(){
         return UUID.randomUUID().toString();
     }
+
 }
+

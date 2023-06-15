@@ -1,6 +1,6 @@
 /**
- * RoomRepositoryTest.java
- * Repository Test for the Room
+ * AmenityRepositoryTest.java
+ * Repository Test for the Amenity
  * Author: Alison Shirlene Williams (219140987)
  * Date: 07 April 2023
  */
@@ -9,46 +9,47 @@ package za.ac.cput.repository;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
+import za.ac.cput.domain.Amenity;
+import za.ac.cput.factory.AmenityFactory;
+import za.ac.cput.repository.impl.AmenityRepositoryImpl;
 
-import za.ac.cput.domain.Room;
-import za.ac.cput.factory.RoomFactory;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 @TestMethodOrder(MethodOrderer.MethodName.class)
-class RoomRepositoryTest {
-    private static RoomRepository repository = RoomRepository.getRepository();
-    private static Room room = RoomFactory.buildRoom("Standard", true);
+class AmenityRepositoryImplTest {
+
+    private static AmenityRepositoryImpl repository = AmenityRepositoryImpl.getRepository();
+    private static Amenity amenity = AmenityFactory.buildAmenity("Shampoo","Toiletries", true, 20.00);
 
     @Test
     void a_create() {
-        Room created = repository.create(room);
-        assertEquals(room.getRoomNo(), created.getRoomNo());
+        Amenity created = repository.create(amenity);
+        assertEquals(amenity.getAmenityID(), created.getAmenityID());
         System.out.println("Create:" + created);
     }
-
     @Test
     void b_read() {
-        Room read = repository.read(room.getRoomNo());
+        Amenity read = repository.read(amenity.getAmenityID());
         assertNotNull(read);
         System.out.println("Read:" + read);
     }
-
     @Test
     void c_update() {
-        Room updated = new Room.Builder().copy(room).setRoomType("Deluxe")
-                .setRoomAvailable(false)
+        Amenity updated = new Amenity.Builder().copy(amenity).setName("Conditioner")
+                .setDescription("Toiletries")
+                .setAmenityAvailable(false)
+                .setPrice(20.00)
                 .build();
         assertNotNull(repository.update(updated));
         System.out.println("Updated:" + updated);
     }
-
     @Test
     void d_delete() {
-        boolean success = repository.delete(room.getRoomNo());
+        boolean success = repository.delete(amenity.getAmenityID());
         assertTrue(success);
         System.out.println("Deleted:" + success);
     }
-
     @Test
     void e_getAll() {
         System.out.println("Show all:");

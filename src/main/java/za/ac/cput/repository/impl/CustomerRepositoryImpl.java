@@ -4,23 +4,25 @@
  * Author: Brandon Wise - 220049173
  * Date: 07 April 2023
  */
-package za.ac.cput.repository;
+package za.ac.cput.repository.impl;
 
 import za.ac.cput.domain.Customer;
+import za.ac.cput.repository.ICustomerRepository;
+
 import java.util.HashSet;
 import java.util.Set;
 
-public class CustomerRepository implements ICustomerRepository {
-    private static CustomerRepository repository = null;
+public class CustomerRepositoryImpl implements ICustomerRepository {
+    private static CustomerRepositoryImpl repository = null;
     private Set<Customer> customerDB = null;
 
-    private CustomerRepository(){
+    private CustomerRepositoryImpl(){
         customerDB = new HashSet<Customer>();
     }
 
-    public static CustomerRepository getRepository(){
+    public static CustomerRepositoryImpl getRepository(){
         if(repository == null) {
-            repository = new CustomerRepository();
+            repository = new CustomerRepositoryImpl();
         }
         return repository;
     }

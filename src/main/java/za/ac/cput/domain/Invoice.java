@@ -5,7 +5,11 @@
 */
 
 package za.ac.cput.domain;
-public class Invoice {
+
+import java.io.Serializable;
+import java.util.Objects;
+
+public class Invoice implements Serializable {
 
    private String invoiceID;
    private String typeOfRoomBooked;
@@ -16,6 +20,9 @@ public class Invoice {
    private double VAT;
    private double totalPrice;
 
+
+
+   private Invoice(){}
    private Invoice(Builder builder){
       this.invoiceID= builder.invoiceID;
       this.typeOfRoomBooked= builder.typeOfRoomBooked;
@@ -90,6 +97,22 @@ public class Invoice {
 
    public void setTotalPrice(double totalPrice) {
       this.totalPrice = totalPrice;
+   }
+
+   @Override
+   public boolean equals(Object o) {
+      if (this == o) return true;
+      if (o == null || getClass() != o.getClass()) return false;
+      Invoice invoice = (Invoice) o;
+      return numRoomsBooked == invoice.numRoomsBooked && numAdults == invoice.numAdults && numChildren == invoice.numChildren
+              && Double.compare(invoice.unitPrice, unitPrice) == 0 && Double.compare(invoice.VAT, VAT) == 0
+              && Double.compare(invoice.totalPrice, totalPrice) == 0 && Objects.equals(invoiceID, invoice.invoiceID)
+              && Objects.equals(typeOfRoomBooked, invoice.typeOfRoomBooked);
+   }
+
+   @Override
+   public int hashCode() {
+      return Objects.hash(invoiceID, typeOfRoomBooked, numRoomsBooked, numAdults, numChildren, unitPrice, VAT, totalPrice);
    }
 
    @Override

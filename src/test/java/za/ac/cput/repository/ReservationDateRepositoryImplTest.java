@@ -11,6 +11,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 import za.ac.cput.domain.ReservationDate;
 import za.ac.cput.factory.ReservationDateFactory;
+import za.ac.cput.repository.impl.ReservationDateRepositoryImpl;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -19,8 +20,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 
 @TestMethodOrder(MethodOrderer.MethodName.class)
-class ReservationDateRepositoryTest {
-    private static ReservationDateRepository repository = ReservationDateRepository.getRepository();
+class ReservationDateRepositoryImplTest {
+    private static ReservationDateRepositoryImpl repository = ReservationDateRepositoryImpl.getRepository();
     private static ReservationDate reservationDate = ReservationDateFactory.buildReservationDate(
             "REF8272927262",
             LocalDate.of(2023, 6, 15),

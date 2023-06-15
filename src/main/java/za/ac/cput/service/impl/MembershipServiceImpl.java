@@ -8,18 +8,18 @@
 package za.ac.cput.service.impl;
 
 import za.ac.cput.domain.Membership;
-import za.ac.cput.repository.MembershipRepository;
+import za.ac.cput.repository.impl.MembershipRepositoryImpl;
 import za.ac.cput.service.MembershipService;
 import java.util.Set;
 
 public class MembershipServiceImpl implements MembershipService {
 
     private static MembershipServiceImpl service = null;
-    private MembershipRepository repository = null;
+    private MembershipRepositoryImpl repository = null;
 
     private MembershipServiceImpl(){
         if(repository == null) {
-            repository = MembershipRepository.getRepository();
+            repository = MembershipRepositoryImpl.getRepository();
         }
     }
     public static MembershipServiceImpl getService() {

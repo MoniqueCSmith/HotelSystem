@@ -27,13 +27,13 @@ public class CustomerQueryServiceImplTest {
 
     @Test
     void b_read() {
-        CustomerQuery read = service.read(customerQuery);
+        CustomerQuery read = service.read(customerQuery.getQueryID());
         assertNotNull(read);
         System.out.println("Read:" + read);
     }
     @Test
     void c_delete() {
-        boolean success = service.delete(customerQuery);
+        boolean success = service.delete(customerQuery.getQueryID());
         assertTrue(success);
         System.out.println("Deleted:" + success);
     }

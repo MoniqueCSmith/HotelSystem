@@ -1,27 +1,28 @@
-/* InvoiceRepository.java
+/* InvoiceRepositoryImpl.java
  Repository for the Invoice class
  Author: Ashton Williams (220468478)
  Date: 08 April 2023
 */
-package za.ac.cput.repository;
+package za.ac.cput.repository.impl;
 
 import za.ac.cput.domain.Invoice;
+import za.ac.cput.repository.IInvoiceRepository;
 
 import java.util.HashSet;
 import java.util.Set;
 
-public class InvoiceRepository implements IInvoiceRepository {
+public class InvoiceRepositoryImpl implements IInvoiceRepository {
 
-    private static InvoiceRepository repository = null;
+    private static InvoiceRepositoryImpl repository = null;
     private Set<Invoice> invoiceDB= null;
 
-    private InvoiceRepository() {
+    private InvoiceRepositoryImpl() {
         invoiceDB = new HashSet<Invoice>();
     }
 
-    public static InvoiceRepository getRepository() {
+    public static InvoiceRepositoryImpl getRepository() {
         if (repository == null) {
-                repository = new InvoiceRepository();
+                repository = new InvoiceRepositoryImpl();
             }
             return repository;
         }

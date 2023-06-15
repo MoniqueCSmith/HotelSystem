@@ -11,12 +11,13 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 import za.ac.cput.domain.CustomerContact;
 import za.ac.cput.factory.CustomerContactFactory;
+import za.ac.cput.repository.impl.CustomerContactRepositoryImpl;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 @TestMethodOrder(MethodOrderer.MethodName.class)
-class CustomerContactRepositoryTest {
-    private static CustomerContactRepository repository = CustomerContactRepository.getRepository();
+class CustomerContactRepositoryImplTest {
+    private static CustomerContactRepositoryImpl repository = CustomerContactRepositoryImpl.getRepository();
     private static CustomerContact customerContact = CustomerContactFactory.buildCustomerContact("0738395832","JoshBrown@gmail.com");
 
     @Test

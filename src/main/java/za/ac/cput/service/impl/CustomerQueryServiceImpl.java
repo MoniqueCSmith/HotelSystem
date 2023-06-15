@@ -7,17 +7,17 @@
 package za.ac.cput.service.impl;
 
 import za.ac.cput.domain.CustomerQuery;
-import za.ac.cput.repository.CustomerQueryRepository;
+import za.ac.cput.repository.impl.CustomerQueryRepositoryImpl;
 import za.ac.cput.service.CustomerQueryService;
 import java.util.Set;
 
 public class CustomerQueryServiceImpl implements CustomerQueryService {
     private static CustomerQueryServiceImpl service = null;
-    private CustomerQueryRepository repository = null;
+    private CustomerQueryRepositoryImpl repository = null;
 
     private CustomerQueryServiceImpl() {
         if(repository == null) {
-            repository = CustomerQueryRepository.getRepository();
+            repository = CustomerQueryRepositoryImpl.getRepository();
         }
     }
 
@@ -34,12 +34,12 @@ public class CustomerQueryServiceImpl implements CustomerQueryService {
     }
 
     @Override
-    public CustomerQuery read(CustomerQuery id) {
-        return repository.read(id.getQueryID());
+    public CustomerQuery read(String id) {
+        return repository.read(id);
     }
     @Override
-    public boolean delete(CustomerQuery id) {
-        return repository.delete(id.getQueryID());
+    public boolean delete(String id) {
+        return repository.delete(id);
     }
     @Override
     public Set<CustomerQuery> getAll() {

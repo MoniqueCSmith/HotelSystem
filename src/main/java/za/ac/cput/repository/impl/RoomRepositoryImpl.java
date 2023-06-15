@@ -4,22 +4,24 @@
  * Author: Alison Shirlene Williams (219140987)
  * Date: 07 April 2023
  */
-package za.ac.cput.repository;
+package za.ac.cput.repository.impl;
 
 import za.ac.cput.domain.Room;
+import za.ac.cput.repository.IRoomRepository;
+
 import java.util.HashSet;
 import java.util.Set;
 
-public class RoomRepository implements IRoomRepository {
-    private static RoomRepository repository = null;
+public class RoomRepositoryImpl implements IRoomRepository {
+    private static RoomRepositoryImpl repository = null;
     private Set<Room> roomDB = null;
 
-    private RoomRepository(){
+    private RoomRepositoryImpl(){
         roomDB = new HashSet<Room>();
     }
-    public static RoomRepository getRepository(){
+    public static RoomRepositoryImpl getRepository(){
         if(repository == null) {
-            repository = new RoomRepository();
+            repository = new RoomRepositoryImpl();
         }
         return repository;
 

@@ -13,15 +13,15 @@ import org.junit.jupiter.api.TestMethodOrder;
 import za.ac.cput.domain.Reservation;
 import za.ac.cput.domain.ReservationDate;
 import za.ac.cput.factory.ReservationFactory;
+import za.ac.cput.repository.impl.ReservationRepositoryImpl;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 @TestMethodOrder(MethodOrderer.MethodName.class)
-class ReservationRepositoryTest {
-    private static ReservationRepository repository = ReservationRepository.getRepository();
+class ReservationRepositoryImplTest {
+    private static ReservationRepositoryImpl repository = ReservationRepositoryImpl.getRepository();
     private static Reservation reservation = ReservationFactory.buildReservation("REF6162722732", LocalDateTime.now(), "Waiting List",false , new ReservationDate());
 
     @Test

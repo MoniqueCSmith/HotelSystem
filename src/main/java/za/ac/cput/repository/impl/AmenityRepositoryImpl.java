@@ -4,23 +4,24 @@
  * Author: Alison Shirlene Williams (219140987)
  * Date: 07 April 2023
  */
-package za.ac.cput.repository;
+package za.ac.cput.repository.impl;
 
 import za.ac.cput.domain.Amenity;
+import za.ac.cput.repository.IAmenityRepository;
 
 import java.util.HashSet;
 import java.util.Set;
 
-public class AmenityRepository implements IAmenityRepository {
-    private static AmenityRepository repository = null;
+public class AmenityRepositoryImpl implements IAmenityRepository {
+    private static AmenityRepositoryImpl repository = null;
     private Set<Amenity> amenityDB = null;
 
-    private AmenityRepository(){
+    private AmenityRepositoryImpl(){
         amenityDB = new HashSet<Amenity>();
     }
-    public static AmenityRepository getRepository(){
+    public static AmenityRepositoryImpl getRepository(){
         if(repository == null) {
-            repository = new AmenityRepository();
+            repository = new AmenityRepositoryImpl();
         }
         return repository;
 

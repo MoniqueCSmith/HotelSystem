@@ -1,3 +1,8 @@
+/* InvoiceRepositoryImplTest.java
+ Reposiitory Test for the Invoice class
+ Author: Ashton Williams (220468478)
+ Date: 08 April 2023
+*/
 package za.ac.cput.repository;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -5,11 +10,12 @@ import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.Test;
 import za.ac.cput.domain.Invoice;
 import za.ac.cput.factory.InvoiceFactory;
+import za.ac.cput.repository.impl.InvoiceRepositoryImpl;
 
 @TestMethodOrder(MethodOrderer.MethodName.class)
-class InvoiceRepositoryTest {
+class InvoiceRepositoryImplTest {
 
-    private static InvoiceRepository repository= InvoiceRepository.getRepository();
+    private static InvoiceRepositoryImpl repository= InvoiceRepositoryImpl.getRepository();
     private static Invoice invoice= InvoiceFactory.createInvoice("Double Bed",1,2,0,800,112,800);
 
     @Test

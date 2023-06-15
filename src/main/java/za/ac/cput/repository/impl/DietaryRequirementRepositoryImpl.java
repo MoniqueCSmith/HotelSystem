@@ -5,25 +5,26 @@
  * Date: 07 April 2023
  */
 
-package za.ac.cput.repository;
+package za.ac.cput.repository.impl;
 
 import za.ac.cput.domain.DietaryRequirement;
+import za.ac.cput.repository.IDietaryRequirementRepository;
 
 import java.util.HashSet;
 import java.util.Set;
 
-public class DietaryRequirementRepository implements IDietaryRequirementRepository {
+public class DietaryRequirementRepositoryImpl implements IDietaryRequirementRepository {
 
-    private static DietaryRequirementRepository repository = null;
+    private static DietaryRequirementRepositoryImpl repository = null;
     private Set<DietaryRequirement> dietaryRequirementDB = null;
 
-    private DietaryRequirementRepository() {
+    private DietaryRequirementRepositoryImpl() {
         dietaryRequirementDB = new HashSet<DietaryRequirement>();
     }
 
-    public static DietaryRequirementRepository getRepository() {
+    public static DietaryRequirementRepositoryImpl getRepository() {
         if (repository == null) {
-            repository = new DietaryRequirementRepository();
+            repository = new DietaryRequirementRepositoryImpl();
         }
         return repository;
     }

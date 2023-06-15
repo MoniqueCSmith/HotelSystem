@@ -4,22 +4,23 @@
  * Author: Shanlynn Courtney Thomas (218053762)
  * Date: 08 April 2023
  */
-package za.ac.cput.repository;
+package za.ac.cput.repository.impl;
 
 import za.ac.cput.domain.Review;
+import za.ac.cput.repository.IReviewRepository;
 
 import java.util.HashSet;
 import java.util.Set;
 
-public class ReviewRepository implements IReviewRepository {
-    public static ReviewRepository repository = null;
+public class ReviewRepositoryImpl implements IReviewRepository {
+    public static ReviewRepositoryImpl repository = null;
     private Set<Review> reviewDB = null;
-    private ReviewRepository(){
+    private ReviewRepositoryImpl(){
         reviewDB = new HashSet<Review>();
     }
-    public static ReviewRepository getRepository(){
+    public static ReviewRepositoryImpl getRepository(){
         if (repository == null){
-            repository = new ReviewRepository();
+            repository = new ReviewRepositoryImpl();
         }
         return repository;
     }

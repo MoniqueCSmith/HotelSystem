@@ -5,25 +5,26 @@
  * Date: 07 April 2023
  */
 
-package za.ac.cput.repository;
+package za.ac.cput.repository.impl;
 
 import za.ac.cput.domain.MealPlan;
+import za.ac.cput.repository.IMealPlanRepository;
 
 import java.util.HashSet;
 import java.util.Set;
 
-public class MealPlanRepository implements IMealPlanRepository {
+public class MealPlanRepositoryImpl implements IMealPlanRepository {
 
-    private static MealPlanRepository repository = null;
+    private static MealPlanRepositoryImpl repository = null;
     private Set<MealPlan> mealPlanDB = null;
 
-    private MealPlanRepository() {
+    private MealPlanRepositoryImpl() {
         mealPlanDB = new HashSet<MealPlan>();
     }
 
-    public static MealPlanRepository getRepository() {
+    public static MealPlanRepositoryImpl getRepository() {
         if (repository == null) {
-            repository = new MealPlanRepository();
+            repository = new MealPlanRepositoryImpl();
         }
         return repository;
     }

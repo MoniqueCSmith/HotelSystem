@@ -1,27 +1,28 @@
-/* HotelLocationRepository.java
+/* HotelLocationRepositoryImpl.java
  Repository for Hotel Location class
  Author: Ashton Williams (220468478)
  Date: 08 April 2023
 */
 
-package za.ac.cput.repository;
+package za.ac.cput.repository.impl;
 
 import za.ac.cput.domain.HotelLocation;
+import za.ac.cput.repository.IHotelLocationRepository;
 
 import java.util.HashSet;
 import java.util.Set;
 
-public class HotelLocationRepository implements IHotelLocationRepository {
+public class HotelLocationRepositoryImpl implements IHotelLocationRepository {
 
-    private static HotelLocationRepository repository= null;
+    private static HotelLocationRepositoryImpl repository= null;
     private Set<HotelLocation> hotelLocationDB= null;
 
-    private HotelLocationRepository(){
+    private HotelLocationRepositoryImpl(){
         hotelLocationDB= new HashSet<HotelLocation>();
     }
-    public static HotelLocationRepository getRepository(){
+    public static HotelLocationRepositoryImpl getRepository(){
         if(repository==null){
-            repository = new HotelLocationRepository();
+            repository = new HotelLocationRepositoryImpl();
         }
         return repository;
     }

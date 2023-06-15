@@ -1,3 +1,9 @@
+/* HotelLocationRepositoryTest.java
+ Repository Test for the Hotel Location class
+ Author: Ashton Williams (220468478)
+ Date: 08 April 2023
+*/
+
 package za.ac.cput.repository;
 
 import org.junit.jupiter.api.MethodOrderer;
@@ -5,14 +11,15 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 import za.ac.cput.domain.HotelLocation;
 import za.ac.cput.factory.HotelLocationFactory;
+import za.ac.cput.repository.impl.HotelLocationRepositoryImpl;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 @TestMethodOrder(MethodOrderer.MethodName.class)
 
-class HotelLocationRepositoryTest {
+class HotelLocationRepositoryImplTest {
 
-    private static HotelLocationRepository repository =HotelLocationRepository.getRepository();
+    private static HotelLocationRepositoryImpl repository = HotelLocationRepositoryImpl.getRepository();
     private static HotelLocation hotelLocation= HotelLocationFactory.createHotelLocation("12 Nassua Street Clifton",
                                                 "Cape Town", "Western Cape", 7650);
 

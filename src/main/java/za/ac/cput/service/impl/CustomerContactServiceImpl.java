@@ -7,17 +7,17 @@
 package za.ac.cput.service.impl;
 
 import za.ac.cput.domain.CustomerContact;
-import za.ac.cput.repository.CustomerContactRepository;
+import za.ac.cput.repository.impl.CustomerContactRepositoryImpl;
 import za.ac.cput.service.CustomerContactService;
 import java.util.Set;
 
 public class CustomerContactServiceImpl implements CustomerContactService {
     private static CustomerContactServiceImpl service = null;
-    private CustomerContactRepository repository = null;
+    private CustomerContactRepositoryImpl repository = null;
 
     private CustomerContactServiceImpl() {
         if(repository == null) {
-            repository = CustomerContactRepository.getRepository();
+            repository = CustomerContactRepositoryImpl.getRepository();
         }
     }
 
@@ -34,8 +34,8 @@ public class CustomerContactServiceImpl implements CustomerContactService {
     }
 
     @Override
-    public CustomerContact read(CustomerContact id) {
-        return repository.read(id.getCustomerContactID());
+    public CustomerContact read(String id) {
+        return repository.read(id);
     }
 
     @Override
@@ -44,8 +44,8 @@ public class CustomerContactServiceImpl implements CustomerContactService {
     }
 
     @Override
-    public boolean delete(CustomerContact id) {
-        return repository.delete(id.getCustomerContactID());
+    public boolean delete(String id) {
+        return repository.delete(id);
     }
     @Override
     public Set<CustomerContact> getAll() {

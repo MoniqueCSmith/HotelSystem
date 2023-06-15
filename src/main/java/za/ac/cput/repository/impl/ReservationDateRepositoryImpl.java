@@ -5,26 +5,27 @@ Author : Kyra Petersen (219474559)
 Date : 5 April 2023
 */
 
-package za.ac.cput.repository;
+package za.ac.cput.repository.impl;
 
 import za.ac.cput.domain.ReservationDate;
+import za.ac.cput.repository.IReservationDateRepository;
 
 import java.util.HashSet;
 import java.util.Set;
 
-public  class ReservationDateRepository implements IReservationDateRepository {
+public  class ReservationDateRepositoryImpl implements IReservationDateRepository {
 
-    private static ReservationDateRepository repository = null;
+    private static ReservationDateRepositoryImpl repository = null;
     private Set<ReservationDate> reservationDateDB = null;
 
-    private ReservationDateRepository() {
+    private ReservationDateRepositoryImpl() {
         reservationDateDB = new HashSet<ReservationDate>();
     }
 
-    public static ReservationDateRepository getRepository() {
+    public static ReservationDateRepositoryImpl getRepository() {
 
         if (repository == null){
-            repository = new ReservationDateRepository();
+            repository = new ReservationDateRepositoryImpl();
     }
    return repository;
 }

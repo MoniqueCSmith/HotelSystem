@@ -10,7 +10,7 @@ Date : 5 June 2023
 package za.ac.cput.service.impl;
 
 import za.ac.cput.domain.Reservation;
-import za.ac.cput.repository.ReservationRepository;
+import za.ac.cput.repository.impl.ReservationRepositoryImpl;
 import za.ac.cput.service.ReservationService;
 
 import java.util.Set;
@@ -18,11 +18,11 @@ import java.util.Set;
 public class ReservationServiceImpl implements ReservationService {
 
     private static ReservationService service = null;
-    private  ReservationRepository repository=null;
+    private ReservationRepositoryImpl repository=null;
 
     private ReservationServiceImpl() {
         if (repository == null) {
-            repository = ReservationRepository.getRepository();
+            repository = ReservationRepositoryImpl.getRepository();
 
         }
     }

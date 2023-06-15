@@ -11,14 +11,15 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 import za.ac.cput.domain.Membership;
 import za.ac.cput.factory.MembershipFactory;
+import za.ac.cput.repository.impl.MembershipRepositoryImpl;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 @TestMethodOrder(MethodOrderer.MethodName.class)
 
-class MembershipRepositoryTest {
+class MembershipRepositoryImplTest {
 
-    private static MembershipRepository repository = MembershipRepository.getRepository();
+    private static MembershipRepositoryImpl repository = MembershipRepositoryImpl.getRepository();
     private static Membership membership = MembershipFactory.buildMembership("cconner@gmail.com", "fish", "Corrie", "Conner", "0874561549", "Male");
 
 

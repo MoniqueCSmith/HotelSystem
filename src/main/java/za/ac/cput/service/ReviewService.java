@@ -13,7 +13,7 @@ import java.util.Set;
 
 public interface ReviewService {
     Review create(Review review);
-    Review read(Review id);
-    boolean delete(Review id);
+    Review read(String id);
+    boolean delete(String id);
     Set<Review>getAll();
 }

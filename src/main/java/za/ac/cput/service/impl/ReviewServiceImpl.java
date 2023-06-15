@@ -8,18 +8,18 @@
 package za.ac.cput.service.impl;
 
 import za.ac.cput.domain.Review;
-import za.ac.cput.repository.ReviewRepository;
+import za.ac.cput.repository.impl.ReviewRepositoryImpl;
 import za.ac.cput.service.ReviewService;
 import java.util.Set;
 
 public class ReviewServiceImpl implements ReviewService {
 
     private static ReviewServiceImpl service = null;
-    private ReviewRepository repository = null;
+    private ReviewRepositoryImpl repository = null;
 
     private ReviewServiceImpl(){
         if(repository == null) {
-            repository = ReviewRepository.getRepository();
+            repository = ReviewRepositoryImpl.getRepository();
         }
     }
     public static ReviewServiceImpl getService() {

@@ -9,6 +9,7 @@ package za.ac.cput.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import za.ac.cput.domain.Amenity;
+import za.ac.cput.factory.AmenityFactory;
 import za.ac.cput.service.impl.AmenityServiceImpl;
 
 import java.util.Set;
@@ -23,8 +24,9 @@ public class AmenityController {
     //@RequestMapping(value = "/create", method = RequestMethod.POST)
     @PostMapping("/create")
     public Amenity create(@RequestBody Amenity amenity){
-
-        return amenityService.create(amenity);
+          Amenity amenityCreated= AmenityFactory.buildAmenity(amenity.getName(), amenity.getDescription(),
+                    amenity.getAmenityAvailable(), amenity.getPrice());
+        return amenityService.create(amenityCreated);
     }
     @GetMapping("/read/{id}")
     public Amenity read(@PathVariable String id){

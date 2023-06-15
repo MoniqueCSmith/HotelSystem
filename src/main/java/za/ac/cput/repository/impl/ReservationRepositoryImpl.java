@@ -6,26 +6,27 @@ Date : 5 April 2023
 */
 
 
-package za.ac.cput.repository;
+package za.ac.cput.repository.impl;
 
 import za.ac.cput.domain.Reservation;
+import za.ac.cput.repository.IReservationRepository;
 
 import java.util.HashSet;
 import java.util.Set;
 
-public  class ReservationRepository implements IReservationRepository {
+public  class ReservationRepositoryImpl implements IReservationRepository {
 
-    private static ReservationRepository repository = null;
+    private static ReservationRepositoryImpl repository = null;
     private Set<Reservation> reservationDB = null;
 
-    private ReservationRepository() {
+    private ReservationRepositoryImpl() {
         reservationDB = new HashSet<Reservation>();
     }
 
-    public static ReservationRepository getRepository() {
+    public static ReservationRepositoryImpl getRepository() {
 
         if (repository == null){
-            repository = new ReservationRepository();
+            repository = new ReservationRepositoryImpl();
         }
         return repository;
     }

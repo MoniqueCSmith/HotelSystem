@@ -11,12 +11,13 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 import za.ac.cput.domain.Review;
 import za.ac.cput.factory.ReviewFactory;
+import za.ac.cput.repository.impl.ReviewRepositoryImpl;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 @TestMethodOrder(MethodOrderer.MethodName.class)
-class ReviewRepositoryTest {
-    private static ReviewRepository repository = ReviewRepository.getRepository();
+class ReviewRepositoryImplTest {
+    private static ReviewRepositoryImpl repository = ReviewRepositoryImpl.getRepository();
     private static Review review = ReviewFactory.buildReview(4, "Was a blissful experience!");
 
     @Test

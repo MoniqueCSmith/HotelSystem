@@ -8,7 +8,7 @@ package za.ac.cput.service.impl;
 
 import org.springframework.stereotype.Service;
 import za.ac.cput.domain.Amenity;
-import za.ac.cput.repository.AmenityRepository;
+import za.ac.cput.repository.impl.AmenityRepositoryImpl;
 import za.ac.cput.service.AmenityService;
 
 
@@ -17,11 +17,11 @@ import java.util.Set;
 public class AmenityServiceImpl implements AmenityService {
 
     private static AmenityServiceImpl service = null;
-    private AmenityRepository repository = null;
+    private AmenityRepositoryImpl repository = null;
 
     private AmenityServiceImpl(){
         if(repository ==null){
-            repository = AmenityRepository.getRepository();
+            repository = AmenityRepositoryImpl.getRepository();
         }
     }
 

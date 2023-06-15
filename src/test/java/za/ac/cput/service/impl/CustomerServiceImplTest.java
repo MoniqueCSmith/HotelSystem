@@ -31,7 +31,7 @@ public class CustomerServiceImplTest {
 
     @Test
     void b_read() {
-        Customer read = service.read(customer);
+        Customer read = service.read(customer.getCustomerID());
         assertNotNull(read);
         System.out.println("Read:" + read);
     }
@@ -51,7 +51,7 @@ public class CustomerServiceImplTest {
 
     @Test
     void d_delete() {
-        boolean success = service.delete(customer);
+        boolean success = service.delete(customer.getCustomerID());
         assertTrue(success);
         System.out.println("Deleted:" + success);
     }

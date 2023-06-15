@@ -13,7 +13,7 @@ import java.util.Set;
 public interface InvoiceService {
 
     Invoice create(Invoice invoice);
-    Invoice read(Invoice id);
+    Invoice read(String id);
     Invoice update(Invoice invoice);
     Set<Invoice> getAll();
 }

@@ -26,7 +26,7 @@ class InvoiceServiceImplTest {
 
     @Test
     void b_read(){
-        Invoice read= service.read(invoice);
+        Invoice read= service.read(invoice.getInvoiceID());
         assertNotNull(read);
         System.out.println("This has been read: " + read);
     }

@@ -5,18 +5,19 @@
 */
 package za.ac.cput.service.impl;
 
+import org.springframework.stereotype.Service;
 import za.ac.cput.domain.Invoice;
-import za.ac.cput.repository.InvoiceRepository;
+import za.ac.cput.repository.impl.InvoiceRepositoryImpl;
 import za.ac.cput.service.InvoiceService;
 
 import java.util.Set;
-
+@Service
 public class InvoiceServiceImpl implements InvoiceService {
     private static InvoiceServiceImpl service= null;
-    private InvoiceRepository repository= null;
+    private InvoiceRepositoryImpl repository= null;
     private InvoiceServiceImpl(){
         if(repository== null){
-                repository= InvoiceRepository.getRepository();
+                repository= InvoiceRepositoryImpl.getRepository();
         }
     }
     public static InvoiceServiceImpl getService(){
@@ -32,8 +33,8 @@ public class InvoiceServiceImpl implements InvoiceService {
     }
 
     @Override
-    public Invoice read(Invoice id) {
-        return repository.read(id.getInvoiceID());
+    public Invoice read(String id) {
+        return repository.read(id);
     }
 
     @Override

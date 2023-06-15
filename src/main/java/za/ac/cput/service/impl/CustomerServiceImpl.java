@@ -7,17 +7,17 @@
 package za.ac.cput.service.impl;
 
 import za.ac.cput.domain.Customer;
-import za.ac.cput.repository.CustomerRepository;
+import za.ac.cput.repository.impl.CustomerRepositoryImpl;
 import za.ac.cput.service.CustomerService;
 import java.util.Set;
 
 public class CustomerServiceImpl implements CustomerService {
     private static CustomerServiceImpl service = null;
-    private CustomerRepository repository = null;
+    private CustomerRepositoryImpl repository = null;
 
     private CustomerServiceImpl() {
         if(repository == null) {
-            repository = CustomerRepository.getRepository();
+            repository = CustomerRepositoryImpl.getRepository();
         }
     }
 

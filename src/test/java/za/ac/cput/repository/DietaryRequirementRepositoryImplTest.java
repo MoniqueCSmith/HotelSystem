@@ -12,13 +12,14 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 import za.ac.cput.domain.DietaryRequirement;
 import za.ac.cput.factory.DietaryRequirementFactory;
+import za.ac.cput.repository.impl.DietaryRequirementRepositoryImpl;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 @TestMethodOrder(MethodOrderer.MethodName.class)
-class DietaryRequirementRepositoryTest {
+class DietaryRequirementRepositoryImplTest {
 
-    private static DietaryRequirementRepository repository = DietaryRequirementRepository.getRepository();
+    private static DietaryRequirementRepositoryImpl repository = DietaryRequirementRepositoryImpl.getRepository();
     private static DietaryRequirement dietaryRequirement = DietaryRequirementFactory.createDietaryRequirement
             ("Vegan", "Allergic to eggs.");
 

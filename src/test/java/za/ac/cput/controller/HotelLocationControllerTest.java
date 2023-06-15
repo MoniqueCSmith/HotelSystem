@@ -28,7 +28,7 @@ class HotelLocationControllerTest {
 
     private final String baseURL= "http://localhost:8080/hotellocation";
     @Test
-    void create() {
+    void a_create() {
         String url= baseURL + "/create";
         ResponseEntity<HotelLocation> postResponse = restTemplate.postForEntity(url, hotelLocation, HotelLocation.class);
         assertNotNull(postResponse);
@@ -39,7 +39,7 @@ class HotelLocationControllerTest {
     }
 
     @Test
-    void read() {
+    void b_read() {
 
         String url= baseURL + "/read/"+ hotelLocation.getID();
         System.out.println("URL:"+ url);
@@ -49,7 +49,7 @@ class HotelLocationControllerTest {
     }
 
     @Test
-    void update() {
+    void c_update() {
         HotelLocation updated= new HotelLocation.Builder().copy(hotelLocation)
                     .setProvince("Western Cape")
                     .build();
@@ -62,14 +62,14 @@ class HotelLocationControllerTest {
 
     @Test
     @Disabled
-    void delete() {
+    void d_delete() {
         String url= baseURL+ "/delete/" + hotelLocation.getID();
         System.out.println("URL:  " + url);
         restTemplate.delete(url);
     }
 
     @Test
-    void getall() {
+    void e_getall() {
         String url = baseURL + "/getall";
         HttpHeaders headers = new HttpHeaders();
         HttpEntity<String> entity = new HttpEntity<>(null, headers);

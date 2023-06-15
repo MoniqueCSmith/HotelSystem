@@ -11,6 +11,10 @@ public class CustomerQuery {
     private String title;
     private String email;
     private String description;
+
+    public CustomerQuery() {
+    }
+
     private CustomerQuery(Builder builder) {
         this.queryID = builder.queryID;
         this.title = builder.title;

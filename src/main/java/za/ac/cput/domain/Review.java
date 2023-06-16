@@ -6,10 +6,14 @@
  */
 package za.ac.cput.domain;
 
-public class Review {
+import java.io.Serializable;
+
+public class Review implements Serializable {
     private String reviewID;
     private int rating;
     private String reviewComment;
+
+    private Review(){}
 
     private Review(Builder builder){
         this.reviewID = builder.reviewID;

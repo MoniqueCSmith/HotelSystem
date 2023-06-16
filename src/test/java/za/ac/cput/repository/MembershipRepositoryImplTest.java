@@ -1,5 +1,5 @@
 /**
- * MembershipRepositoryTest.java
+ * MembershipRepositoryImplTest.java
  * Repository Test class for the Membership
  * Author: Shanlynn Courtney Thomas (218053762)
  * Date: 08 April 2023

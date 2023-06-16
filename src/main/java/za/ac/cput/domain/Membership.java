@@ -6,7 +6,9 @@
  */
 package za.ac.cput.domain;
 
-public class Membership {
+import java.io.Serializable;
+
+public class Membership implements Serializable {
     private String memberID;
     private String email;
     private String password;
@@ -15,6 +17,7 @@ public class Membership {
     private String phoneNumber;
     private String gender;
 
+    private Membership(){}
     private Membership(Builder builder){
         this.memberID = builder.memberID;
         this.email = builder.email;

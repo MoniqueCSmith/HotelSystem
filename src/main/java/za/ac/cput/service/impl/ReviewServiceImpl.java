@@ -7,11 +7,13 @@
 
 package za.ac.cput.service.impl;
 
+import org.springframework.stereotype.Service;
 import za.ac.cput.domain.Review;
 import za.ac.cput.repository.impl.ReviewRepositoryImpl;
 import za.ac.cput.service.ReviewService;
 import java.util.Set;
 
+@Service
 public class ReviewServiceImpl implements ReviewService {
 
     private static ReviewServiceImpl service = null;

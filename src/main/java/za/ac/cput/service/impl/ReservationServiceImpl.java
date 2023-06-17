@@ -9,12 +9,13 @@ Date : 5 June 2023
 
 package za.ac.cput.service.impl;
 
+import org.springframework.stereotype.Service;
 import za.ac.cput.domain.Reservation;
 import za.ac.cput.repository.impl.ReservationRepositoryImpl;
 import za.ac.cput.service.ReservationService;
 
 import java.util.Set;
-
+@Service
 public class ReservationServiceImpl implements ReservationService {
 
     private static ReservationService service = null;

@@ -39,12 +39,12 @@ public  class ReservationDateRepositoryImpl implements IReservationDateRepositor
 
     @Override
     public ReservationDate read(String reservationID) {
-
-        ReservationDate reservationDate = reservationDateDB.stream()
-                .filter(rd -> rd.getReservationID().equals(reservationID))
-                .findAny()
-                .orElse(null);
-        return reservationDate;
+        for (ReservationDate reservationDate : reservationDateDB) {
+            if (reservationDate.getReservationID().equals(reservationID)) {
+                return reservationDate;
+            }
+        }
+        return null;
     }
 
 

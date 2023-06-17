@@ -7,9 +7,10 @@
 
 package za.ac.cput.domain;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class MealPlan {
+public class MealPlan implements Serializable {
     private String mealPlanID;
     private String name;
     private String description;
@@ -67,6 +68,14 @@ public class MealPlan {
 
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    public DietaryRequirement getDietaryRequirement() {
+        return dietaryRequirement;
+    }
+
+    public void setDietaryRequirement(DietaryRequirement dietaryRequirement) {
+        this.dietaryRequirement = dietaryRequirement;
     }
 
     public static class Builder {

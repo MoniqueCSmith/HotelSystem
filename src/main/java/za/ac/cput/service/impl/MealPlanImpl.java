@@ -8,12 +8,14 @@
 
 package za.ac.cput.service.impl;
 
+import org.springframework.stereotype.Service;
 import za.ac.cput.domain.MealPlan;
 import za.ac.cput.repository.impl.MealPlanRepositoryImpl;
 import za.ac.cput.service.MealPlanService;
 
 import java.util.Set;
 
+@Service
 public class MealPlanImpl implements MealPlanService {
 
     private static MealPlanImpl service = null;

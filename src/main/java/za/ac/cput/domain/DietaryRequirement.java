@@ -7,9 +7,10 @@
 
 package za.ac.cput.domain;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class DietaryRequirement {
+public class DietaryRequirement implements Serializable {
     private String dietaryRequirementID;
     private String name;
     private String specialRequirements;

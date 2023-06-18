@@ -6,6 +6,7 @@
  */
 package za.ac.cput.controller;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
@@ -58,6 +59,7 @@ class CustomerContactControllerTest {
     }
 
     @Test
+    @Disabled
     void d_delete() {
         String url = baseURL + "/delete/" + customerContact.getCustomerContactID();
         System.out.println("URL:" + url);

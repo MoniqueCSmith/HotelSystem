@@ -4,64 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce7d189a-7d81-4d9b-b48a-d723a5a067bb" name="Changes" comment="Updated DietaryRequirementImplTest.java and MealPlanImplTest.java.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/ReservationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/ReservationDateController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/controller/ReservationControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/controller/ReservationDateControllerTest.java" afterDir="false" />
+    <list default="true" id="29bc069b-1ed2-4338-8aaf-251e84945cf0" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Reservation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/ReservationDate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/ReservationDate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/repository/impl/ReservationDateRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/repository/impl/ReservationDateRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/repository/impl/ReservationRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/repository/impl/ReservationRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/service/impl/ReservationDateServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/service/impl/ReservationDateServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/service/impl/ReservationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/service/impl/ReservationServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/DietaryRequirement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/DietaryRequirement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/MealPlan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/MealPlan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/factory/MealPlanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/factory/MealPlanFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/repository/impl/MealPlanRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/repository/impl/MealPlanRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/service/impl/DietaryRequirementImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/service/impl/DietaryRequirementImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/service/impl/MealPlanImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/service/impl/MealPlanImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/controller/MealPlanControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/controller/MealPlanControllerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Interface" />
-        <option value="Class" />
-        <option value="JUnit5 Test Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="219474559" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="useMavenConfig" value="true" />
-      </MavenGeneralSettings>
-    </option>
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="workspaceImportEnabled" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
-  <component name="ProjectId" id="2QpPeImkqP2JPHw8To8jOqFVdNd" />
+  <component name="ProjectId" id="2RNqY8Y4PbSjk71uajI5irvasJp" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="false" id="Update" />
   </component>
@@ -78,47 +37,16 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/petersen/Desktop/tester&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.idesettings.debugger.capture&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;bccc3c3a52e56e014ba95dbd45a2cd01&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RecentsManager">
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
-    <key name="CreateTestDialog.RecentsKey">
-      <recent name="za.ac.cput.controller" />
-    </key>
-  </component>
-  <component name="RunManager" selected="JUnit.ReservationDateControllerTest">
-    <configuration name="AmenityControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-  <component name="RunManager" selected="JUnit.MealPlanControllerTest">
-    <configuration name="DietaryRequirementControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="HotelBookingSystem" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="za.ac.cput.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="za.ac.cput.controller" />
-      <option name="MAIN_CLASS_NAME" value="za.ac.cput.controller.AmenityControllerTest" />
-      <option name="MAIN_CLASS_NAME" value="za.ac.cput.controller.DietaryRequirementControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.CustomerControllerTest">
     <configuration name="CustomerContactControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-    <configuration name="MealPlanControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HotelBookingSystem" />
       <extension name="coverage">
         <pattern>
@@ -128,14 +56,42 @@
       </extension>
       <option name="PACKAGE_NAME" value="za.ac.cput.controller" />
       <option name="MAIN_CLASS_NAME" value="za.ac.cput.controller.CustomerContactControllerTest" />
-      <option name="MAIN_CLASS_NAME" value="za.ac.cput.controller.MealPlanControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CustomerControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HotelBookingSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="za.ac.cput.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="za.ac.cput.controller" />
+      <option name="MAIN_CLASS_NAME" value="za.ac.cput.controller.CustomerControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HotelLocationControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HotelBookingSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="za.ac.cput.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="za.ac.cput.controller" />
+      <option name="MAIN_CLASS_NAME" value="za.ac.cput.controller.HotelLocationControllerTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="ReservationControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-    <configuration name="MealPlanControllerTest.a_create" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HotelBookingSystem" />
       <extension name="coverage">
         <pattern>
@@ -146,28 +102,6 @@
       <option name="PACKAGE_NAME" value="za.ac.cput.controller" />
       <option name="MAIN_CLASS_NAME" value="za.ac.cput.controller.ReservationControllerTest" />
       <option name="TEST_OBJECT" value="class" />
-      <option name="MAIN_CLASS_NAME" value="za.ac.cput.controller.MealPlanControllerTest" />
-      <option name="METHOD_NAME" value="a_create" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ReservationDateControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-    <configuration name="MealPlanControllerTest.b_read" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="HotelBookingSystem" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="za.ac.cput.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="za.ac.cput.controller" />
-      <option name="MAIN_CLASS_NAME" value="za.ac.cput.controller.ReservationDateControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="MAIN_CLASS_NAME" value="za.ac.cput.controller.MealPlanControllerTest" />
-      <option name="METHOD_NAME" value="b_read" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -187,127 +121,28 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ReservationDateControllerTest" />
-        <item itemvalue="Spring Boot.MyApplication" />
-        <item itemvalue="JUnit.ReservationControllerTest" />
-        <item itemvalue="JUnit.AmenityControllerTest" />
+        <item itemvalue="JUnit.CustomerControllerTest" />
         <item itemvalue="JUnit.CustomerContactControllerTest" />
-        <item itemvalue="JUnit.MealPlanControllerTest" />
-        <item itemvalue="JUnit.MealPlanControllerTest.b_read" />
-        <item itemvalue="JUnit.MealPlanControllerTest.a_create" />
         <item itemvalue="Spring Boot.MyApplication" />
-        <item itemvalue="JUnit.DietaryRequirementControllerTest" />
+        <item itemvalue="JUnit.HotelLocationControllerTest" />
+        <item itemvalue="JUnit.ReservationControllerTest" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="ce7d189a-7d81-4d9b-b48a-d723a5a067bb" name="Changes" comment="Domain classes completed. Entities updated" />
-      <created>1686047645413</created>
+      <changelist id="29bc069b-1ed2-4338-8aaf-251e84945cf0" name="Changes" comment="" />
+      <created>1687100934466</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1686047645413</updated>
-      <workItem from="1686047648376" duration="5101000" />
-      <workItem from="1686226289735" duration="4052000" />
-      <workItem from="1686236041788" duration="80000" />
-      <workItem from="1686236182150" duration="26380000" />
-      <workItem from="1686305420507" duration="2021000" />
-      <workItem from="1686394894597" duration="3718000" />
-      <workItem from="1686492758918" duration="6435000" />
-      <workItem from="1686669481359" duration="173000" />
-      <workItem from="1686674273737" duration="166000" />
-      <workItem from="1686689378303" duration="831000" />
-      <workItem from="1686691140924" duration="8042000" />
-      <workItem from="1686743522488" duration="783000" />
-      <workItem from="1686757560961" duration="627000" />
-      <workItem from="1686760118276" duration="960000" />
-      <workItem from="1686771651103" duration="75000" />
-      <workItem from="1686771873918" duration="15772000" />
-      <workItem from="1686836787114" duration="610000" />
-      <workItem from="1686840220121" duration="9118000" />
-      <workItem from="1686867242722" duration="718000" />
-      <workItem from="1686906661710" duration="6116000" />
-      <workItem from="1686912850559" duration="1339000" />
-      <workItem from="1686916488433" duration="879000" />
-      <workItem from="1686933723855" duration="1004000" />
-      <workItem from="1686945009499" duration="3863000" />
-      <workItem from="1686996701180" duration="4202000" />
-      <workItem from="1687009879221" duration="8550000" />
-      <workItem from="1686940271276" duration="3847000" />
-      <workItem from="1686944229341" duration="8228000" />
+      <updated>1687100934466</updated>
+      <workItem from="1687100935854" duration="1563000" />
+      <workItem from="1687113678098" duration="39000" />
     </task>
-    <task id="LOCAL-00001" summary="Updated generated ID in DietaryRequirementFactory, MealPlanFactory, and related classes and test classes.">
-      <created>1686509321643</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1686509321643</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Updated DietaryRequirementImplTest.java and MealPlanImplTest.java.">
-      <created>1686510862819</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1686510862819</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="219474559" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Minor fixes made on required classes." />
-    <MESSAGE value="Updated generated ID in DietaryRequirementFactory, MealPlanFactory, and related classes and test classes." />
-    <MESSAGE value="Updated DietaryRequirementImplTest.java and MealPlanImplTest.java." />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated DietaryRequirementImplTest.java and MealPlanImplTest.java." />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/za/ac/cput/controller/CustomerControllerTest.java</url>
-          <line>26</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/za/ac/cput/controller/ReservationControllerTest.java</url>
-          <line>27</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/za/ac/cput/controller/ReservationControllerTest.java</url>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
   </component>
 </project>

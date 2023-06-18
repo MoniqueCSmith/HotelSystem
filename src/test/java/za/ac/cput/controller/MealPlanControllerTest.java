@@ -8,7 +8,6 @@ import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
-import za.ac.cput.domain.CustomerContact;
 import za.ac.cput.domain.DietaryRequirement;
 import za.ac.cput.domain.MealPlan;
 import za.ac.cput.factory.DietaryRequirementFactory;

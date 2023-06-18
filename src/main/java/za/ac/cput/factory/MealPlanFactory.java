@@ -16,8 +16,9 @@ public class MealPlanFactory {
     public static MealPlan createMealPlan (String name, String description, String mealType, double price, DietaryRequirement dietaryRequirement) {
 
         if (Helper.isNullOrEmpty(name) || Helper.isNullOrEmpty(description)
-                || Helper.isNullOrEmpty(mealType) || Helper.isNullOrEmpty(String.valueOf(price)))
+                || Helper.isNullOrEmpty(mealType) || Helper.isNullOrEmpty(String.valueOf(price)) || Helper.isNullOrEmpty(String.valueOf(dietaryRequirement))){
             return null;
+        }
 
         String mealPlanID = Helper.generateID();
 

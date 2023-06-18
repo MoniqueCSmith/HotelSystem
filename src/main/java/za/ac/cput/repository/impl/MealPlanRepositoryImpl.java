@@ -39,11 +39,11 @@ public class MealPlanRepositoryImpl implements IMealPlanRepository {
 
     @Override
     public MealPlan read(String mealPlanID) {
-        MealPlan mealPlan = mealPlanDB.stream()
-                .filter(e -> e.getMealPlanID().equals(mealPlanID))
-                .findAny()
-                .orElse(null);
-        return mealPlan;
+        for (MealPlan m : mealPlanDB) {
+            if (m.getMealPlanID().equals(mealPlanID))
+                return m;
+        }
+        return null;
     }
 
     @Override

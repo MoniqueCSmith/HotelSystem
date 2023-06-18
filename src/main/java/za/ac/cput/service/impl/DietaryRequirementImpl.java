@@ -8,12 +8,14 @@
 
 package za.ac.cput.service.impl;
 
+import org.springframework.stereotype.Service;
 import za.ac.cput.domain.DietaryRequirement;
 import za.ac.cput.repository.impl.DietaryRequirementRepositoryImpl;
 import za.ac.cput.service.DietaryRequirementService;
 
 import java.util.Set;
 
+@Service
 public class DietaryRequirementImpl implements DietaryRequirementService {
 
     private static DietaryRequirementImpl service = null;

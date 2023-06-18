@@ -37,16 +37,17 @@ public  class ReservationRepositoryImpl implements IReservationRepository {
             return null;
         return reservation;
     }
-
-    @Override
-    public Reservation read(String reservationID){
-
-        Reservation reservation = reservationDB.stream()
-                .filter(rd -> rd.getReservationID().equals(reservationID))
-                .findAny()
-                .orElse(null);
-        return reservation;
+//made changes
+@Override
+public Reservation read(String reservationID) {
+    for (Reservation reservation : reservationDB) {
+        if (reservation.getReservationID().equals(reservationID)) {
+            return reservation;
+        }
     }
+    return null;
+}
+
 
 
     @Override
@@ -71,6 +72,6 @@ public  class ReservationRepositoryImpl implements IReservationRepository {
 
     public Set<Reservation> getAll() {
         return reservationDB;
-
     }
+
 }

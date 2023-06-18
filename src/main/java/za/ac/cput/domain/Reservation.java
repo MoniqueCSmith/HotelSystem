@@ -8,10 +8,11 @@ Date : 5 April 2023
 package za.ac.cput.domain;
 
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
-public class Reservation {
+public class Reservation implements Serializable {
 
     private String reservationID;
     private LocalDateTime reservationTimeCreated;
@@ -19,7 +20,7 @@ public class Reservation {
     private Boolean termsAndConditions;
     private ReservationDate reservationDate;
 
-
+    private Reservation(){}
     private Reservation(Builder builder) {
 
         this.reservationID = builder.reservationID;

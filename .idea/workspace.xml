@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="72d4ba2d-56c9-42bc-aa9f-409e38b6bba5" name="Changes" comment="fixed issue regarding workspace.xml file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/controller/CustomerContactControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/controller/CustomerContactControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/controller/CustomerControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/controller/CustomerControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/controller/CustomerQueryControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/controller/CustomerQueryControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/MyApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/HotelBookingSystem.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,8 +51,8 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.InvoiceControllerTest">
-    <configuration name="CustomerContactControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ReviewControllerTest">
+    <configuration name="AmenityControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HotelBookingSystem" />
       <extension name="coverage">
         <pattern>
@@ -63,13 +61,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="za.ac.cput.controller" />
-      <option name="MAIN_CLASS_NAME" value="za.ac.cput.controller.CustomerContactControllerTest" />
+      <option name="MAIN_CLASS_NAME" value="za.ac.cput.controller.AmenityControllerTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CustomerControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MembershipControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HotelBookingSystem" />
       <extension name="coverage">
         <pattern>
@@ -78,13 +76,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="za.ac.cput.controller" />
-      <option name="MAIN_CLASS_NAME" value="za.ac.cput.controller.CustomerControllerTest" />
+      <option name="MAIN_CLASS_NAME" value="za.ac.cput.controller.MembershipControllerTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CustomerQueryControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ReviewControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HotelBookingSystem" />
       <extension name="coverage">
         <pattern>
@@ -93,30 +91,29 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="za.ac.cput.controller" />
-      <option name="MAIN_CLASS_NAME" value="za.ac.cput.controller.CustomerQueryControllerTest" />
+      <option name="MAIN_CLASS_NAME" value="za.ac.cput.controller.ReviewControllerTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InvoiceControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="za.ac.cput.factory in HotelBookingSystem" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HotelBookingSystem" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="za.ac.cput.controller.*" />
+          <option name="PATTERN" value="za.ac.cput.factory.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="za.ac.cput.controller" />
-      <option name="MAIN_CLASS_NAME" value="za.ac.cput.controller.InvoiceControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="za.ac.cput.factory" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MyApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+    <configuration name="HotelBookingSystem" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="HotelBookingSystem" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="za.ac.cput.MyApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="za.ac.cput.HotelBookingSystem" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="za.ac.cput.*" />
@@ -129,11 +126,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.InvoiceControllerTest" />
-        <item itemvalue="Spring Boot.MyApplication" />
-        <item itemvalue="JUnit.CustomerControllerTest" />
-        <item itemvalue="JUnit.CustomerQueryControllerTest" />
-        <item itemvalue="JUnit.CustomerContactControllerTest" />
+        <item itemvalue="JUnit.ReviewControllerTest" />
+        <item itemvalue="Spring Boot.HotelBookingSystem" />
+        <item itemvalue="JUnit.MembershipControllerTest" />
+        <item itemvalue="JUnit.AmenityControllerTest" />
+        <item itemvalue="JUnit.za.ac.cput.factory in HotelBookingSystem" />
       </list>
     </recent_temporary>
   </component>
@@ -160,9 +157,16 @@
       <option name="presentableId" value="Default" />
       <updated>1687115783848</updated>
       <workItem from="1687115785239" duration="32000" />
-      <workItem from="1687115825868" duration="189000" />
+      <workItem from="1687115825868" duration="1283000" />
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="fixed issue regarding workspace.xml file">
+      <created>1687116102451</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1687116102451</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

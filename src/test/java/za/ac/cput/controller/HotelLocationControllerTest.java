@@ -14,7 +14,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import za.ac.cput.domain.HotelLocation;
-import za.ac.cput.factory.HotelLocationFactory;
+import za.ac.cput.util.factory.HotelLocationFactory;
 
 import static org.junit.jupiter.api.Assertions.*;
 @TestMethodOrder(MethodOrderer.MethodName.class)

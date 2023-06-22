@@ -9,7 +9,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import za.ac.cput.domain.Amenity;
-import za.ac.cput.factory.AmenityFactory;
+import za.ac.cput.util.factory.AmenityFactory;
 
 import static org.junit.jupiter.api.Assertions.*;
 

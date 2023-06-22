@@ -6,7 +6,17 @@
  */
 package za.ac.cput.domain;
 
-public class Customer {
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+import java.io.Serializable;
+import java.util.Objects;
+
+@Entity
+@Table(name = "Customer")
+public class Customer implements Serializable {
+    @Id
     private String customerID;
     private String firstName;
     private String lastName;
@@ -47,6 +57,19 @@ public class Customer {
     }
 
     public CustomerContact getCustomerContact() { return customerContact;}
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Customer customer = (Customer) o;
+        return hasMembership == customer.hasMembership && Objects.equals(customerID, customer.customerID) && Objects.equals(firstName, customer.firstName) && Objects.equals(lastName, customer.lastName) && Objects.equals(address, customer.address) && Objects.equals(customerContact, customer.customerContact);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(customerID, firstName, lastName, address, hasMembership, customerContact);
+    }
 
     @Override
     public String toString() {

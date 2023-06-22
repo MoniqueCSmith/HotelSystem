@@ -8,7 +8,7 @@ package za.ac.cput.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import za.ac.cput.domain.HotelLocation;
-import za.ac.cput.factory.HotelLocationFactory;
+import za.ac.cput.util.factory.HotelLocationFactory;
 import za.ac.cput.service.HotelLocationService;
 
 import java.util.Set;

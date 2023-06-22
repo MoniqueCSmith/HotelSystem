@@ -14,7 +14,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import za.ac.cput.domain.Invoice;
-import za.ac.cput.factory.InvoiceFactory;
+import za.ac.cput.util.factory.InvoiceFactory;
 
 import static org.junit.jupiter.api.Assertions.*;
 @TestMethodOrder(MethodOrderer.MethodName.class)

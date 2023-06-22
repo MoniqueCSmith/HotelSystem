@@ -12,7 +12,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import za.ac.cput.domain.Room;
-import za.ac.cput.factory.RoomFactory;
+import za.ac.cput.util.factory.RoomFactory;
 
 import static org.junit.jupiter.api.Assertions.*;
 @TestMethodOrder(MethodOrderer.MethodName.class)

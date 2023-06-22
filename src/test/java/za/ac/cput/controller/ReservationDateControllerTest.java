@@ -20,7 +20,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import za.ac.cput.domain.ReservationDate;
-import za.ac.cput.factory.ReservationDateFactory;
+import za.ac.cput.util.factory.ReservationDateFactory;
 
 
 import java.time.LocalDate;
@@ -64,8 +64,6 @@ class ReservationDateControllerTest {
         System.out.println("Post data"+ updated);
         ResponseEntity<ReservationDate>response= restTemplate.postForEntity(url,updated, ReservationDate.class);
         assertNotNull(response.getBody());
-
-
     }
 
     @Test
@@ -84,8 +82,5 @@ class ReservationDateControllerTest {
         ResponseEntity<String> response = restTemplate.exchange(url , HttpMethod.GET, entity, String.class);
         System.out.println("Show All");
         System.out.println(response.getBody());
-
-
-
     }
 }

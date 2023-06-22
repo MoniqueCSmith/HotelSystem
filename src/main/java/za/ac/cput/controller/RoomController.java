@@ -9,7 +9,7 @@ package za.ac.cput.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import za.ac.cput.domain.Room;
-import za.ac.cput.factory.RoomFactory;
+import za.ac.cput.util.factory.RoomFactory;
 import za.ac.cput.service.impl.RoomServiceImpl;
 
 import java.util.Set;

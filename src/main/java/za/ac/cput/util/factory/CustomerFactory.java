@@ -4,7 +4,7 @@
  * Author: Brandon Wise - 220049173
  * Date: 5 April 2023
  */
-package za.ac.cput.factory;
+package za.ac.cput.util.factory;
 
 import za.ac.cput.domain.Customer;
 import za.ac.cput.domain.CustomerContact;

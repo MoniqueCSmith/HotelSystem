@@ -1,8 +1,6 @@
 package za.ac.cput.util;
 
 import java.util.UUID;
-import java.text.SimpleDateFormat;
-import java.util.*;
 import org.apache.commons.validator.routines.EmailValidator;
 
 public class Helper {

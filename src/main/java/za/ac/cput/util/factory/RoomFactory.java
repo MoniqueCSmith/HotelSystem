@@ -5,7 +5,7 @@
  * Date: 04 April 2023
  */
 
-package za.ac.cput.factory;
+package za.ac.cput.util.factory;
 
 import za.ac.cput.domain.Room;
 import za.ac.cput.util.Helper;

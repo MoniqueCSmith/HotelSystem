@@ -6,50 +6,49 @@
  */
 package za.ac.cput.service.impl;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import za.ac.cput.domain.Customer;
-import za.ac.cput.repository.impl.CustomerRepositoryImpl;
+import za.ac.cput.repository.ICustomerRepository;
 import za.ac.cput.service.CustomerService;
-import java.util.Set;
+
+import java.util.List;
 @Service
 public class CustomerServiceImpl implements CustomerService {
-    private static CustomerServiceImpl service = null;
-    private CustomerRepositoryImpl repository = null;
-
-    private CustomerServiceImpl() {
-        if(repository == null) {
-            repository = CustomerRepositoryImpl.getRepository();
-        }
-    }
-
-    public static CustomerServiceImpl getService(){
-        if(service == null) {
-            service = new CustomerServiceImpl();
-        }
-        return service;
+    private ICustomerRepository repository;
+@Autowired
+    private CustomerServiceImpl(ICustomerRepository repository) {
+        this.repository = repository;
     }
 
     @Override
     public Customer create(Customer customer) {
-        return repository.create(customer);
+    return this.repository.save(customer);
     }
 
     @Override
-    public Customer read(String id) {
-        return repository.read(id);
+    public Customer read(String customerID) {
+    return this.repository.findById(customerID).orElse(null);
     }
 
     @Override
     public Customer update(Customer customer) {
-        return repository.update(customer);
+        if(this.repository.existsById(customer.getCustomerID()))
+            return this.repository.save(customer);
+        return null;
     }
 
     @Override
-    public boolean delete(String id) {
-        return repository.delete(id);
+    public boolean delete(String customerID) {
+        if (this.repository.existsById(customerID)) {
+            this.repository.deleteById(customerID);
+            return true;
+        }
+        return false;
     }
+
     @Override
-    public Set<Customer> getAll() {
-        return repository.getAll();
+    public List<Customer> getAll() {
+        return this.repository.findAll();
     }
 }

@@ -11,7 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import za.ac.cput.domain.Reservation;
-import za.ac.cput.factory.ReservationFactory;
+import za.ac.cput.util.factory.ReservationFactory;
 
 import za.ac.cput.service.impl.ReservationServiceImpl;
 

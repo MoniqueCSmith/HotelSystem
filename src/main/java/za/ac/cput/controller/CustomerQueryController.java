@@ -9,9 +9,10 @@ package za.ac.cput.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import za.ac.cput.domain.CustomerQuery;
-import za.ac.cput.factory.CustomerQueryFactory;
+import za.ac.cput.util.factory.CustomerQueryFactory;
 import za.ac.cput.service.impl.CustomerQueryServiceImpl;
-import java.util.Set;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/customerQuery")
@@ -36,7 +37,7 @@ public class CustomerQueryController {
     }
 
     @RequestMapping("/getall")
-    public Set<CustomerQuery> getall(){
+    public List<CustomerQuery> getall(){
         return customerQueryService.getAll();
     }
 }

@@ -6,9 +6,9 @@
  */
 package za.ac.cput.repository;
 
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 import za.ac.cput.domain.Amenity;
-
-import java.util.Set;
-public interface IAmenityRepository extends IRepository<Amenity, String> {
-    public Set<Amenity> getAll();
+@Repository
+public interface IAmenityRepository extends JpaRepository<Amenity, String> {
 }

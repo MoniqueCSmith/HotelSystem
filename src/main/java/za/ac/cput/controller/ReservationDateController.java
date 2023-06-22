@@ -10,7 +10,7 @@ package za.ac.cput.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import za.ac.cput.domain.ReservationDate;
-import za.ac.cput.factory.ReservationDateFactory;
+import za.ac.cput.util.factory.ReservationDateFactory;
 import za.ac.cput.service.impl.ReservationDateServiceImpl;
 import java.util.Set;
 

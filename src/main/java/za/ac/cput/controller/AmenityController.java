@@ -9,7 +9,7 @@ package za.ac.cput.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import za.ac.cput.domain.Amenity;
-import za.ac.cput.factory.AmenityFactory;
+import za.ac.cput.util.factory.AmenityFactory;
 import za.ac.cput.service.impl.AmenityServiceImpl;
 
 import java.util.Set;

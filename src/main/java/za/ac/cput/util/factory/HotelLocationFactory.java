@@ -4,7 +4,7 @@ Factory for Hotel Location class
  Date: 08 April 2023
 */
 
-package za.ac.cput.factory;
+package za.ac.cput.util.factory;
 
 import za.ac.cput.domain.HotelLocation;
 import za.ac.cput.util.Helper;

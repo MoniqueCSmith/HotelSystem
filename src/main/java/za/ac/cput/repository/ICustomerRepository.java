@@ -6,9 +6,8 @@
  */
 package za.ac.cput.repository;
 
+import org.springframework.data.jpa.repository.JpaRepository;
 import za.ac.cput.domain.Customer;
-import java.util.Set;
 
-public interface ICustomerRepository extends IRepository<Customer, String>{
-    Set<Customer> getAll();
+public interface ICustomerRepository extends JpaRepository<Customer, String> {
 }

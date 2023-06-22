@@ -6,7 +6,17 @@
  */
 package za.ac.cput.domain;
 
-public class CustomerQuery {
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+import java.io.Serializable;
+import java.util.Objects;
+
+@Entity
+@Table(name = "CustomerQuery")
+public class CustomerQuery implements Serializable {
+    @Id
     private String queryID;
     private String title;
     private String email;
@@ -35,6 +45,19 @@ public class CustomerQuery {
 
     public String getDescription() {
         return description;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        CustomerQuery that = (CustomerQuery) o;
+        return Objects.equals(queryID, that.queryID) && Objects.equals(title, that.title) && Objects.equals(email, that.email) && Objects.equals(description, that.description);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(queryID, title, email, description);
     }
 
     @Override

@@ -9,6 +9,8 @@ package za.ac.cput.factory;
 import org.junit.jupiter.api.Test;
 import za.ac.cput.domain.Customer;
 import za.ac.cput.domain.CustomerContact;
+import za.ac.cput.util.factory.CustomerContactFactory;
+import za.ac.cput.util.factory.CustomerFactory;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 

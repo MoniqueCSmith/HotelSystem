@@ -7,52 +7,56 @@
 
 package za.ac.cput.service.impl;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import za.ac.cput.domain.Membership;
-import za.ac.cput.repository.impl.MembershipRepositoryImpl;
+import za.ac.cput.repository.IMembershipRepository;
 import za.ac.cput.service.MembershipService;
+import java.util.List;
 import java.util.Set;
 
 @Service
 public class MembershipServiceImpl implements MembershipService {
 
-    private static MembershipServiceImpl service = null;
-    private MembershipRepositoryImpl repository = null;
+    private IMembershipRepository repository;
 
-    private MembershipServiceImpl(){
-        if(repository == null) {
-            repository = MembershipRepositoryImpl.getRepository();
-        }
+    @Autowired
+    private MembershipServiceImpl(IMembershipRepository repository){
+        this.repository = repository;
     }
-    public static MembershipServiceImpl getService() {
-        if (service == null) {
-            service = new MembershipServiceImpl();
-        }
-        return service;
-    }
+
 
 
     @Override
-    public Membership create(Membership membership) {return repository.create(membership);
+    public Membership create(Membership membership)
+    {return repository.save(membership);
     }
 
     @Override
-    public Membership read(String id) {
-        return repository.read(id);
+    public Membership read(String memberId) {
+        return this.repository.findById(memberId).orElse(null);
     }
 
     @Override
     public Membership update(Membership membership) {
-        return repository.update(membership);
+        if(this.repository.existsById(membership.getMemberID())){
+            return this.repository.save(membership);
+        }
+        return null;
     }
 
     @Override
-    public boolean delete(String id) {
-        return repository.delete(id);
+    public boolean delete(String memberId) {
+        if(this.repository.existsById(memberId)){
+            this.repository.deleteById(memberId);
+            return true;
+        }
+        return false;
     }
+
     @Override
-    public Set<Membership> getAll() {
-        return repository.getAll();
+    public List<Membership> getAll() {
+        return this.repository.findAll();
     }
 
 }

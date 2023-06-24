@@ -7,44 +7,50 @@
 
 package za.ac.cput.service.impl;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import za.ac.cput.domain.Review;
-import za.ac.cput.repository.impl.ReviewRepositoryImpl;
+import za.ac.cput.repository.IReviewRepository;
 import za.ac.cput.service.ReviewService;
+
+import java.util.List;
 import java.util.Set;
 
 @Service
 public class ReviewServiceImpl implements ReviewService {
 
-    private static ReviewServiceImpl service = null;
-    private ReviewRepositoryImpl repository = null;
+    private IReviewRepository repository;
 
-    private ReviewServiceImpl(){
-        if(repository == null) {
-            repository = ReviewRepositoryImpl.getRepository();
+
+    @Autowired
+    private ReviewServiceImpl(IReviewRepository repository) {
+        this.repository = repository;
+    }
+
+
+
+    @Override
+    public Review create(Review review) {
+        return this.repository.save(review);
+    }
+
+    @Override
+    public Review read(String reviewId) {
+
+        return this.repository.findById(reviewId).orElse(null);
+    }
+
+    @Override
+    public boolean delete(String reviewId) {
+        if (this.repository.existsById(reviewId)){
+            this.repository.deleteById(reviewId);
         }
-    }
-    public static ReviewServiceImpl getService() {
-        if (service == null) {
-            service = new ReviewServiceImpl();
-        }
-        return service;
+        return false;
     }
 
-
     @Override
-    public Review create(Review review) {return repository.create(review);
-    }
-    @Override
-    public Review read(String id) {
-        return repository.read(id);
-    }
-    @Override
-    public boolean delete(String id) {
-        return repository.delete(id);
-    }
-    @Override
-    public Set<Review> getAll() {return repository.getAll();
+    public List<Review> getAll() {
+        return this.repository.findAll();
     }
 
 }

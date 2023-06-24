@@ -8,8 +8,8 @@ package za.ac.cput.service;
 
 import za.ac.cput.domain.Membership;
 
-import java.util.Set;
+import java.util.List;
 
 public interface MembershipService extends IService <Membership, String> {
-    Set<Membership>getAll();
+    List<Membership>getAll();
 }

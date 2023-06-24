@@ -20,7 +20,7 @@ public class AmenityFactory {
             return null;
         }
 
-        String amenityID = Helper.generateID();
+        String amenityID = Helper.generateAmenityID();
 
         return new Amenity.Builder()
                 .setAmenityID(amenityID)

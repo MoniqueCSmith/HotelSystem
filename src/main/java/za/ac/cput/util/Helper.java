@@ -45,11 +45,11 @@ public class Helper {
         return id;
     }
 
-    private static int building = 1;
-    private static int floor = 0;
-    private static int room = 1;
-    public static String generateRoomNo() {
 
+    public static String generateRoomNo() {
+        int building = 1;
+        int floor = 0;
+        int room = 1;
         String roomNo = String.format("%d%02d", building, room);
 
         room++;
@@ -63,6 +63,18 @@ public class Helper {
         }
 
         return roomNo;
+    }
+
+
+    public static String generateAmenityID() {
+        int nextId = 1;
+        String id = String.format("%06d", nextId);
+        if (nextId == 999999) {
+            nextId = 1;
+        } else {
+            nextId++;
+        }
+        return id;
     }
 
     public static boolean isNullOrEmpty(String str){

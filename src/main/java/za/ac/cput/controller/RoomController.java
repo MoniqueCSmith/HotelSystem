@@ -12,7 +12,7 @@ import za.ac.cput.domain.Room;
 import za.ac.cput.util.factory.RoomFactory;
 import za.ac.cput.service.impl.RoomServiceImpl;
 
-import java.util.Set;
+import java.util.List;
 
 @RestController
 @RequestMapping("/room")
@@ -44,7 +44,7 @@ public class RoomController {
     }
 
     @RequestMapping("/getall")
-    public Set<Room> getall(){
+    public List<Room> getall(){
         return roomService.getAll();
     }
 }

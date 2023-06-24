@@ -6,9 +6,11 @@
  */
 package za.ac.cput.repository;
 
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 import za.ac.cput.domain.Room;
 import java.util.Set;
 
-public interface IRoomRepository extends IRepository<Room, String> {
-    public Set<Room> getAll();
+@Repository
+public interface IRoomRepository extends JpaRepository<Room, String> {
 }

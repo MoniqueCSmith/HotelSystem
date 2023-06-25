@@ -8,7 +8,7 @@ package za.ac.cput.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import za.ac.cput.domain.Invoice;
-import za.ac.cput.util.factory.InvoiceFactory;
+import za.ac.cput.factory.InvoiceFactory;
 import za.ac.cput.service.InvoiceService;
 
 import java.util.List;

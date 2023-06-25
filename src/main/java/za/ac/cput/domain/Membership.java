@@ -6,9 +6,14 @@
  */
 package za.ac.cput.domain;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
 import java.io.Serializable;
 
+@Entity
 public class Membership implements Serializable {
+    @Id
     private String memberID;
     private String email;
     private String password;
@@ -17,7 +22,7 @@ public class Membership implements Serializable {
     private String phoneNumber;
     private String gender;
 
-    private Membership(){}
+    protected Membership(){}
     private Membership(Builder builder){
         this.memberID = builder.memberID;
         this.email = builder.email;

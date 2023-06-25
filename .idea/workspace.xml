@@ -70,6 +70,20 @@
       <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/factory/RoomFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/factory/RoomFactoryTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/service/impl/AmenityServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/service/impl/AmenityServiceImplTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/service/impl/RoomServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/service/impl/RoomServiceImplTest.java" afterDir="false" />
+    <list default="true" id="c8462399-ea98-4d76-9f71-e097ff840e3a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/service/impl/MembershipServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/service/impl/ReviewServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/MembershipController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/MembershipController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/ReviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/ReviewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Membership.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Membership.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Review.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/repository/IMembershipRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/repository/IMembershipRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/repository/IReviewRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/repository/IReviewRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/service/MembershipService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/service/MembershipService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/service/ReviewService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/service/ReviewService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/service/impl/MembershipServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/service/impl/MembershipServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/service/impl/ReviewServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/service/impl/ReviewServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,10 +94,16 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -139,6 +159,8 @@
   </component>
   <component name="RunManager" selected="JUnit.CustomerServiceImplTest.a_create">
     <configuration name="CustomerContactServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Spring Boot.HotelBookingSystem">
+    <configuration name="AmenityServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HotelBookingSystem" />
       <extension name="coverage">
         <pattern>
@@ -148,12 +170,14 @@
       </extension>
       <option name="PACKAGE_NAME" value="za.ac.cput.service.impl" />
       <option name="MAIN_CLASS_NAME" value="za.ac.cput.service.impl.CustomerContactServiceImplTest" />
+      <option name="MAIN_CLASS_NAME" value="za.ac.cput.service.impl.AmenityServiceImplTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="CustomerControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MembershipControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HotelBookingSystem" />
       <extension name="coverage">
         <pattern>
@@ -163,12 +187,14 @@
       </extension>
       <option name="PACKAGE_NAME" value="za.ac.cput.controller" />
       <option name="MAIN_CLASS_NAME" value="za.ac.cput.controller.CustomerControllerTest" />
+      <option name="MAIN_CLASS_NAME" value="za.ac.cput.controller.MembershipControllerTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="CustomerServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ReviewControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HotelBookingSystem" />
       <extension name="coverage">
         <pattern>
@@ -178,12 +204,16 @@
       </extension>
       <option name="PACKAGE_NAME" value="za.ac.cput.service.impl" />
       <option name="MAIN_CLASS_NAME" value="za.ac.cput.service.impl.CustomerServiceImplTest" />
+      <option name="PACKAGE_NAME" value="za.ac.cput.controller" />
+      <option name="MAIN_CLASS_NAME" value="za.ac.cput.controller.ReviewControllerTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="CustomerServiceImplTest.a_create" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ReviewServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+
       <module name="HotelBookingSystem" />
       <extension name="coverage">
         <pattern>
@@ -195,6 +225,8 @@
       <option name="MAIN_CLASS_NAME" value="za.ac.cput.service.impl.CustomerServiceImplTest" />
       <option name="METHOD_NAME" value="a_create" />
       <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="za.ac.cput.service.impl.ReviewServiceImplTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -219,6 +251,11 @@
         <item itemvalue="JUnit.CustomerContactServiceImplTest" />
         <item itemvalue="JUnit.CustomerControllerTest" />
         <item itemvalue="Spring Boot.HotelBookingSystem" />
+        <item itemvalue="Spring Boot.HotelBookingSystem" />
+        <item itemvalue="JUnit.ReviewServiceImplTest" />
+        <item itemvalue="JUnit.AmenityServiceImplTest" />
+        <item itemvalue="JUnit.ReviewControllerTest" />
+        <item itemvalue="JUnit.MembershipControllerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -239,7 +276,7 @@
       <updated>1687115654703</updated>
     </task>
     <task active="true" id="Default" summary="Default task">
-      <changelist id="72d4ba2d-56c9-42bc-aa9f-409e38b6bba5" name="Changes" comment="fixed issue regarding workspace.xml file" />
+      <changelist id="c8462399-ea98-4d76-9f71-e097ff840e3a" name="Changes" comment="" />
       <created>1687115783848</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -252,6 +289,8 @@
       <workItem from="1687432456640" duration="1725000" />
       <workItem from="1687454019604" duration="2449000" />
       <workItem from="1687706442567" duration="5333000" />
+      <workItem from="1687115825868" duration="1283000" />
+      <workItem from="1687613494712" duration="9533000" />
     </task>
     <task id="LOCAL-00003" summary="fixed issue regarding workspace.xml file">
       <created>1687116102451</created>
@@ -278,7 +317,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="218053762" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>

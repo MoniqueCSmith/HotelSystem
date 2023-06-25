@@ -7,11 +7,10 @@
 
 package za.ac.cput.repository;
 
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 import za.ac.cput.domain.DietaryRequirement;
 
-import java.util.Set;
-
-public interface IDietaryRequirementRepository extends IRepository <DietaryRequirement, String> {
-
-    public Set<DietaryRequirement> getAll();
+@Repository
+public interface IDietaryRequirementRepository extends JpaRepository<DietaryRequirement, String> {
 }

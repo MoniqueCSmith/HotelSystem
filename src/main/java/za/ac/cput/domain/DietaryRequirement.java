@@ -7,15 +7,22 @@
 
 package za.ac.cput.domain;
 
+import jakarta.persistence.Embeddable;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
 import java.io.Serializable;
 import java.util.Objects;
 
+@Entity
+@Embeddable
 public class DietaryRequirement implements Serializable {
+    @Id
     private String dietaryRequirementID;
     private String name;
     private String specialRequirements;
 
-    private DietaryRequirement() {
+    protected DietaryRequirement() {
     }
 
     private DietaryRequirement(Builder builder) {

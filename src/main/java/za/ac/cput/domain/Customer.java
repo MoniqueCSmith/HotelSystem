@@ -6,6 +6,7 @@
  */
 package za.ac.cput.domain;
 
+import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
@@ -22,9 +23,10 @@ public class Customer implements Serializable {
     private String lastName;
     private String address;
     private boolean hasMembership;
+    @Embedded
     private CustomerContact customerContact;
 
-    public Customer() {
+    protected Customer() {
     }
 
     private Customer(Builder builder){
@@ -33,7 +35,7 @@ public class Customer implements Serializable {
         this.lastName = builder.lastName;
         this.address = builder.address;
         this.hasMembership = builder.hasMembership;
-        this.customerContact = builder.customerContact;
+        //this.customerContact = builder.customerContact;
     }
 
     public String getCustomerID() {
@@ -56,19 +58,19 @@ public class Customer implements Serializable {
         return hasMembership;
     }
 
-    public CustomerContact getCustomerContact() { return customerContact;}
+    //public CustomerContact getCustomerContact() { return customerContact;}
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Customer customer = (Customer) o;
-        return hasMembership == customer.hasMembership && Objects.equals(customerID, customer.customerID) && Objects.equals(firstName, customer.firstName) && Objects.equals(lastName, customer.lastName) && Objects.equals(address, customer.address) && Objects.equals(customerContact, customer.customerContact);
+        return hasMembership == customer.hasMembership && Objects.equals(customerID, customer.customerID) && Objects.equals(firstName, customer.firstName) && Objects.equals(lastName, customer.lastName) && Objects.equals(address, customer.address); //&& Objects.equals(customerContact, customer.customerContact);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(customerID, firstName, lastName, address, hasMembership, customerContact);
+        return Objects.hash(customerID, firstName, lastName, address, hasMembership); //, customerContact);
     }
 
     @Override
@@ -79,7 +81,6 @@ public class Customer implements Serializable {
                 ", lastName='" + lastName + '\'' +
                 ", address='" + address + '\'' +
                 ", hasMembership=" + hasMembership +
-                ", customerContact=" + customerContact +
                 '}';
     }
 
@@ -90,7 +91,7 @@ public class Customer implements Serializable {
         private String address;
         private  Boolean hasMembership;
 
-        private CustomerContact customerContact;
+        //private CustomerContact customerContact;
 
         public Builder setCustomerID(String customerID) {
             this.customerID = customerID;
@@ -115,17 +116,17 @@ public class Customer implements Serializable {
             this.hasMembership = hasMembership;
             return this;
         }
-        public Builder setCustomerContact(CustomerContact customerContact) {
-            this.customerContact = customerContact;
-            return this;
-        }
+        //public Builder setCustomerContact(CustomerContact customerContact) {
+            //this.customerContact = customerContact;
+            //return this;
+        //}
         public Builder copy(Customer customer){
             this.customerID = customer.customerID;
             this.firstName = customer.firstName;
             this.lastName = customer.lastName;
             this.address = customer.address;
             this.hasMembership = customer.hasMembership;
-            this.customerContact = customer.customerContact;
+            //this.customerContact = customer.customerContact;
             return this;
         }
         public Customer build(){

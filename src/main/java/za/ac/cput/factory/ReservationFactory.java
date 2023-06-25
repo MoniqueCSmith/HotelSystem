@@ -5,7 +5,7 @@ Author : Kyra Petersen (219474559)
 Date : 5 April 2023
 */
 
-package za.ac.cput.util.factory;
+package za.ac.cput.factory;
 
 import za.ac.cput.domain.Reservation;
 import za.ac.cput.domain.ReservationDate;

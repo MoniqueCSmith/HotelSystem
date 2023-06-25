@@ -4,7 +4,7 @@
  * Author: Alison Shirlene Williams (219140987)
  * Date: 07 April 2023
  */
-package za.ac.cput.util.factory;
+package za.ac.cput.factory;
 
 import za.ac.cput.domain.Amenity;
 import za.ac.cput.util.Helper;

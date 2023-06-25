@@ -4,7 +4,7 @@
  * Author: Shanlynn Courtney Thomas (218053762)
  * Date: 08 April 2023
  */
-package za.ac.cput.util.factory;
+package za.ac.cput.factory;
 
 import za.ac.cput.domain.Membership;
 import za.ac.cput.util.Helper;
@@ -16,6 +16,9 @@ public class MembershipFactory {
         }
 
         if(!Helper.isValidEmail(email)){
+            return null;
+        }
+        if(!Helper.isValidCellNo(phoneNumber)) {
             return null;
         }
 

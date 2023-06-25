@@ -17,7 +17,7 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import za.ac.cput.domain.Reservation;
 import za.ac.cput.domain.ReservationDate;
-import za.ac.cput.util.factory.ReservationFactory;
+import za.ac.cput.factory.ReservationFactory;
 
 import java.time.LocalDateTime;
 

@@ -6,17 +6,24 @@
 
 package za.ac.cput.domain;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
 import java.io.Serializable;
 import java.util.Objects;
 
+@Entity
+@Table(name = "HotelLocation")
 public class HotelLocation implements Serializable {
+    @Id
     private String ID;
     private String Address;
     private String City;
     private String Province;
     private int ZipCode;
 
-private HotelLocation(){}
+protected HotelLocation(){}
     private HotelLocation(Builder builder) {
         this.ID=builder.ID;
         this.Address= builder.Address;

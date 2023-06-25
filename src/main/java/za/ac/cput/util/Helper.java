@@ -100,6 +100,22 @@ public class Helper {
         EmailValidator ev = EmailValidator.getInstance();
         return ev.isValid(email);
     }
+
+    public static boolean isValidCellNo(String cellNo) {
+        // Check if the cellNo is exactly 10 characters long
+        if (cellNo.length() != 10) {
+            return false;
+        }
+        if (cellNo.charAt(0) != '0') {
+            return false;
+        }
+        for (int i = 1; i < cellNo.length(); i++) {
+            if (!Character.isDigit(cellNo.charAt(i))) {
+                return false;
+            }
+        }
+        return true;
+    }
     public static String reservationID(){
         return UUID.randomUUID().toString();
     }

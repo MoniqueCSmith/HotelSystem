@@ -6,7 +6,7 @@ Date : 5 June 2023
 */
 
 
-package za.ac.cput.util.factory;
+package za.ac.cput.factory;
 
 import za.ac.cput.domain.ReservationDate;
 import za.ac.cput.util.Helper;

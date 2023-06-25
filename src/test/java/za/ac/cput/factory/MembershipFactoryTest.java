@@ -8,7 +8,6 @@ package za.ac.cput.factory;
 
 import org.junit.jupiter.api.Test;
 import za.ac.cput.domain.Membership;
-import za.ac.cput.util.factory.MembershipFactory;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 

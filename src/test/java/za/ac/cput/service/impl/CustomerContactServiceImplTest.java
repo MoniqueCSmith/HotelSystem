@@ -6,46 +6,43 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import za.ac.cput.domain.Room;
-import za.ac.cput.factory.RoomFactory;
+import za.ac.cput.domain.CustomerContact;
+import za.ac.cput.factory.CustomerContactFactory;
 
 import static org.junit.jupiter.api.Assertions.*;
-
 @TestMethodOrder(MethodOrderer.MethodName.class)
 @SpringBootTest
-class RoomServiceImplTest {
+class CustomerContactServiceImplTest {
 
     @Autowired
-    private RoomServiceImpl service;
-
-    private static Room room = RoomFactory.buildRoom("Standard", true);
-
+    private CustomerContactServiceImpl service;
+    private static CustomerContact customerContact = CustomerContactFactory.buildCustomerContact("0769284755", "SmithJohn321@gmail.com");
     @Test
     void a_create() {
-        Room create = service.create(room);
-        assertEquals(room.getRoomNo(), create.getRoomNo());
+        CustomerContact create = service.create(customerContact);
+        assertEquals(customerContact.getCustomerContactID(), create.getCustomerContactID());
         System.out.println("created" + create);
     }
 
     @Test
     void b_read() {
-        Room read = service.read(room.getRoomNo());
+        CustomerContact read = service.read(customerContact.getCustomerContactID());
         assertNotNull(read);
         System.out.println("read" + read);
     }
 
     @Test
     void c_update() {
-        Room newRoom = new Room.Builder().copy(room).setRoomType("Double").build();
-        Room updated = service.update(newRoom);
-        assertEquals(newRoom.getRoomType(), updated.getRoomType());
+        CustomerContact newCustomerContact = new CustomerContact.Builder().copy(customerContact).setCellNo("0672347474").build();
+        CustomerContact updated = service.update(newCustomerContact);
+        assertEquals(newCustomerContact.getCellNo(), updated.getCellNo());
         System.out.println("Update" + updated);
     }
 
     @Test
     @Disabled
     void d_delete() {
-        boolean success = service.delete(room.getRoomNo());
+        boolean success = service.delete(customerContact.getCustomerContactID());
         assertTrue(success);
         System.out.println("Deleted:" + success);
     }

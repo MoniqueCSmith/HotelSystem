@@ -4,6 +4,72 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+    <list default="true" id="72d4ba2d-56c9-42bc-aa9f-409e38b6bba5" name="Changes" comment="Renamed main class to HotelBookingSystem">
+      <change afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/service/impl/CustomerContactServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/service/impl/CustomerQueryServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/service/impl/CustomerServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/AmenityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/AmenityController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/CustomerContactController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/CustomerContactController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/CustomerQueryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/CustomerQueryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/DietaryRequirementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/DietaryRequirementController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/HotelLocationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/HotelLocationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/InvoiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/InvoiceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/MealPlanController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/MealPlanController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/MembershipController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/MembershipController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/ReservationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/ReservationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/ReservationDateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/ReservationDateController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/ReviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/ReviewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/RoomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/RoomController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/CustomerContact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/CustomerContact.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/CustomerQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/CustomerQuery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/repository/ICustomerContactRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/repository/ICustomerContactRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/repository/ICustomerQueryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/repository/ICustomerQueryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/repository/ICustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/repository/ICustomerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/util/Helper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/util/Helper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/util/factory/AmenityFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/factory/AmenityFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/util/factory/CustomerContactFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/factory/CustomerContactFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/util/factory/CustomerFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/factory/CustomerFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/util/factory/CustomerQueryFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/factory/CustomerQueryFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/util/factory/DietaryRequirementFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/factory/DietaryRequirementFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/util/factory/HotelLocationFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/factory/HotelLocationFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/util/factory/InvoiceFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/factory/InvoiceFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/util/factory/MealPlanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/factory/MealPlanFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/util/factory/MembershipFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/factory/MembershipFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/util/factory/ReservationDateFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/factory/ReservationDateFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/util/factory/ReservationFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/factory/ReservationFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/util/factory/ReviewFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/factory/ReviewFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/util/factory/RoomFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/factory/RoomFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/controller/AmenityControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/controller/AmenityControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/controller/CustomerContactControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/controller/CustomerContactControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/controller/CustomerControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/controller/CustomerControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/controller/CustomerQueryControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/controller/CustomerQueryControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/controller/DietaryRequirementControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/controller/DietaryRequirementControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/controller/HotelLocationControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/controller/HotelLocationControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/controller/InvoiceControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/controller/InvoiceControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/controller/MealPlanControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/controller/MealPlanControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/controller/MembershipControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/controller/MembershipControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/controller/ReservationControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/controller/ReservationControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/controller/ReservationDateControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/controller/ReservationDateControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/controller/ReviewControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/controller/ReviewControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/controller/RoomControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/controller/RoomControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/factory/AmenityFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/factory/AmenityFactoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/factory/CustomerContactFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/factory/CustomerContactFactoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/factory/CustomerFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/factory/CustomerFactoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/factory/CustomerQueryFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/factory/CustomerQueryFactoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/factory/DietaryRequirementFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/factory/DietaryRequirementFactoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/factory/HotelLocationFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/factory/HotelLocationFactoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/factory/InvoiceFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/factory/InvoiceFactoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/factory/MealPlanFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/factory/MealPlanFactoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/factory/MembershipFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/factory/MembershipFactoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/factory/ReservationDateFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/factory/ReservationDateFactoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/factory/ReservationFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/factory/ReservationFactoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/factory/ReviewFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/factory/ReviewFactoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/factory/RoomFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/factory/RoomFactoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/service/impl/AmenityServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/service/impl/AmenityServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/za/ac/cput/service/impl/RoomServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/service/impl/RoomServiceImplTest.java" afterDir="false" />
     <list default="true" id="c8462399-ea98-4d76-9f71-e097ff840e3a" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/service/impl/MembershipServiceImplTest.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/test/java/za/ac/cput/service/impl/ReviewServiceImplTest.java" afterDir="false" />
@@ -50,6 +116,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectId" id="2ROKeAjjRbjZ46BWxo2zlxiZUWP" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="false" id="Update" />
@@ -73,6 +142,9 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;bccc3c3a52e56e014ba95dbd45a2cd01&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -85,6 +157,8 @@
       <recent name="za.ac.cput.service.impl" />
     </key>
   </component>
+  <component name="RunManager" selected="JUnit.CustomerServiceImplTest.a_create">
+    <configuration name="CustomerContactServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
   <component name="RunManager" selected="Spring Boot.HotelBookingSystem">
     <configuration name="AmenityServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HotelBookingSystem" />
@@ -95,12 +169,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="za.ac.cput.service.impl" />
+      <option name="MAIN_CLASS_NAME" value="za.ac.cput.service.impl.CustomerContactServiceImplTest" />
       <option name="MAIN_CLASS_NAME" value="za.ac.cput.service.impl.AmenityServiceImplTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CustomerControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
     <configuration name="MembershipControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HotelBookingSystem" />
       <extension name="coverage">
@@ -110,28 +186,15 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="za.ac.cput.controller" />
+      <option name="MAIN_CLASS_NAME" value="za.ac.cput.controller.CustomerControllerTest" />
       <option name="MAIN_CLASS_NAME" value="za.ac.cput.controller.MembershipControllerTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CustomerServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
     <configuration name="ReviewControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="HotelBookingSystem" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="za.ac.cput.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="za.ac.cput.controller" />
-      <option name="MAIN_CLASS_NAME" value="za.ac.cput.controller.ReviewControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ReviewServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HotelBookingSystem" />
       <extension name="coverage">
         <pattern>
@@ -140,6 +203,28 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="za.ac.cput.service.impl" />
+      <option name="MAIN_CLASS_NAME" value="za.ac.cput.service.impl.CustomerServiceImplTest" />
+      <option name="PACKAGE_NAME" value="za.ac.cput.controller" />
+      <option name="MAIN_CLASS_NAME" value="za.ac.cput.controller.ReviewControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CustomerServiceImplTest.a_create" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ReviewServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+
+      <module name="HotelBookingSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="za.ac.cput.service.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="za.ac.cput.service.impl" />
+      <option name="MAIN_CLASS_NAME" value="za.ac.cput.service.impl.CustomerServiceImplTest" />
+      <option name="METHOD_NAME" value="a_create" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="MAIN_CLASS_NAME" value="za.ac.cput.service.impl.ReviewServiceImplTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
@@ -161,6 +246,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CustomerServiceImplTest.a_create" />
+        <item itemvalue="JUnit.CustomerServiceImplTest" />
+        <item itemvalue="JUnit.CustomerContactServiceImplTest" />
+        <item itemvalue="JUnit.CustomerControllerTest" />
+        <item itemvalue="Spring Boot.HotelBookingSystem" />
         <item itemvalue="Spring Boot.HotelBookingSystem" />
         <item itemvalue="JUnit.ReviewServiceImplTest" />
         <item itemvalue="JUnit.AmenityServiceImplTest" />
@@ -192,6 +282,13 @@
       <option name="presentableId" value="Default" />
       <updated>1687115783848</updated>
       <workItem from="1687115785239" duration="32000" />
+      <workItem from="1687115825868" duration="1543000" />
+      <workItem from="1687257335764" duration="1465000" />
+      <workItem from="1687258980994" duration="13336000" />
+      <workItem from="1687350567630" duration="1220000" />
+      <workItem from="1687432456640" duration="1725000" />
+      <workItem from="1687454019604" duration="2449000" />
+      <workItem from="1687706442567" duration="5333000" />
       <workItem from="1687115825868" duration="1283000" />
       <workItem from="1687613494712" duration="9533000" />
     </task>
@@ -202,7 +299,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687116102451</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Renamed main class to HotelBookingSystem">
+      <created>1687117153453</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1687117153453</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -233,6 +337,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fixed issue regarding workspace.xml file" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed issue regarding workspace.xml file" />
+    <MESSAGE value="Renamed main class to HotelBookingSystem" />
+    <option name="LAST_COMMIT_MESSAGE" value="Renamed main class to HotelBookingSystem" />
   </component>
 </project>

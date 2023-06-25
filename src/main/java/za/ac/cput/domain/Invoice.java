@@ -6,11 +6,18 @@
 
 package za.ac.cput.domain;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
 import java.io.Serializable;
 import java.util.Objects;
 
+@Entity
+@Table(name = "Invoice")
 public class Invoice implements Serializable {
 
+   @Id
    private String invoiceID;
    private String typeOfRoomBooked;
    private int numRoomsBooked;
@@ -21,8 +28,7 @@ public class Invoice implements Serializable {
    private double totalPrice;
 
 
-
-   private Invoice(){}
+   protected Invoice(){}
    private Invoice(Builder builder){
       this.invoiceID= builder.invoiceID;
       this.typeOfRoomBooked= builder.typeOfRoomBooked;

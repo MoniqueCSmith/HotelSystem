@@ -5,11 +5,10 @@
 */
 package za.ac.cput.repository;
 
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 import za.ac.cput.domain.HotelLocation;
-import java.util.Set;
 
-public interface IHotelLocationRepository extends IRepository<HotelLocation, String> {
-    public Set<HotelLocation> getAll();
+@Repository
+public interface IHotelLocationRepository extends JpaRepository<HotelLocation, String> {
 }
-
-

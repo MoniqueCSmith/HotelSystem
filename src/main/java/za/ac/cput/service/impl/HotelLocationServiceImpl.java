@@ -5,54 +5,53 @@
 */
 package za.ac.cput.service.impl;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import za.ac.cput.domain.HotelLocation;
-import za.ac.cput.repository.impl.HotelLocationRepositoryImpl;
+import za.ac.cput.repository.IHotelLocationRepository;
 import za.ac.cput.service.HotelLocationService;
 
-import java.util.Set;
+import java.util.List;
 
 @Service
 public class HotelLocationServiceImpl implements HotelLocationService {
 
-    private static HotelLocationServiceImpl service= null;
-    private HotelLocationRepositoryImpl repository= null;
+    private IHotelLocationRepository repository;
 
-    private HotelLocationServiceImpl(){
-        if(repository== null){
-            repository= HotelLocationRepositoryImpl.getRepository();
-        }
-    }
-
-    public static HotelLocationServiceImpl getService(){
-        if(service==null){
-            service= new HotelLocationServiceImpl();
-        }
-        return service;
+    @Autowired
+    private HotelLocationServiceImpl(IHotelLocationRepository repository){
+        this.repository= repository;
     }
 
     @Override
     public HotelLocation create(HotelLocation hotelLocation) {
-        return repository.create(hotelLocation);
+        return this.repository.save(hotelLocation);
     }
 
     @Override
-    public HotelLocation read(String id) {
-        return repository.read(id);
+    public HotelLocation read(String ID) {
+        return this.repository.findById(ID).orElse(null);
     }
 
     @Override
     public HotelLocation update(HotelLocation hotelLocation) {
-        return repository.update(hotelLocation);
+        if(this.repository.existsById(hotelLocation.getID())){
+            return this.repository.save(hotelLocation);
+        }
+        return null;
     }
 
     @Override
-    public boolean delete(String id) {
-        return repository.delete(id);
+    public boolean delete(String ID) {
+        if(this.repository.existsById(ID)){
+            this.repository.deleteById(ID);
+            return true;
+        }
+        return false;
     }
 
     @Override
-    public Set<HotelLocation> getAll() {
-        return repository.getAll();
+    public List<HotelLocation> getAll() {
+        return this.repository.findAll();
     }
 }

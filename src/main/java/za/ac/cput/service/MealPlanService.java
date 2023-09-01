@@ -10,8 +10,8 @@ package za.ac.cput.service;
 
 import za.ac.cput.domain.MealPlan;
 
-import java.util.Set;
+import java.util.List;
 
 public interface MealPlanService extends IService <MealPlan, String> {
-    Set<MealPlan> getAll();
+    List<MealPlan> getAll();
 }

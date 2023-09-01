@@ -13,9 +13,10 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/CustomerContactController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/CustomerContactController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/CustomerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/CustomerQueryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/CustomerQueryController.java" afterDir="false" />
+    <list default="true" id="ce7d189a-7d81-4d9b-b48a-d723a5a067bb" name="Changes" comment="Completed controller classes and controller test classes for DietaryRequirement and MealPlan with updated minor changes.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/service/impl/DietaryRequirementServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/DietaryRequirementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/DietaryRequirementController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/HotelLocationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/HotelLocationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/InvoiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/InvoiceController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/MealPlanController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/MealPlanController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/MembershipController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/MembershipController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/ReservationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/controller/ReservationController.java" afterDir="false" />
@@ -84,6 +85,14 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/service/ReviewService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/service/ReviewService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/service/impl/MembershipServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/service/impl/MembershipServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/service/impl/ReviewServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/service/impl/ReviewServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/DietaryRequirement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/DietaryRequirement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/MealPlan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/domain/MealPlan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/repository/IDietaryRequirementRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/repository/IDietaryRequirementRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/repository/IMealPlanRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/repository/IMealPlanRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/service/DietaryRequirementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/service/DietaryRequirementService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/service/MealPlanService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/service/MealPlanService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/service/impl/DietaryRequirementImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/service/impl/MealPlanImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/service/impl/MealPlanServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,6 +158,33 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "last_opened_file_path": "C:/Users/moniq/IdeaProjects/HotelSystem",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "spring.configuration.checksum": "bccc3c3a52e56e014ba95dbd45a2cd01",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -161,6 +197,8 @@
     <configuration name="CustomerContactServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
   <component name="RunManager" selected="Spring Boot.HotelBookingSystem">
     <configuration name="AmenityServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Spring Boot.HotelBookingSystem">
+    <configuration name="CustomerControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HotelBookingSystem" />
       <extension name="coverage">
         <pattern>
@@ -254,6 +292,10 @@
         <item itemvalue="Spring Boot.HotelBookingSystem" />
         <item itemvalue="JUnit.ReviewServiceImplTest" />
         <item itemvalue="JUnit.AmenityServiceImplTest" />
+        <item itemvalue="Spring Boot.HotelBookingSystem" />
+        <item itemvalue="JUnit.CustomerControllerTest" />
+        <item itemvalue="JUnit.ReservationDateControllerTest.c_update" />
+        <item itemvalue="JUnit.ReservationDateControllerTest" />
         <item itemvalue="JUnit.ReviewControllerTest" />
         <item itemvalue="JUnit.MembershipControllerTest" />
       </list>

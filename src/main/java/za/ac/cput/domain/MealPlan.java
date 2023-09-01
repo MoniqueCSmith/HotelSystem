@@ -7,18 +7,24 @@
 
 package za.ac.cput.domain;
 
+import jakarta.persistence.*;
+
 import java.io.Serializable;
 import java.util.Objects;
 
+@Entity
 public class MealPlan implements Serializable {
+
+    @Id
     private String mealPlanID;
     private String name;
     private String description;
     private String mealType;
     private double price;
+    @Embedded
     private DietaryRequirement dietaryRequirement;
 
-    private MealPlan() {
+    protected MealPlan() {
     }
 
     private MealPlan(Builder builder) {

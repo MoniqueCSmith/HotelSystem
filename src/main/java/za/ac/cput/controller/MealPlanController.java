@@ -5,15 +5,17 @@ import org.springframework.web.bind.annotation.*;
 import za.ac.cput.domain.MealPlan;
 import za.ac.cput.factory.MealPlanFactory;
 import za.ac.cput.service.impl.MealPlanImpl;
+import za.ac.cput.util.factory.MealPlanFactory;
+import za.ac.cput.service.impl.MealPlanServiceImpl;
 
-import java.util.Set;
+import java.util.List;
 
 @RestController
 @RequestMapping("/mealPlan")
 public class MealPlanController {
 
     @Autowired
-    private MealPlanImpl mealPlanService;
+    private MealPlanServiceImpl mealPlanService;
 
     @PostMapping("/create")
     public MealPlan create(@RequestBody MealPlan mealPlan) {
@@ -37,7 +39,7 @@ public class MealPlanController {
     }
 
     @RequestMapping({"/getAll"})
-    public Set<MealPlan> getAll() {
+    public List<MealPlan> getAll() {
         return mealPlanService.getAll();
     }
 }

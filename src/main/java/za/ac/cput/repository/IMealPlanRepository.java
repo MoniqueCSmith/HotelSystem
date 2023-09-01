@@ -1,12 +1,7 @@
 package za.ac.cput.repository;
 
+import org.springframework.data.jpa.repository.JpaRepository;
 import za.ac.cput.domain.MealPlan;
 
-import java.util.Set;
-
-public interface IMealPlanRepository extends IRepository <MealPlan, String> {
-
-    public Set<MealPlan> getAll();
-
-
+public interface IMealPlanRepository extends JpaRepository<MealPlan, String> {
 }

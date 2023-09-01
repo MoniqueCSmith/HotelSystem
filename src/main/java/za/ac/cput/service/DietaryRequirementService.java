@@ -9,13 +9,12 @@
 package za.ac.cput.service;
 
 import za.ac.cput.domain.DietaryRequirement;
-import za.ac.cput.domain.Invoice;
 
-import java.util.Set;
+import java.util.List;
 
 public interface DietaryRequirementService {
     DietaryRequirement create(DietaryRequirement dietaryRequirement);
     DietaryRequirement read(String id);
     DietaryRequirement update(DietaryRequirement dietaryRequirement);
-    Set<DietaryRequirement> getAll();
+    List<DietaryRequirement> getAll();
 }

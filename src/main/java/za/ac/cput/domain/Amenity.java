@@ -6,16 +6,23 @@
  */
 package za.ac.cput.domain;
 
-import java.util.Objects;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 
-public class Amenity {
+
+import java.io.Serializable;
+
+
+@Entity
+public class Amenity implements Serializable {
+    @Id
     private String amenityID;
     private String name;
     private String description;
     private Boolean isAmenityAvailable;
     private Double price;
 
-    private Amenity(){}
+    protected Amenity(){}
     private Amenity(Builder builder){
         this.amenityID = builder.amenityID;
         this.name = builder.name;

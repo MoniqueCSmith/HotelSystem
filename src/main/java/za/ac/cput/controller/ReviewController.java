@@ -10,10 +10,10 @@ package za.ac.cput.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import za.ac.cput.domain.Review;
-import za.ac.cput.util.factory.ReviewFactory;
+import za.ac.cput.factory.ReviewFactory;
 import za.ac.cput.service.impl.ReviewServiceImpl;
 
-import java.util.Set;
+import java.util.List;
 
 @RestController
 @RequestMapping("/review")
@@ -39,7 +39,7 @@ public class ReviewController {
     }
 
     @RequestMapping("/getall")
-    public Set<Review> getall(){
+    public List<Review> getall(){
         return reviewService.getAll();
     }
 

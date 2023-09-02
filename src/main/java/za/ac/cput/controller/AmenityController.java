@@ -9,10 +9,11 @@ package za.ac.cput.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import za.ac.cput.domain.Amenity;
-import za.ac.cput.util.factory.AmenityFactory;
+import za.ac.cput.factory.AmenityFactory;
 import za.ac.cput.service.impl.AmenityServiceImpl;
 
-import java.util.Set;
+import java.util.List;
+
 
 @RestController
 @RequestMapping("/amenity")
@@ -44,7 +45,7 @@ public class AmenityController {
     }
 
     @RequestMapping("/getall")
-    public Set<Amenity> getall(){
+    public List<Amenity> getall(){
         return amenityService.getAll();
     }
 

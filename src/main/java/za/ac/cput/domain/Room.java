@@ -6,12 +6,20 @@
  */
 package za.ac.cput.domain;
 
-public class Room {
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+import java.io.Serializable;
+
+@Entity
+public class Room implements Serializable {
+
+    @Id
     private String roomNo;
     private String roomType;
     private boolean isRoomAvailable;
 
-    private Room(){}
+    protected Room(){}
     private Room(Builder builder){
         this.roomNo = builder.roomNo;
         this.roomType = builder.roomType;

@@ -9,7 +9,7 @@ package za.ac.cput.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import za.ac.cput.domain.Customer;
-import za.ac.cput.util.factory.CustomerFactory;
+import za.ac.cput.factory.CustomerFactory;
 import za.ac.cput.service.impl.CustomerServiceImpl;
 
 import java.util.List;
@@ -23,7 +23,7 @@ public class CustomerController {
     //@RequestMapping(value = "/create", method = RequestMethod.POST)
     @PostMapping("/create")
     public Customer create(@RequestBody Customer customer){
-        Customer customerCreated = CustomerFactory.buildCustomer(customer.getFirstName(), customer.getLastName(), customer.getAddress(), customer.HasMembership(), customer.getCustomerContact());
+        Customer customerCreated = CustomerFactory.buildCustomer(customer.getFirstName(), customer.getLastName(), customer.getAddress(), customer.HasMembership());
         return customerService.create(customerCreated);
     }
     @GetMapping("/read/{id}")

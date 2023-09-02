@@ -45,11 +45,11 @@ public class Helper {
         return id;
     }
 
-    private static int building = 1;
-    private static int floor = 0;
-    private static int room = 1;
-    public static String generateRoomNo() {
 
+    public static String generateRoomNo() {
+        int building = 1;
+        int floor = 0;
+        int room = 1;
         String roomNo = String.format("%d%02d", building, room);
 
         room++;
@@ -63,6 +63,18 @@ public class Helper {
         }
 
         return roomNo;
+    }
+
+
+    public static String generateAmenityID() {
+        int nextId = 1;
+        String id = String.format("%06d", nextId);
+        if (nextId == 999999) {
+            nextId = 1;
+        } else {
+            nextId++;
+        }
+        return id;
     }
 
     public static boolean isNullOrEmpty(String str){
@@ -87,6 +99,22 @@ public class Helper {
     public static boolean isValidEmail(String email) {
         EmailValidator ev = EmailValidator.getInstance();
         return ev.isValid(email);
+    }
+
+    public static boolean isValidCellNo(String cellNo) {
+        // Check if the cellNo is exactly 10 characters long
+        if (cellNo.length() != 10) {
+            return false;
+        }
+        if (cellNo.charAt(0) != '0') {
+            return false;
+        }
+        for (int i = 1; i < cellNo.length(); i++) {
+            if (!Character.isDigit(cellNo.charAt(i))) {
+                return false;
+            }
+        }
+        return true;
     }
     public static String reservationID(){
         return UUID.randomUUID().toString();

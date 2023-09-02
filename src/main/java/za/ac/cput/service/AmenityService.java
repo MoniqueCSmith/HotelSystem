@@ -8,8 +8,8 @@ package za.ac.cput.service;
 
 import za.ac.cput.domain.Amenity;
 
-import java.util.Set;
+import java.util.List;
 
 public interface AmenityService extends IService <Amenity, String> {
-    Set<Amenity>getAll();
+    List<Amenity> getAll();
 }

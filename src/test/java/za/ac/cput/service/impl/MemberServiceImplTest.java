@@ -1,3 +1,9 @@
+/**
+ * MemberServiceImplTest.java
+ * Service Test class for the Member
+ * Author: Shanlynn Courtney Thomas (218053762)
+ * Date: 09 September 2023
+ */
 package za.ac.cput.service.impl;
 
 import org.junit.jupiter.api.Disabled;
@@ -6,46 +12,47 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import za.ac.cput.domain.Membership;
-import za.ac.cput.util.factory.MembershipFactory;
+import za.ac.cput.domain.Member;
+import za.ac.cput.factory.MemberFactory;
+
 
 import static org.junit.jupiter.api.Assertions.*;
 
 @TestMethodOrder(MethodOrderer.MethodName.class)
 @SpringBootTest
-class MembershipServiceImplTest {
+class MemberServiceImplTest {
 
     @Autowired
-    private MembershipServiceImpl service;
+    private MemberServiceImpl service;
 
-    private static Membership membership = MembershipFactory.buildMembership("plions@gmail.com","seaweed", "Paxton", "Lions", "0879543576", "male");
+    private static Member member = MemberFactory.buildMember("plions","seaweed");
 
     @Test
     void a_create(){
-        Membership create = service.create(membership);
-        assertEquals(membership.getMemberID(), create.getMemberID());
+        Member create = service.create(member);
+        assertEquals(member.getMemberID(), create.getMemberID());
         System.out.println("created" + create);
     }
 
     @Test
     void b_read() {
-        Membership read = service.read(membership.getMemberID());
+        Member read = service.read(member.getMemberID());
         assertNotNull(read);
         System.out.println("read" + read);
     }
 
     @Test
     void c_update() {
-        Membership newMembership = new Membership.Builder().copy(membership).setEmail("p.lions@gmail.com").build();
-        Membership updated = service.update(newMembership);
-        assertEquals(newMembership.getEmail(), updated.getEmail());
+        Member newMember = new Member.Builder().copy(member).setUsername("p.lions").build();
+        Member updated = service.update(newMember);
+        assertEquals(newMember.getUsername(), updated.getUsername());
         System.out.println("Update" + updated);
     }
 
     @Test
     @Disabled
     void d_delete() {
-        boolean success = service.delete(membership.getMemberID());
+        boolean success = service.delete(member.getMemberID());
         assertTrue(success);
         System.out.println("Deleted:" + success);
     }

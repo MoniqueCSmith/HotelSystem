@@ -1,5 +1,8 @@
 package za.ac.cput.util;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.UUID;
 import org.apache.commons.validator.routines.EmailValidator;
 
@@ -118,6 +121,16 @@ public class Helper {
     }
     public static String reservationID(){
         return UUID.randomUUID().toString();
+    }
+
+    public static boolean isDateRangeValid(LocalDate checkInDate, LocalDate checkOutDate) {
+        return !checkOutDate.isBefore(checkInDate);
+    }
+    public static boolean isCheckInTimeValid(LocalDateTime estCheckInTime) {
+        LocalTime checkInTime = estCheckInTime.toLocalTime();
+        LocalTime startTime = LocalTime.of(0, 0);
+        LocalTime endTime = LocalTime.of(10, 0);
+        return checkInTime.isBefore(startTime) || checkInTime.isAfter(endTime);
     }
 
 }

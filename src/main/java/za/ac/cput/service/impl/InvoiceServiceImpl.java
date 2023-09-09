@@ -5,45 +5,42 @@
 */
 package za.ac.cput.service.impl;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import za.ac.cput.domain.Invoice;
-import za.ac.cput.repository.impl.InvoiceRepositoryImpl;
+import za.ac.cput.repository.IInvoiceRepository;
 import za.ac.cput.service.InvoiceService;
 
-import java.util.Set;
+import java.util.List;
 @Service
 public class InvoiceServiceImpl implements InvoiceService {
-    private static InvoiceServiceImpl service= null;
-    private InvoiceRepositoryImpl repository= null;
-    private InvoiceServiceImpl(){
-        if(repository== null){
-                repository= InvoiceRepositoryImpl.getRepository();
-        }
-    }
-    public static InvoiceServiceImpl getService(){
-        if(service== null){
-            service= new InvoiceServiceImpl();
-        }
-        return service;
+    private IInvoiceRepository repository;
+
+    @Autowired
+    private InvoiceServiceImpl(IInvoiceRepository repository){
+        this.repository= repository;
     }
 
     @Override
     public Invoice create(Invoice invoice) {
-        return repository.create(invoice);
+        return this.repository.save(invoice);
     }
 
     @Override
-    public Invoice read(String id) {
-        return repository.read(id);
+    public Invoice read(String invoiceID) {
+        return this.repository.findById(invoiceID).orElse(null);
     }
 
     @Override
     public Invoice update(Invoice invoice) {
-        return repository.update(invoice);
+        if(this.repository.existsById(invoice.getInvoiceID())){
+            return this.repository.save(invoice);
+        }
+        return null;
     }
 
     @Override
-    public Set<Invoice> getAll() {
-        return repository.getAll();
+    public List<Invoice> getAll() {
+        return this.repository.findAll();
     }
 }

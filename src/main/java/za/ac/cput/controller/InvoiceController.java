@@ -10,7 +10,8 @@ import org.springframework.web.bind.annotation.*;
 import za.ac.cput.domain.Invoice;
 import za.ac.cput.factory.InvoiceFactory;
 import za.ac.cput.service.InvoiceService;
-import java.util.Set;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/invoice")
@@ -36,7 +37,7 @@ public class InvoiceController {
     }
 
     @RequestMapping("/getall")
-    public Set<Invoice> getall(){
+    public List<Invoice> getall(){
         return invoiceService.getAll();
     }
 }

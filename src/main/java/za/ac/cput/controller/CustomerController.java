@@ -23,7 +23,7 @@ public class CustomerController {
     //@RequestMapping(value = "/create", method = RequestMethod.POST)
     @PostMapping("/create")
     public Customer create(@RequestBody Customer customer){
-        Customer customerCreated = CustomerFactory.buildCustomer(customer.getFirstName(), customer.getLastName(), customer.getAddress(), customer.HasMembership(), customer.getCustomerContact());
+        Customer customerCreated = CustomerFactory.buildCustomer(customer.getFirstName(), customer.getLastName(), customer.getAddress(), customer.HasMembership());
         return customerService.create(customerCreated);
     }
     @GetMapping("/read/{id}")

@@ -15,8 +15,9 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 class CustomerFactoryTest {
     @Test
     void createCustomer(){
-        CustomerContact customerContact = CustomerContactFactory.buildCustomerContact("0783545275","vdbsepp1@gmail.com");
-        Customer customer = CustomerFactory.buildCustomer("Alison", "Williams","10 Loop Street, Table View",true, customerContact);
+        //CustomerContact customerContact = CustomerContactFactory.buildCustomerContact("0783545275","vdbsepp1@gmail.com");
+        Customer customer = CustomerFactory.buildCustomer("Alison", "Williams","10 Loop Street, Table View",true //, customerContact
+                );
         assertNotNull(customer);
         System.out.println(customer);
     }

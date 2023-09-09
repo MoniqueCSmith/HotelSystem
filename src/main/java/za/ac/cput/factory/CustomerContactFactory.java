@@ -17,6 +17,10 @@ public class CustomerContactFactory {
         if(!Helper.isValidEmail(email)) {
             return null;
         }
+        if(!Helper.isValidCellNo(cellNo)) {
+            return null;
+        }
+
         String customerContactID = Helper.generateID();
 
         return new CustomerContact.Builder()

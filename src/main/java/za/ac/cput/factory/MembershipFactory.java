@@ -18,6 +18,9 @@ public class MembershipFactory {
         if(!Helper.isValidEmail(email)){
             return null;
         }
+        if(!Helper.isValidCellNo(phoneNumber)) {
+            return null;
+        }
 
 
         String memberID = Helper.generateID();

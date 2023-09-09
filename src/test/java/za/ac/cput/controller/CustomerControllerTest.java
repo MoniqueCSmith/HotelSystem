@@ -26,8 +26,9 @@ import static org.junit.jupiter.api.Assertions.*;
 @TestMethodOrder(MethodOrderer.MethodName.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class CustomerControllerTest {
-    private static CustomerContact customerContact = CustomerContactFactory.buildCustomerContact("0732685242","Ashtonw123@gmail.com");
-    private static Customer customer = CustomerFactory.buildCustomer("Ashton", "Williams", "10 Stable Road, Milnerton", true, customerContact);
+    //private static CustomerContact customerContact = CustomerContactFactory.buildCustomerContact("0732685242","Ashtonw123@gmail.com");
+    private static Customer customer = CustomerFactory.buildCustomer("Ashton", "Williams", "10 Stable Road, Milnerton", true //, customerContact
+    );
     @Autowired
     private TestRestTemplate restTemplate;
     private final String baseURL = "http://localhost:8080/customer";

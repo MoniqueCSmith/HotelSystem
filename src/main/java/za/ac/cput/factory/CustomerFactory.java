@@ -11,8 +11,10 @@ import za.ac.cput.domain.CustomerContact;
 import za.ac.cput.util.Helper;
 
 public class CustomerFactory {
-    public static Customer buildCustomer(String firstName, String lastName, String address, boolean hasMembership, CustomerContact customerContact){
-        if(Helper.isNullOrEmpty(firstName) || Helper.isNullOrEmpty(lastName) || Helper.isNullOrEmpty(address) || Helper.isNullOrEmpty(String.valueOf(hasMembership)) || Helper.isNullOrEmpty(String.valueOf(customerContact))){
+    public static Customer buildCustomer(String firstName, String lastName, String address, boolean hasMembership //, CustomerContact customerContact
+    ){
+        if(Helper.isNullOrEmpty(firstName) || Helper.isNullOrEmpty(lastName) || Helper.isNullOrEmpty(address) || Helper.isNullOrEmpty(String.valueOf(hasMembership)) //|| Helper.isNullOrEmpty(String.valueOf(customerContact))
+        ){
             return null;
         }
         String customerID = Helper.generateID();
@@ -23,7 +25,7 @@ public class CustomerFactory {
                 .setLastName(lastName)
                 .setAddress(address)
                 .setHasMembership(hasMembership)
-                .setCustomerContact(customerContact)
+                //.setCustomerContact(customerContact)
                 .build();
     }
 }

@@ -6,6 +6,7 @@
  */
 package za.ac.cput.domain;
 
+import jakarta.persistence.Embeddable;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
@@ -13,7 +14,7 @@ import jakarta.persistence.Table;
 import java.io.Serializable;
 import java.util.Objects;
 
-@Entity
+@Embeddable
 @Table(name = "CustomerContact")
 public class CustomerContact implements Serializable {
     @Id
@@ -21,7 +22,7 @@ public class CustomerContact implements Serializable {
     private String cellNo;
     private String email;
 
-    public CustomerContact() {
+    protected CustomerContact() {
     }
 
     private CustomerContact(Builder builder){

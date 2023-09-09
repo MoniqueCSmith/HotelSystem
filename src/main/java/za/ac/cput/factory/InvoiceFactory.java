@@ -4,7 +4,7 @@
  Date: 08 April 2023
 */
 
-package za.ac.cput.util.factory;
+package za.ac.cput.factory;
 
 import za.ac.cput.domain.Invoice;
 import za.ac.cput.util.Helper;

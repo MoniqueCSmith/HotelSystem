@@ -11,6 +11,7 @@ import jakarta.persistence.Id;
 
 
 import java.io.Serializable;
+import java.util.Objects;
 
 
 @Entity
@@ -52,6 +53,18 @@ public class Amenity implements Serializable {
         return price;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Amenity amenity = (Amenity) o;
+        return Objects.equals(amenityID, amenity.amenityID) && Objects.equals(name, amenity.name) && Objects.equals(description, amenity.description) && Objects.equals(isAmenityAvailable, amenity.isAmenityAvailable) && Objects.equals(price, amenity.price);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(amenityID, name, description, isAmenityAvailable, price);
+    }
 
     @Override
     public String toString() {

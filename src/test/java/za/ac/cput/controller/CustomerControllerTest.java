@@ -19,8 +19,8 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import za.ac.cput.domain.Customer;
 import za.ac.cput.domain.CustomerContact;
-import za.ac.cput.util.factory.CustomerContactFactory;
-import za.ac.cput.util.factory.CustomerFactory;
+import za.ac.cput.factory.CustomerContactFactory;
+import za.ac.cput.factory.CustomerFactory;
 
 import static org.junit.jupiter.api.Assertions.*;
 @TestMethodOrder(MethodOrderer.MethodName.class)

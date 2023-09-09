@@ -8,7 +8,6 @@ package za.ac.cput.factory;
 
 import org.junit.jupiter.api.Test;
 import za.ac.cput.domain.Room;
-import za.ac.cput.util.factory.RoomFactory;
 
 import static org.junit.jupiter.api.Assertions.*;
 

@@ -10,8 +10,8 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import za.ac.cput.domain.DietaryRequirement;
 import za.ac.cput.domain.MealPlan;
-import za.ac.cput.util.factory.DietaryRequirementFactory;
-import za.ac.cput.util.factory.MealPlanFactory;
+import za.ac.cput.factory.DietaryRequirementFactory;
+import za.ac.cput.factory.MealPlanFactory;
 
 import static org.junit.jupiter.api.Assertions.*;
 

@@ -7,7 +7,6 @@ package za.ac.cput.factory;
 
 import org.junit.jupiter.api.Test;
 import za.ac.cput.domain.HotelLocation;
-import za.ac.cput.util.factory.HotelLocationFactory;
 
 import static org.junit.jupiter.api.Assertions.*;
 

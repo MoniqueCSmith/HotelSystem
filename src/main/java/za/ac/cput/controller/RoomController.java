@@ -23,7 +23,7 @@ public class RoomController {
 
     @PostMapping("/create")
     public Room create(@RequestBody Room room){
-        Room roomCreated = RoomFactory.buildRoom(room.getRoomType(), room.isRoomAvailable());
+        Room roomCreated = RoomFactory.buildRoom(room.getRoomType(), room.getPrice());
         return roomService.create(roomCreated);
 
     }

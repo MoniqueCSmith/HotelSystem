@@ -13,42 +13,30 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class AmenityFactoryTest {
     @Test
-    void createAmenityToiletries1(){
-        Amenity amenity = AmenityFactory.buildAmenity("Shampoo", "Toiletries", true, 25.00);
-        assertNotNull(amenity);
-        System.out.println(amenity);
-    }
-    @Test
-    void createAmenityToiletries2(){
-        Amenity amenity = AmenityFactory.buildAmenity("Conditioner", "Toiletries", true, 25.00);
-        assertNotNull(amenity);
-        System.out.println(amenity);
-    }
+    void createAmentities(){
+        Amenity amenity1 = AmenityFactory.buildAmenity("Shampoo", "Toiletries", true, 25.00);
+        assertNotNull(amenity1);
+        System.out.println(amenity1);
 
-    @Test
-    void createAmenityToiletries3(){
-        Amenity amenity = AmenityFactory.buildAmenity("Lotion", "Toiletries", true, 30.00);
-        assertNotNull(amenity);
-        System.out.println(amenity);
-    }
+        Amenity amenity2 = AmenityFactory.buildAmenity("Conditioner", "Toiletries", true, 25.00);
+        assertNotNull(amenity2);
+        System.out.println(amenity2);
 
-    @Test
-    void createAmenityToiletries4(){
-        Amenity amenity = AmenityFactory.buildAmenity("Toothpaste", "Toiletries", true, 20.00);
-        assertNotNull(amenity);
-        System.out.println(amenity);
-    }
+        Amenity amenity3 = AmenityFactory.buildAmenity("Lotion", "Toiletries", true, 30.00);
+        assertNotNull(amenity3);
+        System.out.println(amenity3);
 
-    @Test
-    void createAmenityElectronics1(){
-        Amenity amenity = AmenityFactory.buildAmenity("Blowdryer", "Electronics", true, 20.00);
-        assertNotNull(amenity);
-        System.out.println(amenity);
-    }@Test
-    void createAmenityElectronics2(){
-        Amenity amenity = AmenityFactory.buildAmenity("Flat Iron", "Electronics", true, 20.00);
-        assertNotNull(amenity);
-        System.out.println(amenity);
+        Amenity amenity4 = AmenityFactory.buildAmenity("Toothpaste", "Toiletries", true, 20.00);
+        assertNotNull(amenity4);
+        System.out.println(amenity4);
+
+        Amenity amenity5 = AmenityFactory.buildAmenity("Blowdryer", "Electronics", true, 20.00);
+        assertNotNull(amenity5);
+        System.out.println(amenity5);
+
+        Amenity amenity6 = AmenityFactory.buildAmenity("Flat Iron", "Electronics", true, 20.00);
+        assertNotNull(amenity6);
+        System.out.println(amenity6);
     }
 
 }

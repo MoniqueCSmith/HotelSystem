@@ -1,5 +1,9 @@
 package za.ac.cput.util;
 
+import org.apache.commons.validator.routines.EmailValidator;
+
+import java.util.UUID;
+
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
@@ -8,6 +12,7 @@ import org.apache.commons.validator.routines.EmailValidator;
 
 import static za.ac.cput.domain.Amenity.nextId;
 import static za.ac.cput.domain.Room.currentRoomNumber;
+
 
 public class Helper {
 

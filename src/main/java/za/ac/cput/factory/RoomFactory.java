@@ -8,11 +8,16 @@
 package za.ac.cput.factory;
 
 import za.ac.cput.domain.Room;
+import za.ac.cput.domain.RoomType;
 import za.ac.cput.util.Helper;
 
 public class RoomFactory {
-    public static Room buildRoom(String roomType, boolean isRoomAvailable){
-        if(Helper.isNullOrEmpty(roomType) || Helper.isNullOrEmpty(String.valueOf(isRoomAvailable))) {
+    public static Room buildRoom(RoomType roomType, double price){
+        if(Helper.isNullOrEmpty(String.valueOf(roomType)) || Helper.isNullOrEmpty(String.valueOf(price))) {
+            return null;
+        }
+
+        if(Helper.isValidDouble(price)){
             return null;
         }
 
@@ -21,7 +26,7 @@ public class RoomFactory {
         return new Room.Builder()
                 .setRoomNo(roomNo)
                 .setRoomType(roomType)
-                .setRoomAvailable(isRoomAvailable)
+                .setPrice(price)
                 .build();
 
     }

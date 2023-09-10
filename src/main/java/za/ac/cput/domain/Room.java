@@ -7,82 +7,88 @@
 package za.ac.cput.domain;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.Id;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 @Entity
 public class Room implements Serializable {
 
     @Id
     private String roomNo;
-    private String roomType;
-    private boolean isRoomAvailable;
+    @Enumerated(EnumType.STRING)
+    private RoomType roomType;
+    private double price;
 
+    public static int currentRoomNumber = 101;
     protected Room(){}
     private Room(Builder builder){
         this.roomNo = builder.roomNo;
         this.roomType = builder.roomType;
-        this.isRoomAvailable = builder.isRoomAvailable;
+        this.price = builder.price;
     }
 
     public String getRoomNo() {
         return roomNo;
     }
 
-    public String getRoomType() {
+    public RoomType getRoomType() {
         return roomType;
     }
 
-    public boolean isRoomAvailable() {
-        return isRoomAvailable;
+    public double getPrice() {
+        return price;
     }
 
-    public void setRoomNo(String roomNo) {
-        this.roomNo = roomNo;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Room room = (Room) o;
+        return Double.compare(room.price, price) == 0 && Objects.equals(roomNo, room.roomNo) && roomType == room.roomType;
     }
 
-    public void setRoomType(String roomType) {
-        this.roomType = roomType;
-    }
-
-    public void setRoomAvailable(boolean roomAvailable) {
-        this.isRoomAvailable = roomAvailable;
+    @Override
+    public int hashCode() {
+        return Objects.hash(roomNo, roomType, price);
     }
 
     @Override
     public String toString() {
         return "Room{" +
                 "roomNo='" + roomNo + '\'' +
-                ", roomType='" + roomType + '\'' +
-                ", isRoomAvailable=" + isRoomAvailable +
+                ", roomType=" + roomType +
+                ", price=" + price +
                 '}';
     }
 
     public static class Builder {
         public String roomNo;
-        public String roomType;
-        public boolean isRoomAvailable;
+        public RoomType roomType;
+        private double price;
 
         public Builder setRoomNo(String roomNo) {
             this.roomNo = roomNo;
             return this;
         }
 
-        public Builder setRoomType(String roomType) {
+        public Builder setRoomType(RoomType roomType) {
             this.roomType = roomType;
             return this;
         }
 
-        public Builder setRoomAvailable(boolean roomAvailable) {
-            this.isRoomAvailable = roomAvailable;
+        public Builder setPrice(double price) {
+            this.price = price;
             return this;
         }
 
         public Builder copy(Room room) {
             this.roomNo = room.roomNo;
             this.roomType = room.roomType;
-            this.isRoomAvailable = room.isRoomAvailable;
+            this.price = room.price;
             return this;
 
         }

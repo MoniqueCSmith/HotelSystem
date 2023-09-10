@@ -11,7 +11,7 @@ import org.junit.jupiter.api.Test;
 import za.ac.cput.domain.DietaryRequirementEnum;
 import za.ac.cput.domain.MealPlan;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 class MealPlanFactoryTest {
 

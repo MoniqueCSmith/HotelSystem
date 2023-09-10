@@ -6,7 +6,6 @@ import za.ac.cput.domain.Guest;
 import za.ac.cput.repository.IGuestRepository;
 import za.ac.cput.service.GuestService;
 
-
 import java.util.List;
 
 @Service

@@ -1,9 +1,13 @@
 package za.ac.cput.util;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.UUID;
 import org.apache.commons.validator.routines.EmailValidator;
 
-import static za.ac.cput.domain.User.nextId;
+import static za.ac.cput.domain.Amenity.nextId;
+import static za.ac.cput.domain.Room.currentRoomNumber;
 
 public class Helper {
 
@@ -35,7 +39,7 @@ public class Helper {
         return builder.toString();
     }*/
 
-
+    private static int nextId = 1;
 
     public static String generateID() {
         String id = String.format("%06d", nextId);
@@ -49,27 +53,13 @@ public class Helper {
 
 
     public static String generateRoomNo() {
-        int building = 1;
-        int floor = 0;
-        int room = 1;
-        String roomNo = String.format("%d%02d", building, room);
-
-        room++;
-        if (room > 5) {
-            room = 1;
-            floor++;
-            if (floor > 3) {
-                floor = 1;
-                building++;
-            }
-        }
-
-        return roomNo;
+        String roomNumber = Integer.toString(currentRoomNumber);
+        currentRoomNumber++;
+        return roomNumber;
     }
 
 
     public static String generateAmenityID() {
-        int nextId = 1;
         String id = String.format("%06d", nextId);
         if (nextId == 999999) {
             nextId = 1;
@@ -104,6 +94,7 @@ public class Helper {
     }
 
     public static boolean isValidCellNo(String cellNo) {
+        // Check if the cellNo is exactly 10 characters long
         if (cellNo.length() != 10) {
             return false;
         }
@@ -119,6 +110,16 @@ public class Helper {
     }
     public static String reservationID(){
         return UUID.randomUUID().toString();
+    }
+
+    public static boolean isDateRangeValid(LocalDate checkInDate, LocalDate checkOutDate) {
+        return !checkOutDate.isBefore(checkInDate);
+    }
+    public static boolean isCheckInTimeValid(LocalDateTime estCheckInTime) {
+        LocalTime checkInTime = estCheckInTime.toLocalTime();
+        LocalTime startTime = LocalTime.of(0, 0);
+        LocalTime endTime = LocalTime.of(10, 0);
+        return checkInTime.isBefore(startTime) || checkInTime.isAfter(endTime);
     }
 
 }

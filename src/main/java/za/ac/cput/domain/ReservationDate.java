@@ -1,4 +1,3 @@
-
 /*
 ReservationDate.java
 ReservationDate POJO class
@@ -8,22 +7,22 @@ Date : 5 April 2023
 
 package za.ac.cput.domain;
 
+import jakarta.persistence.*;
+
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
+@Embeddable
 public class ReservationDate implements Serializable {
-    private String reservationID;
     private LocalDate checkInDate;
     private LocalDate checkOutDate;
     private LocalDateTime estCheckInTime;
 
-    public ReservationDate() {
+    protected ReservationDate() {
     }
-    public String getReservationID() {
-        return reservationID;
-    }
+
     public LocalDate getCheckInDate() {
         return checkInDate;
     }
@@ -37,22 +36,20 @@ public class ReservationDate implements Serializable {
     }
 
     public ReservationDate(ReservationDate.Builder builder) {
-        this.reservationID = builder.reservationID;
+
         this.checkInDate = builder.checkInDate;
         this.checkOutDate = builder.checkOutDate;
         this.estCheckInTime = builder.estCheckInTime;
+
     }
 
     public static class Builder {
-        private String reservationID;
+
         private LocalDate checkInDate;
         private LocalDate checkOutDate;
         private LocalDateTime estCheckInTime;
 
-        public Builder setReservationID(String reservationID) {
-            this.reservationID = reservationID;
-            return this;
-        }
+
 
         public Builder setCheckInDate(LocalDate checkInDate) {
             this.checkInDate = checkInDate;
@@ -73,7 +70,7 @@ public class ReservationDate implements Serializable {
         @Override
         public String toString() {
             return "ReservationDate{" +
-                    "reservationID='" + reservationID + '\'' +
+                    '\'' +
                     ", checkInDate=" + checkInDate +
                     ", checkOutDate=" + checkOutDate +
                     ", estCheckInTime=" + estCheckInTime +
@@ -84,21 +81,13 @@ public class ReservationDate implements Serializable {
         public boolean equals(Object o) {
             if (this == o) return true;
             if (o == null || getClass() != o.getClass()) return false;
-            ReservationDate that = (ReservationDate) o;
-            return Objects.equals(reservationID, that.reservationID) && Objects.equals(checkInDate, that.checkInDate) && Objects.equals(checkOutDate, that.checkOutDate) && Objects.equals(estCheckInTime, that.estCheckInTime);
+            Builder builder = (Builder) o;
+            return Objects.equals(checkInDate, builder.checkInDate) && Objects.equals(checkOutDate, builder.checkOutDate) && Objects.equals(estCheckInTime, builder.estCheckInTime);
         }
 
         @Override
         public int hashCode() {
-            return Objects.hash(reservationID, checkInDate, checkOutDate, estCheckInTime);
-        }
-        public Builder copy(ReservationDate reservationDate) {
-
-            this.reservationID = reservationDate.reservationID;
-            this.checkInDate = reservationDate.checkInDate;
-            this.checkOutDate = reservationDate.checkOutDate;
-            this.estCheckInTime = reservationDate.estCheckInTime;
-            return this;
+            return Objects.hash(checkInDate, checkOutDate, estCheckInTime);
         }
 
         public ReservationDate build() {
@@ -108,5 +97,4 @@ public class ReservationDate implements Serializable {
     }
 
 }
-
 

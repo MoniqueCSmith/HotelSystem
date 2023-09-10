@@ -19,6 +19,9 @@ public class AmenityFactory {
                 Helper.isNullOrEmpty(String.valueOf(price))) {
             return null;
         }
+        if(Helper.isValidDouble(price)){
+            return null;
+        }
 
         String amenityID = Helper.generateAmenityID();
 

@@ -8,12 +8,13 @@ package za.ac.cput.service;
 
 import za.ac.cput.domain.Invoice;
 
-import java.util.Set;
+import java.util.List;
+
 
 public interface InvoiceService {
 
     Invoice create(Invoice invoice);
     Invoice read(String id);
     Invoice update(Invoice invoice);
-    Set<Invoice> getAll();
+    List<Invoice> getAll();
 }

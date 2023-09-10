@@ -6,50 +6,56 @@
  */
 package za.ac.cput.service.impl;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import za.ac.cput.domain.Amenity;
-import za.ac.cput.repository.impl.AmenityRepositoryImpl;
+import za.ac.cput.repository.IAmenityRepository;
 import za.ac.cput.service.AmenityService;
 
 
+import java.util.List;
 import java.util.Set;
 @Service
 public class AmenityServiceImpl implements AmenityService {
 
-    private static AmenityServiceImpl service = null;
-    private AmenityRepositoryImpl repository = null;
 
-    private AmenityServiceImpl(){
-        if(repository ==null){
-            repository = AmenityRepositoryImpl.getRepository();
-        }
-    }
+    private IAmenityRepository repository;
 
-    public static AmenityServiceImpl getService(){
-        if(service == null){
-            service = new AmenityServiceImpl();
-        }
-        return service;
+    @Autowired
+    private AmenityServiceImpl(IAmenityRepository repository) {
+        this.repository = repository;
     }
 
     @Override
-    public Amenity create(Amenity amenity){return repository.create(amenity);}
+    public Amenity create(Amenity amenity) {
+        return this.repository.save(amenity);
+    }
 
     @Override
-    public Amenity read(String id){return repository.read(id);}
+    public Amenity read(String amenityId) {
+        return this.repository.findById(amenityId).orElse(null);
+    }
 
     @Override
     public Amenity update(Amenity amenity) {
-        return repository.update(amenity);
+        if(this.repository.existsById(amenity.getAmenityID())) {
+            return this.repository.save(amenity);
+        }
+        return null;
     }
 
     @Override
-    public boolean delete(String id) {
-        return repository.delete(id);
-    }
-    @Override
-    public Set<Amenity> getAll() {
-        return repository.getAll();
+    public boolean delete(String amenityId) {
+        if(this.repository.existsById(amenityId)) {
+            this.repository.deleteById(amenityId);
+            return true;
+        }
+        return false;
+
     }
 
+    @Override
+    public List<Amenity> getAll() {
+        return this.repository.findAll();
+    }
 }

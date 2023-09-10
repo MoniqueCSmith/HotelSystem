@@ -6,11 +6,13 @@
  */
 package za.ac.cput.repository;
 
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 import za.ac.cput.domain.Membership;
 
 import java.util.Set;
 
-public interface IMembershipRepository extends IRepository<Membership, String> {
+@Repository
+public interface IMembershipRepository extends JpaRepository<Membership, String> {
 
-    public Set<Membership> getAll();
 }

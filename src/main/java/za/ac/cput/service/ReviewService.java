@@ -6,14 +6,13 @@
  */
 package za.ac.cput.service;
 
-import za.ac.cput.domain.CustomerQuery;
 import za.ac.cput.domain.Review;
 
-import java.util.Set;
+import java.util.List;
 
 public interface ReviewService {
     Review create(Review review);
     Review read(String id);
     boolean delete(String id);
-    Set<Review>getAll();
+    List<Review>getAll();
 }

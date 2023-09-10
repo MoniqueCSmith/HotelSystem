@@ -6,10 +6,13 @@
  */
 package za.ac.cput.repository;
 
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
 import za.ac.cput.domain.Review;
 
 import java.util.Set;
 
-public interface IReviewRepository extends IRepository<Review, String>{
-    public Set<Review> getAll();
+@Repository
+public interface IReviewRepository extends JpaRepository<Review, String>{
 }

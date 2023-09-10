@@ -22,7 +22,7 @@ public class CustomerQuery implements Serializable {
     private String email;
     private String description;
 
-    public CustomerQuery() {
+    protected CustomerQuery() {
     }
 
     private CustomerQuery(Builder builder) {

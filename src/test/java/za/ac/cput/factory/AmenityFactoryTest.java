@@ -8,7 +8,6 @@ package za.ac.cput.factory;
 
 import org.junit.jupiter.api.Test;
 import za.ac.cput.domain.Amenity;
-import za.ac.cput.util.factory.AmenityFactory;
 
 import static org.junit.jupiter.api.Assertions.*;
 

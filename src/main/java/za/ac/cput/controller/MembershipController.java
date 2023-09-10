@@ -10,10 +10,10 @@ package za.ac.cput.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import za.ac.cput.domain.Membership;
-import za.ac.cput.util.factory.MembershipFactory;
+import za.ac.cput.factory.MembershipFactory;
 import za.ac.cput.service.impl.MembershipServiceImpl;
 
-import java.util.Set;
+import java.util.List;
 
 @RestController
 @RequestMapping("/membership")
@@ -43,7 +43,7 @@ public class MembershipController {
     }
 
     @RequestMapping("/getall")
-    public Set<Membership> getall(){
+    public List<Membership> getall(){
         return membershipService.getAll();
     }
 }

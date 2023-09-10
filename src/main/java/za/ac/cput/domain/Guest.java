@@ -11,6 +11,7 @@ public class Guest implements Serializable {
     @Id
     private String guestID;
 
+    public static int nextGuestId = 1;
     public Guest() {
     }
 

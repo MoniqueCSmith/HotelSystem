@@ -20,7 +20,7 @@ public class MealPlanFactory {
             return null;
         }
 
-        String mealPlanID = Helper.generateID();
+        String mealPlanID = Helper.generateMealPlanID();
 
         return new MealPlan.Builder().setMealPlanID(mealPlanID)
                 .setName(name)

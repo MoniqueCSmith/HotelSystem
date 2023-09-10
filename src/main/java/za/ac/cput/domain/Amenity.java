@@ -23,7 +23,7 @@ public class Amenity implements Serializable {
     private Boolean isAmenityAvailable;
     private Double price;
 
-    public static int nextId = 1;
+    public static int nextAmenityId = 1;
 
     protected Amenity(){}
     private Amenity(Builder builder){

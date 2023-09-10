@@ -11,6 +11,7 @@ import za.ac.cput.domain.Reservation;
 import za.ac.cput.domain.ReservationDate;
 import za.ac.cput.util.Helper;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public class ReservationFactory {
@@ -18,7 +19,8 @@ public class ReservationFactory {
     //Reservation objects
     public static Reservation buildReservation(LocalDateTime reservationTimeCreated, String reservationStatus , Boolean termsAndConditions, Boolean isChild,ReservationDate reservationDate ) {
 
-        String reservationID=Helper.generateID();
+        String reservationID=Helper.generateReservationID();
+
 
         if (Helper.isNullOrEmpty(String.valueOf(reservationID))||
                 Helper.isNullOrEmpty(String.valueOf(reservationTimeCreated)) ||

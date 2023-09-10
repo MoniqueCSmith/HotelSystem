@@ -14,7 +14,7 @@ class HotelLocationFactoryTest {
 
     @Test
     void createHotelLocation(){
-        HotelLocation hotelLocation= HotelLocationFactory.createHotelLocation("32 Burger Street Camps Bay", "Cape Town", "Western Cape", 7301);
+        HotelLocation hotelLocation= HotelLocationFactory.createHotelLocation("32 Burger Street Camps Bay", "Cape Town", "Western Cape", 7301, "0215900310");
         assertNotNull(hotelLocation);
         System.out.println(hotelLocation);
         }

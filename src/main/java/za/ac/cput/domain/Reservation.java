@@ -17,12 +17,13 @@ import java.util.Objects;
 @Table(name= "Reservation")
 public class Reservation implements Serializable {
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
     private String reservationID;
     private LocalDateTime reservationTimeCreated;
     private String reservationStatus;
     private Boolean termsAndConditions;
     private Boolean isChild;
+
+    public static int nextReservationId = 1;
 
   @Embedded
    private  ReservationDate reservationDate;

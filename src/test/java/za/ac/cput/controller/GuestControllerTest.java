@@ -1,5 +1,6 @@
 package za.ac.cput.controller;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
@@ -10,53 +11,62 @@ import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
-import za.ac.cput.domain.DietaryRequirement;
-import za.ac.cput.util.factory.DietaryRequirementFactory;
+import za.ac.cput.domain.Guest;
+import za.ac.cput.factory.GuestFactory;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 @TestMethodOrder(MethodOrderer.MethodName.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-class DietaryRequirementControllerTest {
+class GuestControllerTest {
 
-    private static DietaryRequirement dietaryRequirement = DietaryRequirementFactory.createDietaryRequirement("Lactose intolerant", "Substitute all dairy products.");
+    private static Guest guest = GuestFactory.createGuest();
 
     @Autowired
     private TestRestTemplate restTemplate;
-    private final String baseURL = "http://localhost:8080/dietaryRequirement";
+    private final String baseURL = "http://localhost:8080/guest";
+
     @Test
     void a_create() {
         String url = baseURL + "/create";
-        ResponseEntity<DietaryRequirement> postResponse = restTemplate.postForEntity(url, dietaryRequirement, DietaryRequirement.class);
+        ResponseEntity<Guest> postResponse = restTemplate.postForEntity(url, guest, Guest.class);
         assertNotNull(postResponse);
         assertNotNull(postResponse.getBody());
-        DietaryRequirement savedDietaryRequirement = postResponse.getBody();
-        System.out.println("Saved data: " + savedDietaryRequirement);
-        assertEquals(dietaryRequirement.getDietaryRequirementID(), savedDietaryRequirement.getDietaryRequirementID());
+        Guest savedGuest = postResponse.getBody();
+        System.out.println("Saved data: " + savedGuest);
+        assertEquals(guest.getGuestID(), savedGuest.getGuestID());
     }
 
     @Test
     void b_read() {
-        String url = baseURL + "/read/" + dietaryRequirement.getDietaryRequirementID();
+        String url = baseURL + "/read/" + guest.getGuestID();
         System.out.println("URL: " + url);
-        ResponseEntity<DietaryRequirement> response = restTemplate.getForEntity(url, DietaryRequirement.class);
-        assertEquals(dietaryRequirement.getDietaryRequirementID(), response.getBody().getDietaryRequirementID());
+        ResponseEntity<Guest> response = restTemplate.getForEntity(url, Guest.class);
+        assertEquals(guest.getGuestID(), response.getBody().getGuestID());
         System.out.println(response.getBody());
     }
 
     @Test
     void c_update() {
-        DietaryRequirement updated = new DietaryRequirement.Builder().copy(dietaryRequirement).setName("Vegan").build();
+        Guest updated = new Guest.Builder().copy(guest).build();
         String url = baseURL + "/update";
         System.out.println("URL: " + url);
         System.out.println("Post data: " + updated);
-        ResponseEntity<DietaryRequirement> response = restTemplate.postForEntity(url, updated, DietaryRequirement.class);
+        ResponseEntity<Guest> response = restTemplate.postForEntity(url, updated, Guest.class);
         assertNotNull(response.getBody());
     }
 
     @Test
-    void d_getAll() {
+    @Disabled
+    void d_delete() {
+        String url = baseURL + "/delete/" + guest.getGuestID();
+        System.out.println("URL: " + url);
+        restTemplate.delete(url);
+    }
+
+    @Test
+    void e_getAll() {
         String url = baseURL + "/getAll";
         HttpHeaders headers = new HttpHeaders();
         HttpEntity<String> entity = new HttpEntity<>(null, headers);

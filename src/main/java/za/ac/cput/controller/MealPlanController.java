@@ -3,7 +3,7 @@ package za.ac.cput.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import za.ac.cput.domain.MealPlan;
-import za.ac.cput.util.factory.MealPlanFactory;
+import za.ac.cput.factory.MealPlanFactory;
 import za.ac.cput.service.impl.MealPlanServiceImpl;
 
 import java.util.List;
@@ -17,7 +17,7 @@ public class MealPlanController {
 
     @PostMapping("/create")
     public MealPlan create(@RequestBody MealPlan mealPlan) {
-        MealPlan created = MealPlanFactory.createMealPlan(mealPlan.getName(), mealPlan.getDescription(), mealPlan.getMealType(), mealPlan.getPrice(), mealPlan.getDietaryRequirement());
+        MealPlan created = MealPlanFactory.createMealPlan(mealPlan.getName(), mealPlan.getDescription(), mealPlan.getMealType(), mealPlan.getPrice(), mealPlan.getDietaryRequirementEnum());
         return mealPlanService.create(created);
     }
 

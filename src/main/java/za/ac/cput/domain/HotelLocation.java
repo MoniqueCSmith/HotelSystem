@@ -22,6 +22,9 @@ public class HotelLocation implements Serializable {
     private String City;
     private String Province;
     private int ZipCode;
+    private String phoneNo;
+    public static int nextHotelId;
+
 
 protected HotelLocation(){}
     private HotelLocation(Builder builder) {
@@ -30,6 +33,7 @@ protected HotelLocation(){}
         this.City= builder.City;
         this.Province= builder.Province;
         this.ZipCode=builder.ZipCode;
+        this.phoneNo= builder.phoneNo;
     }
     public String getID() {
         return ID;
@@ -71,17 +75,26 @@ protected HotelLocation(){}
         ZipCode = zipCode;
     }
 
+
+    public String getPhoneNo() {
+        return phoneNo;
+    }
+
+    public void setPhoneNo(String phoneNo) {
+        this.phoneNo = phoneNo;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         HotelLocation that = (HotelLocation) o;
-        return ZipCode == that.ZipCode && Objects.equals(ID, that.ID) && Objects.equals(Address, that.Address) && Objects.equals(City, that.City) && Objects.equals(Province, that.Province);
+        return ZipCode == that.ZipCode && Objects.equals(ID, that.ID) && Objects.equals(Address, that.Address) && Objects.equals(City, that.City) && Objects.equals(Province, that.Province) && Objects.equals(phoneNo, that.phoneNo);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(ID, Address, City, Province, ZipCode);
+        return Objects.hash(ID, Address, City, Province, ZipCode, phoneNo);
     }
 
     @Override
@@ -91,7 +104,8 @@ protected HotelLocation(){}
                 ", Address='" + Address + '\'' +
                 ", City='" + City + '\'' +
                 ", Province='" + Province + '\'' +
-                ", ZipCode='" + ZipCode + '\'' +
+                ", ZipCode=" + ZipCode +
+                ", phoneNo=" + phoneNo +
                 '}';
     }
 
@@ -101,6 +115,7 @@ protected HotelLocation(){}
         private String City;
         private String Province;
         private int ZipCode;
+        private String phoneNo;
 
         public Builder setID(String ID) {
             this.ID = ID;
@@ -108,21 +123,26 @@ protected HotelLocation(){}
         }
 
         public Builder setAddress(String address) {
-            Address = address;
+            this.Address = address;
             return this;
         }
 
         public Builder setCity(String city) {
-            City = city;
+            this.City = city;
             return this;
         }
         public Builder setProvince(String province) {
-            Province = province;
+            this.Province = province;
             return this;
         }
 
         public Builder setZipCode(int zipCode) {
-            ZipCode = zipCode;
+            this.ZipCode = zipCode;
+            return this;
+        }
+
+        public Builder setPhoneNo(String phoneNo) {
+            this.phoneNo = phoneNo;
             return this;
         }
 
@@ -132,6 +152,7 @@ protected HotelLocation(){}
             this.City= hotelLocation.City;
             this.Province= hotelLocation.Province;
             this.ZipCode=hotelLocation.ZipCode;
+            this.phoneNo=  hotelLocation.phoneNo;
             return this;
         }
 

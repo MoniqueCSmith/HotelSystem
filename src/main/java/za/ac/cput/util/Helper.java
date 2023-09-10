@@ -12,37 +12,12 @@ import org.apache.commons.validator.routines.EmailValidator;
 
 import static za.ac.cput.domain.Amenity.nextId;
 import static za.ac.cput.domain.Room.currentRoomNumber;
+import static za.ac.cput.domain.HotelLocation.nextHotelId;
+import static za.ac.cput.domain.Employee.nextEmployeeID;
 
 
 public class Helper {
 
-    /*private static final int idSize = 10;
-    private static final int dateSize = 6;
-    private static final String currentDate = "ddMMyy";
-    private static final String charAmount = "0123456789";
-    private static final Random randomNum = new Random();
-    private static final Set<String> randomInvoiceID = new HashSet<>();
-    public static String generateUniqueID() {
-        SimpleDateFormat dateFormat = new SimpleDateFormat(currentDate);
-        String date = dateFormat.format(new Date());
-        String randID = generateRandomID(idSize - dateSize);
-        String invoiceID = date + randID;
-        while (randomInvoiceID.contains(invoiceID)) {
-            randID = generateRandomID(idSize - dateSize);
-            invoiceID = date + randID;
-        }
-        randomInvoiceID.add(invoiceID);
-        return invoiceID;
-    }
-
-    private static String generateRandomID(int length) {
-        StringBuilder builder = new StringBuilder(length);
-        for (int i = 0; i < length; i++) {
-            int index = randomNum.nextInt(charAmount.length());
-            builder.append(charAmount.charAt(index));
-        }
-        return builder.toString();
-    }*/
 
     private static int nextId = 1;
 
@@ -56,6 +31,25 @@ public class Helper {
         return id;
     }
 
+    public static String generateHotelID() {
+        String id = String.format("%06d", nextHotelId);
+        if (nextHotelId == 999999) {
+            nextHotelId = 1;
+        } else {
+            nextHotelId++;
+        }
+        return id;
+    }
+
+    public static String generateEmployeeID() {
+        String id = String.format("%06d", nextEmployeeID);
+        if (nextEmployeeID == 999999) {
+            nextEmployeeID = 1;
+        } else {
+            nextEmployeeID++;
+        }
+        return id;
+    }
 
     public static String generateRoomNo() {
         String roomNumber = Integer.toString(currentRoomNumber);

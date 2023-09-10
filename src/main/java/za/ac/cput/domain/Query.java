@@ -19,7 +19,7 @@ public class Query implements Serializable {
     private String title;
     private String email;
     private String description;
-    public static int nextId = 1;
+    public static int nextQueryId = 1;
 
     protected Query() {
     }

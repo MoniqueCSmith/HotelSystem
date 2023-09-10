@@ -21,6 +21,8 @@ public class MealPlan implements Serializable {
     private String description;
     private String mealType;
     private double price;
+
+    public static int nextMealPlanId = 1;
     @Enumerated(EnumType.STRING)
     @Column(name = "dietary_requirement")
     private DietaryRequirementEnum dietaryRequirementEnum;
@@ -34,7 +36,7 @@ public class MealPlan implements Serializable {
         this.description = builder.description;
         this.mealType = builder.mealType;
         this.price = builder.price;
-        this.dietaryRequirementEnum = builder.build().dietaryRequirementEnum;
+        this.dietaryRequirementEnum = builder.dietaryRequirementEnum;
     }
 
     public String getMealPlanID() {
@@ -85,9 +87,9 @@ public class MealPlan implements Serializable {
         this.dietaryRequirementEnum = dietaryRequirementEnum;
     }
 
-    @Entity
+
     public static class Builder {
-        @Id
+
         private String mealPlanID;
         private String name;
         private String description;
@@ -145,12 +147,12 @@ public class MealPlan implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         MealPlan mealPlan = (MealPlan) o;
-        return Double.compare(mealPlan.price, price) == 0 && mealPlanID.equals(mealPlan.mealPlanID) && name.equals(mealPlan.name) && description.equals(mealPlan.description) && mealType.equals(mealPlan.mealType);
+        return Double.compare(mealPlan.price, price) == 0 && Objects.equals(mealPlanID, mealPlan.mealPlanID) && Objects.equals(name, mealPlan.name) && Objects.equals(description, mealPlan.description) && Objects.equals(mealType, mealPlan.mealType) && dietaryRequirementEnum == mealPlan.dietaryRequirementEnum;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(mealPlanID, name, description, mealType, price);
+        return Objects.hash(mealPlanID, name, description, mealType, price, dietaryRequirementEnum);
     }
 
     @Override

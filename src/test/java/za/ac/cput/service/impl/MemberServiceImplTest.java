@@ -25,7 +25,7 @@ class MemberServiceImplTest {
     @Autowired
     private MemberServiceImpl service;
 
-    private static Member member = MemberFactory.buildMember("plions","seaweed");
+    private static Member member = MemberFactory.buildMember("ffloppy@gmail.com", "carrot");
 
     @Test
     void a_create(){
@@ -43,7 +43,7 @@ class MemberServiceImplTest {
 
     @Test
     void c_update() {
-        Member newMember = new Member.Builder().copy(member).setUsername("p.lions").build();
+        Member newMember = new Member.Builder().copy(member).setUsername("ffloppy1@gmail.com").build();
         Member updated = service.update(newMember);
         assertEquals(newMember.getUsername(), updated.getUsername());
         System.out.println("Update" + updated);

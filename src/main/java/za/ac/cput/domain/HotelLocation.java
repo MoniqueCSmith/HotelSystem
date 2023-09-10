@@ -23,7 +23,7 @@ public class HotelLocation implements Serializable {
     private String Province;
     private int ZipCode;
     private String phoneNo;
-    public static int nextHotelId;
+    public static int nextHotelId = 1;
 
 
 protected HotelLocation(){}

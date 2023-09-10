@@ -16,7 +16,7 @@ private String Username;
 private String Password;
 private String JobTitle;
 
-    public static int nextEmployeeID;
+    public static int nextEmployeeID = 1;
 protected Employee(){}
 
     private Employee(Builder builder){

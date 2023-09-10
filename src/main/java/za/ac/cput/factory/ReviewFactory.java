@@ -14,7 +14,7 @@ public class ReviewFactory {
         if(Helper.isNullOrEmpty(String.valueOf(rating)) || Helper.isNullOrEmpty(reviewComment)){
             return null;
         }
-        String reviewID = Helper.generateID();
+        String reviewID = Helper.generateReviewID();
         return new Review.Builder()
                 .setReviewID(reviewID)
                 .setRating(rating)

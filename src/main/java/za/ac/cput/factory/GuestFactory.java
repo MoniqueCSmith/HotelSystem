@@ -8,7 +8,7 @@ public class GuestFactory {
 
     public static Guest createGuest () {
 
-        String guestID = Helper.generateID();
+        String guestID = Helper.generateGuestID();
 
         return new Guest.Builder().setGuestID(guestID).build();
     }

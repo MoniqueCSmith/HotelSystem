@@ -8,11 +8,11 @@ package za.ac.cput.factory;
 
 import za.ac.cput.domain.Query;
 import za.ac.cput.util.Helper;
-import static za.ac.cput.util.Helper.generateID;
+
 
 public class QueryFactory {
     public static Query buildQuery(String title, String email, String description){
-        String refNo = generateID();
+        String refNo = Helper.generateQueryID();
 
         if(Helper.isNullOrEmpty(title) || Helper.isNullOrEmpty(email) || Helper.isNullOrEmpty(description)) {
             return null;

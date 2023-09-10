@@ -7,26 +7,88 @@ import java.util.UUID;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
-import java.util.UUID;
-import org.apache.commons.validator.routines.EmailValidator;
 
-import static za.ac.cput.domain.Amenity.nextId;
+import static za.ac.cput.domain.Amenity.nextAmenityId;
+
+import static za.ac.cput.domain.Guest.nextGuestId;
+import static za.ac.cput.domain.MealPlan.nextMealPlanId;
+import static za.ac.cput.domain.Member.nextMemberId;
+import static za.ac.cput.domain.Query.nextQueryId;
+import static za.ac.cput.domain.Reservation.nextReservationId;
+import static za.ac.cput.domain.Review.nextReviewId;
 import static za.ac.cput.domain.Room.currentRoomNumber;
 import static za.ac.cput.domain.HotelLocation.nextHotelId;
 import static za.ac.cput.domain.Employee.nextEmployeeID;
+import static za.ac.cput.domain.User.nextUserId;
 
 
 public class Helper {
 
-
-    private static int nextId = 1;
-
-    public static String generateID() {
-        String id = String.format("%06d", nextId);
-        if (nextId == 999999) {
-            nextId = 1;
+    public static String generateQueryID() {
+        String id = String.format("%06d", nextQueryId);
+        if (nextQueryId == 999999) {
+            nextQueryId = 1;
         } else {
-            nextId++;
+            nextQueryId++;
+        }
+        return id;
+    }
+
+    public static String generateReservationID() {
+        String id = String.format("%06d", nextReservationId);
+        if (nextReservationId == 999999) {
+            nextReservationId = 1;
+        } else {
+            nextReservationId++;
+        }
+        return id;
+    }
+    public static String generateUserID() {
+        String id = String.format("%06d", nextUserId);
+        if (nextUserId == 999999) {
+            nextUserId = 1;
+        } else {
+            nextUserId++;
+        }
+        return id;
+    }
+
+    public static String generateReviewID() {
+        String id = String.format("%06d", nextReviewId);
+        if (nextReviewId == 999999) {
+            nextReviewId = 1;
+        } else {
+            nextReviewId++;
+        }
+        return id;
+    }
+
+
+
+    public static String generateMemberID() {
+        String id = String.format("%06d", nextMemberId);
+        if (nextMemberId == 999999) {
+            nextMemberId = 1;
+        } else {
+            nextMemberId++;
+        }
+        return id;
+    }
+    public static String generateGuestID() {
+        String id = String.format("%06d", nextGuestId);
+        if (nextGuestId == 999999) {
+            nextGuestId = 1;
+        } else {
+            nextGuestId++;
+        }
+        return id;
+    }
+    public static String generateMealPlanID() {
+        String id = String.format("%06d", nextMealPlanId);
+        if (nextMealPlanId == 999999) {
+            nextMealPlanId = 1;
+        } else {
+            nextMealPlanId++;
         }
         return id;
     }
@@ -59,11 +121,11 @@ public class Helper {
 
 
     public static String generateAmenityID() {
-        String id = String.format("%06d", nextId);
-        if (nextId == 999999) {
-            nextId = 1;
+        String id = String.format("%06d", nextAmenityId);
+        if (nextAmenityId == 999999) {
+            nextAmenityId = 1;
         } else {
-            nextId++;
+            nextAmenityId++;
         }
         return id;
     }

@@ -17,7 +17,7 @@ class HotelLocationServiceImplTest {
     @Autowired
     private HotelLocationServiceImpl service;
 
-    private static HotelLocation hotelLocation= HotelLocationFactory.createHotelLocation("6 Nassau Street Milnerton", "Cape Town", "Western Cape",7441);
+    private static HotelLocation hotelLocation= HotelLocationFactory.createHotelLocation("6 Nassau Street Milnerton", "Cape Town", "Western Cape",7441,"0213907901");
 
     @Test
     void a_create() {

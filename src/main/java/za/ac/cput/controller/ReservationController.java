@@ -5,17 +5,22 @@ Author : Kyra Petersen (219474559)
 Date : 15 June 2023
 */
 
+
+
 package za.ac.cput.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import za.ac.cput.domain.Reservation;
+import za.ac.cput.domain.ReservationDate;
 import za.ac.cput.factory.ReservationFactory;
 
 import za.ac.cput.service.impl.ReservationServiceImpl;
 
-import java.util.Set;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.List;
 
 @RestController
 @RequestMapping("/reservation")
@@ -23,10 +28,17 @@ import java.util.Set;
 public class ReservationController {
     @Autowired
     private ReservationServiceImpl reservationService;
+    private ReservationDate reservationDate = new ReservationDate.Builder()
+            .setCheckInDate(LocalDate.of(2023, 6, 15))
+            .setCheckOutDate(LocalDate.of(2023, 6, 20))
+            .setEstCheckInTime(LocalDateTime.of(2023, 6, 15, 14, 30))
+            .build();
 
-    @PostMapping("/create")
+
+
+    @PostMapping("/crLocalDateTimeDate")
     public Reservation create (@RequestBody Reservation reservation){
-        Reservation reservationCreated= ReservationFactory.buildReservation(reservation.getReservationID(), reservation.getReservationTimeCreated(),reservation.getReservationStatus(),reservation.getTermsAndConditions(),reservation.getReservationDate());
+        Reservation reservationCreated= ReservationFactory.buildReservation( reservation.getReservationTimeCreated(),reservation.getReservationStatus(),reservation.getTermsAndConditions(),reservation.getIsChild(),reservationDate );
 
         return reservationService.create(reservationCreated);
     }
@@ -47,7 +59,7 @@ public class ReservationController {
     }
 
     @RequestMapping({"/getall"})
-    public Set<Reservation> getAll(){
+    public List<Reservation> getAll(){
         return reservationService.getAll();
 
     }

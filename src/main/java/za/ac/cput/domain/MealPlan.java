@@ -21,8 +21,9 @@ public class MealPlan implements Serializable {
     private String description;
     private String mealType;
     private double price;
-    @Embedded
-    private DietaryRequirement dietaryRequirement;
+    @Enumerated(EnumType.STRING)
+    @Column(name = "dietary_requirement")
+    private DietaryRequirementEnum dietaryRequirementEnum;
 
     protected MealPlan() {
     }
@@ -33,7 +34,7 @@ public class MealPlan implements Serializable {
         this.description = builder.description;
         this.mealType = builder.mealType;
         this.price = builder.price;
-        this.dietaryRequirement = builder.dietaryRequirement;
+        this.dietaryRequirementEnum = builder.build().dietaryRequirementEnum;
     }
 
     public String getMealPlanID() {
@@ -76,21 +77,23 @@ public class MealPlan implements Serializable {
         this.price = price;
     }
 
-    public DietaryRequirement getDietaryRequirement() {
-        return dietaryRequirement;
+    public DietaryRequirementEnum getDietaryRequirementEnum() {
+        return dietaryRequirementEnum;
     }
 
-    public void setDietaryRequirement(DietaryRequirement dietaryRequirement) {
-        this.dietaryRequirement = dietaryRequirement;
+    public void setDietaryRequirementEnum(DietaryRequirementEnum dietaryRequirementEnum) {
+        this.dietaryRequirementEnum = dietaryRequirementEnum;
     }
 
+    @Entity
     public static class Builder {
+        @Id
         private String mealPlanID;
         private String name;
         private String description;
         private String mealType;
         private double price;
-        private DietaryRequirement  dietaryRequirement;
+        private DietaryRequirementEnum  dietaryRequirementEnum;
 
         public Builder setMealPlanID(String mealPlanID) {
             this.mealPlanID = mealPlanID;
@@ -117,8 +120,8 @@ public class MealPlan implements Serializable {
             return this;
         }
 
-        public Builder setDietaryRequirement(DietaryRequirement dietaryRequirement) {
-            this.dietaryRequirement = dietaryRequirement;
+        public Builder setDietaryRequirementEnum(DietaryRequirementEnum dietaryRequirementEnum) {
+            this.dietaryRequirementEnum = dietaryRequirementEnum;
             return this;
         }
 
@@ -128,7 +131,7 @@ public class MealPlan implements Serializable {
             this.description = mealPlan.description;
             this.mealType = mealPlan.mealType;
             this.price = mealPlan.price;
-            this.dietaryRequirement = mealPlan.dietaryRequirement;
+            this.dietaryRequirementEnum = mealPlan.dietaryRequirementEnum;
             return this;
         }
 
@@ -158,7 +161,7 @@ public class MealPlan implements Serializable {
                 ", description='" + description + '\'' +
                 ", mealType='" + mealType + '\'' +
                 ", price=" + price +
-                ", dietaryRequirement=" + dietaryRequirement +
+                ", dietaryRequirementEnum=" + dietaryRequirementEnum +
                 '}';
     }
 }

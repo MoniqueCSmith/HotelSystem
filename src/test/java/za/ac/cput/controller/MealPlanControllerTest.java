@@ -1,6 +1,9 @@
 package za.ac.cput.controller;
 
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.MethodOrderer;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestMethodOrder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
@@ -8,22 +11,22 @@ import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
-import za.ac.cput.domain.DietaryRequirement;
+import za.ac.cput.domain.DietaryRequirementEnum;
 import za.ac.cput.domain.MealPlan;
-import za.ac.cput.factory.DietaryRequirementFactory;
 import za.ac.cput.factory.MealPlanFactory;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 @TestMethodOrder(MethodOrderer.MethodName.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class MealPlanControllerTest {
 
-    private static DietaryRequirement dietaryRequirement = DietaryRequirementFactory.createDietaryRequirement("Lactose intolerant", "Substitute all dairy products.");
-    private static MealPlan mealPlan = MealPlanFactory.createMealPlan("BLT Sandwich", "Toasted rye bread with bacon, lettuce, tomato, and mayo.", "Breakfast", 55.00, dietaryRequirement);
+    private static MealPlan mealPlan = MealPlanFactory.createMealPlan("Berry smoothie", "Vegan smoothies with frozen berries.", "Breakfast", 55.00, DietaryRequirementEnum.VEGAN);
 
     @Autowired
     private TestRestTemplate restTemplate;
+
     private final String baseURL = "http://localhost:8080/mealPlan";
     @Test
     void a_create() {

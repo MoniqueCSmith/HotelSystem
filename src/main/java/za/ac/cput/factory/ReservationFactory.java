@@ -15,38 +15,28 @@ import java.time.LocalDateTime;
 
 public class ReservationFactory {
 
-     //user objects
-     public static Reservation buildReservation(String reservationID, LocalDateTime reservationTimeCreated, String reservationStatus , Boolean termsAndConditions, ReservationDate reservationDate) {
+    //Reservation objects
+    public static Reservation buildReservation(LocalDateTime reservationTimeCreated, String reservationStatus , Boolean termsAndConditions, Boolean isChild,ReservationDate reservationDate ) {
+
+        String reservationID=Helper.generateID();
+
+        if (Helper.isNullOrEmpty(String.valueOf(reservationID))||
+                Helper.isNullOrEmpty(String.valueOf(reservationTimeCreated)) ||
+                Helper.isNullOrEmpty(String.valueOf(reservationStatus)) ||
+                Helper.isNullOrEmpty(String.valueOf(termsAndConditions)) ||
+                reservationDate == null) {
+            return null;
+        }
+// Build and return the object
+        return new Reservation.Builder()
+                .setReservationID(reservationID)
+                .setReservationTimeCreated(LocalDateTime.from(reservationTimeCreated))
+                .setTermsAndConditions(termsAndConditions)
+                .setIsChild(isChild)
+                .setReservationStatus(reservationStatus)
+                .setReservationDate(reservationDate)
+                .build();
 
 
-         /*if (reservationID.equals("") || reservationID == null)
-
-             return null;
-
-         if (reservationTimeCreated.equals("") || reservationTimeCreated == null)
-
-             return null;
-
-         if (reservationStatus.equals("") || reservationStatus == null)
-
-             return null;*/
-         String ReservationId=Helper.generateID();
-
-             if (Helper.isNullOrEmpty(String.valueOf(reservationID))||
-                     Helper.isNullOrEmpty(String.valueOf(reservationTimeCreated)) ||
-                     Helper.isNullOrEmpty(String.valueOf(reservationStatus)) ||
-                     Helper.isNullOrEmpty(String.valueOf(termsAndConditions)) ||
-                     Helper.isNullOrEmpty(String.valueOf(reservationDate)))
-                 return null;
-
-             return new Reservation.Builder()
-                     .setReservationID(reservationID)
-                     .setReservationTimeCreated(LocalDateTime.from(reservationTimeCreated))
-                     .setTermsAndConditions(termsAndConditions)
-                     .setReservationStatus(reservationStatus)
-                     .setReservationDate(reservationDate)
-                     .build();
-
-
-     }
- }
+    }
+}

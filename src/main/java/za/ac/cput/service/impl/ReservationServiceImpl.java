@@ -9,56 +9,55 @@ Date : 5 June 2023
 
 package za.ac.cput.service.impl;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import za.ac.cput.domain.Reservation;
-import za.ac.cput.repository.impl.ReservationRepositoryImpl;
+import za.ac.cput.repository.IReservationRepository;
 import za.ac.cput.service.ReservationService;
 
+import java.util.List;
 import java.util.Set;
 @Service
 public class ReservationServiceImpl implements ReservationService {
 
-    private static ReservationService service = null;
-    private ReservationRepositoryImpl repository=null;
-
-    private ReservationServiceImpl() {
-        if (repository == null) {
-            repository = ReservationRepositoryImpl.getRepository();
-
-        }
+  private IReservationRepository repository;
+@Autowired
+    private ReservationServiceImpl(IReservationRepository repository) {
+    this.repository= repository;
     }
-    public static ReservationService getService() {
 
-        if (service == null){
-            service = new ReservationServiceImpl();
-        }
-        return service;
-    }
     @Override
     public Reservation create(Reservation reservation) {
-        return repository.create(reservation);
+        return repository.save(reservation);
 
     }
 
     @Override
     public Reservation read(String reservationID){
-        return repository.read(reservationID);
+        return this.repository.findById(reservationID).orElse(null);
     }
 
 
 
     @Override
     public Reservation update(Reservation reservation) {
-        return repository.update(reservation);
+        if (this.repository.existsById(reservation.getReservationID())) {
+            return repository.save(reservation);
+        }
+        return null;
     }
 
     @Override
-    public boolean delete(String reservationID) {
-        return repository.delete(reservationID);
-    }
-
-    public Set<Reservation> getAll() {
-        return repository.getAll();
+    public boolean delete(String reservationID){
+            if (this.repository.existsById(reservationID)) {
+                this.repository.deleteById(reservationID);
+                return true;
+            }
+            return false;
+        }
+    @Override
+    public List<Reservation> getAll() {
+        return this.repository.findAll();
 
     }
 }

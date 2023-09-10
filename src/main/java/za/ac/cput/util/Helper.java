@@ -1,37 +1,23 @@
 package za.ac.cput.util;
 
+import org.apache.commons.validator.routines.EmailValidator;
+
+import java.util.UUID;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.UUID;
 import org.apache.commons.validator.routines.EmailValidator;
 
+import static za.ac.cput.domain.Amenity.nextId;
+import static za.ac.cput.domain.Room.currentRoomNumber;
+import static za.ac.cput.domain.HotelLocation.nextHotelId;
+import static za.ac.cput.domain.Employee.nextEmployeeID;
+
+
 public class Helper {
 
-    /*private static final int idSize = 10;
-    private static final int dateSize = 6;
-    private static final String currentDate = "ddMMyy";
-    private static final String charAmount = "0123456789";
-    private static final Random randomNum = new Random();
-    private static final Set<String> randomInvoiceID = new HashSet<>();
-    public static String generateUniqueID() {
-        SimpleDateFormat dateFormat = new SimpleDateFormat(currentDate);
-        String date = dateFormat.format(new Date());
-        String randID = generateRandomID(idSize - dateSize);
-        String invoiceID = date + randID;
-        while (randomInvoiceID.contains(invoiceID)) {
-            randID = generateRandomID(idSize - dateSize);
-            invoiceID = date + randID;
-        }
-        randomInvoiceID.add(invoiceID);
-        return invoiceID;
-    }
-
-    private static String generateRandomID(int length) {
-        StringBuilder builder = new StringBuilder(length);
-        for (int i = 0; i < length; i++) {
-            int index = randomNum.nextInt(charAmount.length());
-            builder.append(charAmount.charAt(index));
-        }
-        return builder.toString();
-    }*/
 
     private static int nextId = 1;
 
@@ -45,29 +31,34 @@ public class Helper {
         return id;
     }
 
+    public static String generateHotelID() {
+        String id = String.format("%06d", nextHotelId);
+        if (nextHotelId == 999999) {
+            nextHotelId = 1;
+        } else {
+            nextHotelId++;
+        }
+        return id;
+    }
+
+    public static String generateEmployeeID() {
+        String id = String.format("%06d", nextEmployeeID);
+        if (nextEmployeeID == 999999) {
+            nextEmployeeID = 1;
+        } else {
+            nextEmployeeID++;
+        }
+        return id;
+    }
 
     public static String generateRoomNo() {
-        int building = 1;
-        int floor = 0;
-        int room = 1;
-        String roomNo = String.format("%d%02d", building, room);
-
-        room++;
-        if (room > 5) {
-            room = 1;
-            floor++;
-            if (floor > 3) {
-                floor = 1;
-                building++;
-            }
-        }
-
-        return roomNo;
+        String roomNumber = Integer.toString(currentRoomNumber);
+        currentRoomNumber++;
+        return roomNumber;
     }
 
 
     public static String generateAmenityID() {
-        int nextId = 1;
         String id = String.format("%06d", nextId);
         if (nextId == 999999) {
             nextId = 1;
@@ -118,6 +109,16 @@ public class Helper {
     }
     public static String reservationID(){
         return UUID.randomUUID().toString();
+    }
+
+    public static boolean isDateRangeValid(LocalDate checkInDate, LocalDate checkOutDate) {
+        return !checkOutDate.isBefore(checkInDate);
+    }
+    public static boolean isCheckInTimeValid(LocalDateTime estCheckInTime) {
+        LocalTime checkInTime = estCheckInTime.toLocalTime();
+        LocalTime startTime = LocalTime.of(0, 0);
+        LocalTime endTime = LocalTime.of(10, 0);
+        return checkInTime.isBefore(startTime) || checkInTime.isAfter(endTime);
     }
 
 }

@@ -7,11 +7,14 @@ Date : 5 June 2023
 */
 
 
+
+
 package za.ac.cput.service;
 import za.ac.cput.domain.Reservation;
 
-import java.util.Set;
+import java.util.List;
+
 
 public interface ReservationService extends IService <Reservation ,String> {
-     Set<Reservation> getAll();
+     List<Reservation> getAll();
 }

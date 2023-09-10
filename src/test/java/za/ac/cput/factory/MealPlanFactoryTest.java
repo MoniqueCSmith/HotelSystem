@@ -8,18 +8,18 @@
 package za.ac.cput.factory;
 
 import org.junit.jupiter.api.Test;
-import za.ac.cput.domain.DietaryRequirement;
+import za.ac.cput.domain.DietaryRequirementEnum;
 import za.ac.cput.domain.MealPlan;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 class MealPlanFactoryTest {
 
     @Test
     public void test() {
-        DietaryRequirement dietaryRequirement = DietaryRequirementFactory.createDietaryRequirement("Vegan", "Allergic to eggs");
+
         MealPlan mealPlan = MealPlanFactory.createMealPlan("Vegan",
-                "Breakfast burritos made with tofu.", "Breakfast", 80.00, dietaryRequirement);
+                "Breakfast burritos made with tofu.", "Breakfast", 80.00, DietaryRequirementEnum.VEGAN);
         assertNotNull(mealPlan);
         System.out.println(mealPlan.toString());
 

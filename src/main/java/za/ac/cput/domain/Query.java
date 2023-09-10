@@ -1,6 +1,6 @@
 /**
- * CustomerQuery.java
- * POJO class for the CustomerQuery
+ * Query.java
+ * POJO class for the Query
  * Author: Brandon Wise - 220049173
  * Date: 5 April 2023
  */
@@ -8,31 +8,30 @@ package za.ac.cput.domain;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
-import jakarta.persistence.Table;
 
 import java.io.Serializable;
 import java.util.Objects;
 
 @Entity
-@Table(name = "CustomerQuery")
-public class CustomerQuery implements Serializable {
+public class Query implements Serializable {
     @Id
-    private String queryID;
+    private String refNo;
     private String title;
     private String email;
     private String description;
+    public static int nextId = 1;
 
-    protected CustomerQuery() {
+    protected Query() {
     }
 
-    private CustomerQuery(Builder builder) {
-        this.queryID = builder.queryID;
+    private Query(Builder builder) {
+        this.refNo = builder.refNo;
         this.title = builder.title;
         this.email = builder.email;
         this.description = builder.description;
     }
-    public String getQueryID() {
-        return queryID;
+    public String getRefNo() {
+        return refNo;
     }
 
     public String getTitle() {
@@ -51,19 +50,19 @@ public class CustomerQuery implements Serializable {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        CustomerQuery that = (CustomerQuery) o;
-        return Objects.equals(queryID, that.queryID) && Objects.equals(title, that.title) && Objects.equals(email, that.email) && Objects.equals(description, that.description);
+        Query that = (Query) o;
+        return Objects.equals(refNo, that.refNo) && Objects.equals(title, that.title) && Objects.equals(email, that.email) && Objects.equals(description, that.description);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(queryID, title, email, description);
+        return Objects.hash(refNo, title, email, description);
     }
 
     @Override
     public String toString() {
-        return "CustomerQuery{" +
-                "queryID='" + queryID + '\'' +
+        return "Query{" +
+                "RefNo='" + refNo + '\'' +
                 ", Title='" + title + '\'' +
                 ", Email='" + email + '\'' +
                 ", Description='" + description + '\'' +
@@ -71,37 +70,37 @@ public class CustomerQuery implements Serializable {
     }
 
     public static class Builder{
-        private String queryID;
+        private String refNo;
         private String title;
         private String email;
         private String description;
 
-        public CustomerQuery.Builder setQueryID(String queryID) {
-            this.queryID = queryID;
+        public Query.Builder setRefNo(String refNo) {
+            this.refNo = refNo;
             return this;
         }
 
-        public CustomerQuery.Builder setTitle(String title) {
+        public Query.Builder setTitle(String title) {
             this.title = title;
             return this;
         }
-        public CustomerQuery.Builder setEmail(String email) {
+        public Query.Builder setEmail(String email) {
             this.email = email;
             return this;
         }
-        public CustomerQuery.Builder setDescription(String description) {
+        public Query.Builder setDescription(String description) {
             this.description = description;
             return this;
         }
-        public CustomerQuery.Builder copy(CustomerQuery customerQuery){
-            this.queryID = customerQuery.queryID;
-            this.title = customerQuery.title;
-            this.email = customerQuery.email;
-            this.description = customerQuery.description;
+        public Query.Builder copy(Query query){
+            this.refNo = query.refNo;
+            this.title = query.title;
+            this.email = query.email;
+            this.description = query.description;
             return this;
         }
-        public CustomerQuery build(){
-            return new CustomerQuery(this);
+        public Query build(){
+            return new Query(this);
         }
     }
 }

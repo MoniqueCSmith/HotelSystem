@@ -1,6 +1,6 @@
 /**
- * CustomerContactControllerTest.java
- * Test class for the CustomerContactController
+ * UserControllerTest.java
+ * Test class for the UserController
  * Author: Brandon Wise (220049173)
  * Date: 15 June 2023
  */
@@ -17,51 +17,66 @@ import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
-import za.ac.cput.domain.CustomerContact;
-import za.ac.cput.factory.CustomerContactFactory;
+import za.ac.cput.domain.User;
+import za.ac.cput.domain.UserContact;
+import za.ac.cput.factory.UserContactFactory;
+import za.ac.cput.factory.UserFactory;
 
 import static org.junit.jupiter.api.Assertions.*;
 @TestMethodOrder(MethodOrderer.MethodName.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-class CustomerContactControllerTest {
-    private static CustomerContact customerContact = CustomerContactFactory.buildCustomerContact("0812685242","Ashtonw1234@gmail.com");
+class UserControllerTest {
+    private static UserContact userContact = UserContactFactory.buildUserContact("0732685242","Ashtonw123@gmail.com");
+    private static User user = UserFactory.buildUser("Ashton", "Williams", "10 Stable Road, Milnerton", userContact.getCellNo(), userContact.getEmail());
+    private static User user2 = UserFactory.buildUser("Alison", "Williams", "10 Stable Road, Milnerton", userContact.getCellNo(), userContact.getEmail());
     @Autowired
     private TestRestTemplate restTemplate;
-    private final String baseURL = "http://localhost:8080/customerContact";
+    private final String baseURL = "http://localhost:8080/user";
     @Test
-    void a_create() {
+    void a_create1() {
         String url = baseURL + "/create";
-        ResponseEntity<CustomerContact> postResponse = restTemplate.postForEntity(url, customerContact, CustomerContact.class);
+        ResponseEntity<User> postResponse = restTemplate.postForEntity(url, user, User.class);
         assertNotNull(postResponse);
         assertNotNull(postResponse.getBody());
-        CustomerContact savedCustomerContact = postResponse.getBody();
-        System.out.println("Saved data:" + savedCustomerContact);
-        assertEquals(customerContact.getCustomerContactID(), customerContact.getCustomerContactID());
+        User savedUser = postResponse.getBody();
+        System.out.println("Saved data:" + savedUser);
+        assertEquals(user.getUserID(), savedUser.getUserID());
+    }
+
+    @Test
+    void a_create2() {
+        String url = baseURL + "/create";
+        ResponseEntity<User> postResponse = restTemplate.postForEntity(url, user2, User.class);
+        assertNotNull(postResponse);
+        assertNotNull(postResponse.getBody());
+        User savedUser = postResponse.getBody();
+        System.out.println("Saved data:" + savedUser);
+        assertEquals(user2.getUserID(), savedUser.getUserID());
     }
 
     @Test
     void b_read() {
-        String url = baseURL + "/read/" + customerContact.getCustomerContactID();
+        String url = baseURL + "/read/" + user.getUserID();
         System.out.println("URL:" + url);
-        ResponseEntity<CustomerContact> response = restTemplate.getForEntity(url, CustomerContact.class);
-        assertEquals(customerContact.getCustomerContactID(),response.getBody().getCustomerContactID());
+        ResponseEntity<User> response = restTemplate.getForEntity(url, User.class);
+        assertEquals(user.getUserID(),response.getBody().getUserID());
         System.out.println(response.getBody());
     }
 
     @Test
     void c_update() {
-        CustomerContact updated = new CustomerContact.Builder().copy(customerContact).setCellNo("0762466432").build();
+        User updated = new User.Builder().copy(user2).setFirstName("Kruben").build();
         String url = baseURL + "/update";
         System.out.println("URL:" + url);
         System.out.println("Post data:" + updated);
-        ResponseEntity<CustomerContact> response = restTemplate.postForEntity(url, updated, CustomerContact.class);
+        ResponseEntity<User> response = restTemplate.postForEntity(url, updated, User.class);
         assertNotNull(response.getBody());
     }
 
     @Test
     @Disabled
     void d_delete() {
-        String url = baseURL + "/delete/" + customerContact.getCustomerContactID();
+        String url = baseURL + "/delete/" + user.getUserID();
         System.out.println("URL:" + url);
         restTemplate.delete(url);
     }

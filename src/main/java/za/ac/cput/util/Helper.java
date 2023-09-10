@@ -3,6 +3,8 @@ package za.ac.cput.util;
 import java.util.UUID;
 import org.apache.commons.validator.routines.EmailValidator;
 
+import static za.ac.cput.domain.User.nextId;
+
 public class Helper {
 
     /*private static final int idSize = 10;
@@ -33,7 +35,7 @@ public class Helper {
         return builder.toString();
     }*/
 
-    private static int nextId = 1;
+
 
     public static String generateID() {
         String id = String.format("%06d", nextId);
@@ -102,7 +104,6 @@ public class Helper {
     }
 
     public static boolean isValidCellNo(String cellNo) {
-        // Check if the cellNo is exactly 10 characters long
         if (cellNo.length() != 10) {
             return false;
         }

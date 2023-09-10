@@ -6,11 +6,10 @@
  */
 package za.ac.cput.service;
 
-import za.ac.cput.domain.Customer;
+import za.ac.cput.domain.User;
 
 import java.util.List;
-import java.util.Set;
 
-public interface CustomerService extends IService <Customer, String>{
-    List<Customer> getAll();
+public interface UserService extends IService <User, String>{
+    List<User> getAll();
 }

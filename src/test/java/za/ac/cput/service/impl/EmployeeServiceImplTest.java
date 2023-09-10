@@ -6,47 +6,46 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import za.ac.cput.domain.HotelLocation;
-import za.ac.cput.factory.HotelLocationFactory;
+import za.ac.cput.domain.Employee;
+import za.ac.cput.factory.EmployeeFactory;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 @TestMethodOrder(MethodOrderer.MethodName.class)
 @SpringBootTest
-class HotelLocationServiceImplTest {
+class EmployeeServiceImplTest {
 
     @Autowired
-    private HotelLocationServiceImpl service;
-
-    private static HotelLocation hotelLocation= HotelLocationFactory.createHotelLocation("6 Nassau Street Milnerton", "Cape Town", "Western Cape",7441,"0213907901");
-
+    private EmployeeServiceImpl service;
+    private static Employee employee= EmployeeFactory.createEmployee("StephanSteve", "908KLmn@", "Cleaner");
     @Test
     void a_create() {
-        HotelLocation created = service.create(hotelLocation);
-        assertEquals(hotelLocation.getID(), created.getID());
+        Employee created = service.create(employee);
+        assertEquals(employee.getEmployeeID(), created.getEmployeeID());
         System.out.println("This has been created: " + created);
     }
 
     @Test
     void b_read() {
-        HotelLocation read= service.read(hotelLocation.getID());
+        Employee read= service.read(employee.getEmployeeID());
         assertNotNull(read);
         System.out.println("This has been read: " + read);
     }
 
     @Test
     void c_update() {
-        HotelLocation newHotelLocation= new HotelLocation.Builder().copy(hotelLocation)
-                .setZipCode(7341)
+        Employee newEmployee= new Employee.Builder().copy(employee)
+                .setPassword("120823KL")
                 .build();
-        HotelLocation updated= service.update(newHotelLocation);
-        assertEquals(newHotelLocation.getZipCode(), updated.getZipCode());
+        Employee updated= service.update(newEmployee);
+        assertEquals(newEmployee.getPassword(), updated.getPassword());
         System.out.println("This has been updated" + updated);
     }
 
     @Test
     @Disabled
     void d_delete() {
-        boolean success= service.delete(hotelLocation.getID());
+        boolean success= service.delete(employee.getEmployeeID());
         assertTrue(success);
         System.out.println("Files have been deleted." + success);
     }

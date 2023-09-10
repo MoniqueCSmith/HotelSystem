@@ -25,7 +25,7 @@ public class User implements Serializable {
     @Embedded
     private UserContact userContact;
 
-    public static int nextId = 1;
+    public static int nextUserId = 1;
 
     protected User() {
     }

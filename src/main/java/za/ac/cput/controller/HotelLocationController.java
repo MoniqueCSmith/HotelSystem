@@ -23,7 +23,7 @@ public class HotelLocationController {
     @PostMapping("/create")
     public HotelLocation create(@RequestBody HotelLocation hotelLocation){
        HotelLocation HotelLocationCreated = HotelLocationFactory.createHotelLocation(hotelLocation.getAddress(), hotelLocation.getCity(),
-                hotelLocation.getProvince(), hotelLocation.getZipCode());
+                hotelLocation.getProvince(), hotelLocation.getZipCode(), hotelLocation.getPhoneNo());
         return hotelLocationService.create(HotelLocationCreated);
     }
 

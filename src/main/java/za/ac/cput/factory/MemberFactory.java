@@ -20,7 +20,7 @@ public class MemberFactory {
         }
 
 
-        String memberID = Helper.generateID();
+        String memberID = Helper.generateMemberID();
         return new Member.Builder()
                 .setMemberID(memberID)
                 .setUsername(username)

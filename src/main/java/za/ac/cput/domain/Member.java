@@ -18,6 +18,7 @@ public class Member implements Serializable {
     private String username;
     private String password;
 
+    public static int nextMemberId = 1;
 
     protected Member(){}
     private Member(Builder builder){

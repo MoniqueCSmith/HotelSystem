@@ -19,6 +19,8 @@ public class Review implements Serializable {
     private int rating;
     private String reviewComment;
 
+    public static int nextReviewId = 1;
+
     protected Review(){}
 
     private Review(Builder builder){

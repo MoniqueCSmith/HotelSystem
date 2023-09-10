@@ -18,7 +18,7 @@ public class UserFactory {
 
         UserContact userContact = UserContactFactory.buildUserContact(cellNo, email);
 
-        String userID = Helper.generateID();
+        String userID = Helper.generateUserID();
 
         return new User.Builder()
                 .setUserID(userID)

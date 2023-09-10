@@ -10,6 +10,7 @@ import za.ac.cput.domain.MealPlan;
 import za.ac.cput.factory.MealPlanFactory;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static za.ac.cput.domain.DietaryRequirementEnum.VEGAN;
 
 @TestMethodOrder(MethodOrderer.MethodName.class)
 @SpringBootTest
@@ -18,8 +19,8 @@ class MealPlanServiceImplTest {
     @Autowired
     private MealPlanServiceImpl service;
 
-    //private static DietaryRequirementEnum dietaryRequirementEnum = DietaryRequirementEnumFactory.createDietaryRequirementEnum();
-    private static MealPlan mealPlan = MealPlanFactory.createMealPlan("Vegan", "Breakfast burritos made with tofu.", "Breakfast", 80.00, DietaryRequirementEnum.VEGAN);
+
+    private static MealPlan mealPlan = MealPlanFactory.createMealPlan("Vegan", "Breakfast burritos made with tofu.", "Breakfast", 80.00, VEGAN);
     @Test
     void a_create() {
         MealPlan created = service.create(mealPlan);

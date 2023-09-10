@@ -21,7 +21,7 @@ import static org.junit.jupiter.api.Assertions.*;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class HotelLocationControllerTest {
 
-    private static HotelLocation hotelLocation= HotelLocationFactory.createHotelLocation("89 Nassau Street Bothasig", "Cape Town", "Gauteng", 7441);
+    private static HotelLocation hotelLocation= HotelLocationFactory.createHotelLocation("51 Miltion Street Tygervalley", "Cape Town", "Western Cape", 7411, "0213109070");
 
     @Autowired
     private TestRestTemplate restTemplate;
@@ -61,7 +61,7 @@ class HotelLocationControllerTest {
     }
 
     @Test
-    @Disabled
+   @Disabled
     void d_delete() {
         String url= baseURL+ "/delete/" + hotelLocation.getID();
         System.out.println("URL:  " + url);

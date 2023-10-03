@@ -12,20 +12,20 @@ import za.ac.cput.domain.ReservationDate;
 import za.ac.cput.util.Helper;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
+import java.time.LocalTime;
 
 import static za.ac.cput.util.Helper.isCheckInTimeValid;
 
 public class ReservationDateFactory {
 
 
-    public static ReservationDate buildReservationDate( LocalDate checkInDate , LocalDate checkOutDate , LocalDateTime estCheckInTime ){
+    public static ReservationDate buildReservationDate( LocalDate checkInDate , LocalDate checkOutDate , LocalTime estCheckInTime ){
 
 
         if (
                 Helper.isNullOrEmpty(String.valueOf(checkInDate)) ||
                 Helper.isNullOrEmpty(String.valueOf(checkOutDate)) ||
-                Helper.isNullOrEmpty(String.valueOf(estCheckInTime))) return null;
+                Helper.isNullOrEmpty(String.valueOf(estCheckInTime))) {return null;}
 
         if (!Helper.isDateRangeValid(checkInDate, checkOutDate)) {
             return null;

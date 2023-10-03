@@ -24,28 +24,21 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/reservation")
-
+//@CrossOrigin("http://localhost:8080")
 public class ReservationController {
     @Autowired
     private ReservationServiceImpl reservationService;
-    private ReservationDate reservationDate = new ReservationDate.Builder()
-            .setCheckInDate(LocalDate.of(2023, 6, 15))
-            .setCheckOutDate(LocalDate.of(2023, 6, 20))
-            .setEstCheckInTime(LocalDateTime.of(2023, 6, 15, 14, 30))
-            .build();
 
-
-
-    @PostMapping("/crLocalDateTimeDate")
+    @PostMapping("/create")
     public Reservation create (@RequestBody Reservation reservation){
-        Reservation reservationCreated= ReservationFactory.buildReservation( reservation.getReservationTimeCreated(),reservation.getReservationStatus(),reservation.getTermsAndConditions(),reservation.getIsChild(),reservationDate );
+        Reservation reservationCreated= ReservationFactory.buildReservation( reservation.getReservationTimeCreated(),reservation.getReservationStatus(),reservation.getTermsAndConditions(),reservation.getIsChild(),reservation.getReservationDate() );
 
         return reservationService.create(reservationCreated);
     }
 
-    @GetMapping("/read/{ID}")
-    public Reservation read(@PathVariable String ID){
-        return reservationService.read(ID);
+    @GetMapping("/read/{id}")
+    public Reservation read(@PathVariable String id){
+        return reservationService.read(id);
     }
 
     @PostMapping("/update")
@@ -53,9 +46,9 @@ public class ReservationController {
         return reservationService.update(reservation);
     }
 
-    @DeleteMapping("delete/{ID}")
-    public boolean delete(@PathVariable String ID){
-        return reservationService.delete(ID);
+    @DeleteMapping("/delete/{id}")
+    public boolean delete(@PathVariable String id){
+        return reservationService.delete(id);
     }
 
     @RequestMapping({"/getall"})

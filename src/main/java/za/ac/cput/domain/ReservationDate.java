@@ -12,14 +12,14 @@ import jakarta.persistence.*;
 
 import java.io.Serializable;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.Objects;
 
 @Embeddable
-public class ReservationDate implements Serializable {
+public class ReservationDate  {
     private LocalDate checkInDate;
     private LocalDate checkOutDate;
-    private LocalDateTime estCheckInTime;
+    private LocalTime estCheckInTime;
 
     protected ReservationDate() {
     }
@@ -32,8 +32,20 @@ public class ReservationDate implements Serializable {
         return checkOutDate;
     }
 
-    public LocalDateTime getEstCheckInTime() {
+    public LocalTime getEstCheckInTime() {
         return estCheckInTime;
+    }
+
+    public void setCheckInDate(LocalDate checkInDate) {
+        this.checkInDate = checkInDate;
+    }
+
+    public void setCheckOutDate(LocalDate checkOutDate) {
+        this.checkOutDate = checkOutDate;
+    }
+
+    public void setEstCheckInTime(LocalTime estCheckInTime) {
+        this.estCheckInTime = estCheckInTime;
     }
 
     public ReservationDate(Builder builder) {
@@ -44,11 +56,34 @@ public class ReservationDate implements Serializable {
 
     }
 
+    @Override
+    public String toString() {
+        return "ReservationDate{" +
+                "checkInDate=" + checkInDate +
+                ", checkOutDate=" + checkOutDate +
+                ", estCheckInTime=" + estCheckInTime +
+                '}';
+    }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ReservationDate that = (ReservationDate) o;
+        return Objects.equals(checkInDate, that.checkInDate) && Objects.equals(checkOutDate, that.checkOutDate) && Objects.equals(estCheckInTime, that.estCheckInTime);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(checkInDate, checkOutDate, estCheckInTime);
+    }
+
     public static class Builder {
 
         private LocalDate checkInDate;
         private LocalDate checkOutDate;
-        private LocalDateTime estCheckInTime;
+        private LocalTime estCheckInTime;
 
 
 
@@ -62,33 +97,9 @@ public class ReservationDate implements Serializable {
             return this;
         }
 
-        public Builder setEstCheckInTime(LocalDateTime estCheckInTime) {
+        public Builder setEstCheckInTime(LocalTime estCheckInTime) {
             this.estCheckInTime = estCheckInTime;
             return this;
-        }
-
-
-        @Override
-        public String toString() {
-            return "ReservationDate{" +
-                     '\'' +
-                    ", checkInDate=" + checkInDate +
-                    ", checkOutDate=" + checkOutDate +
-                    ", estCheckInTime=" + estCheckInTime +
-                    '}';
-        }
-
-        @Override
-        public boolean equals(Object o) {
-            if (this == o) return true;
-            if (o == null || getClass() != o.getClass()) return false;
-            Builder builder = (Builder) o;
-            return Objects.equals(checkInDate, builder.checkInDate) && Objects.equals(checkOutDate, builder.checkOutDate) && Objects.equals(estCheckInTime, builder.estCheckInTime);
-        }
-
-        @Override
-        public int hashCode() {
-            return Objects.hash(checkInDate, checkOutDate, estCheckInTime);
         }
 
         public ReservationDate build() {

@@ -15,7 +15,7 @@ import java.util.Objects;
 
 @Entity
 @Table(name= "Reservation")
-public class Reservation implements Serializable {
+public class Reservation {
     @Id
     private String reservationID;
     private LocalDateTime reservationTimeCreated;
@@ -90,7 +90,7 @@ public class Reservation implements Serializable {
             return this;
         }
 
-        public Builder setIsChild(Boolean isChild) {  // Setter for isChild
+        public Builder setIsChild(Boolean isChild) {
             this.isChild = isChild;
             return this;
         }

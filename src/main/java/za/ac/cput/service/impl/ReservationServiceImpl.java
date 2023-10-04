@@ -41,9 +41,8 @@ public class ReservationServiceImpl implements ReservationService {
 
     @Override
     public Reservation update(Reservation reservation) {
-        if (this.repository.existsById(reservation.getReservationID())) {
+        if (this.repository.existsById(reservation.getReservationID()))
             return repository.save(reservation);
-        }
         return null;
     }
 

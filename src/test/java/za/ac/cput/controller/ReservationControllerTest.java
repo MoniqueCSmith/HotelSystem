@@ -23,18 +23,18 @@ import za.ac.cput.factory.ReservationFactory;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 
 import static org.junit.jupiter.api.Assertions.*;
-
 
 
 @TestMethodOrder(MethodOrderer.MethodName.class)
 @SpringBootTest(webEnvironment= SpringBootTest.WebEnvironment.RANDOM_PORT)
 class ReservationControllerTest {
-    //last parameter check again
 
-    private static ReservationDate reservationDate= ReservationDateFactory.buildReservationDate(LocalDate.of(2024, 03 , 1),  LocalDate.of(2023,03,4),     LocalDateTime.of(2024, 03, 1, 15, 30));
-    private static Reservation reservation = ReservationFactory.buildReservation( LocalDateTime.now(), "Waiting List", true, false, reservationDate);
+
+   private static ReservationDate reservationDate= ReservationDateFactory.buildReservationDate( LocalDate.of(2023, 9 , 1),  LocalDate.of(2023,9,4),     LocalTime.of( 15, 30));
+    private  static Reservation reservation = ReservationFactory.buildReservation( LocalDateTime.now(), "Booking confirmed" , true, false, reservationDate);
     @Autowired
     private TestRestTemplate restTemplate;
     private final String baseURL = "http://localhost:8080/reservation";
@@ -42,30 +42,30 @@ class ReservationControllerTest {
     void a_create() {
         String url = baseURL + "/create";
         ResponseEntity<Reservation> postResponse=restTemplate.postForEntity(url, reservation,Reservation.class);
-        //assertNotNull(postResponse);
-        //assertNotNull(postResponse.getBody());
+        assertNotNull(postResponse);
+        assertNotNull(postResponse.getBody());
         Reservation savedReservation= postResponse.getBody();
         System.out.println("Saved data:" + savedReservation);
-        //assertEquals(reservation.getReservationID(),savedReservation.getReservationID() );
+        assertEquals(reservation.getReservationID(),savedReservation.getReservationID() );
     }
 
     @Test
     void b_read() {
-        //String url = baseURL + "/read/"+ reservation.getReservationID();
-        //System.out.println("URL"+ url);
-        //ResponseEntity<Reservation>response= restTemplate.getForEntity(url, Reservation.class);
-        //assertEquals(reservation.getReservationID(), response.getBody().getReservationID());
-        //System.out.println(response.getBody());
+        String url = baseURL + "/read/"+ reservation.getReservationID();
+        System.out.println("URL"+ url);
+        ResponseEntity<Reservation>response= restTemplate.getForEntity(url, Reservation.class);
+        assertEquals(reservation.getReservationID(), response.getBody().getReservationID());
+        System.out.println(response.getBody());
     }
 
     @Test
     void c_update() {
-        //Reservation updated = new Reservation .Builder().copy(reservation).setReservationStatus("Confirmed").build();
+        Reservation updated = new Reservation .Builder().copy(reservation).setIsChild(true).build();
         String url = baseURL + "/update";
         System.out.println("URL"+ url);
-        //System.out.println("Post data"+ updated);
-        //ResponseEntity<Reservation>response= restTemplate.postForEntity(url,updated, Reservation.class);
-        //assertNotNull(response.getBody());
+        System.out.println("Post data"+ updated);
+        ResponseEntity<Reservation>response= restTemplate.postForEntity(url,updated, Reservation.class);
+        assertNotNull(response.getBody());
 
 
     }

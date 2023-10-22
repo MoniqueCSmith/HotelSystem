@@ -19,7 +19,6 @@ import static za.ac.cput.domain.Review.nextReviewId;
 import static za.ac.cput.domain.Room.currentRoomNumber;
 import static za.ac.cput.domain.HotelLocation.nextHotelId;
 import static za.ac.cput.domain.Employee.nextEmployeeID;
-import static za.ac.cput.domain.User.nextUserId;
 
 
 public class Helper {
@@ -43,15 +42,7 @@ public class Helper {
         }
         return id;
     }
-    public static String generateUserID() {
-        String id = String.format("%06d", nextUserId);
-        if (nextUserId == 999999) {
-            nextUserId = 1;
-        } else {
-            nextUserId++;
-        }
-        return id;
-    }
+
 
     public static String generateReviewID() {
         String id = String.format("%06d", nextReviewId);

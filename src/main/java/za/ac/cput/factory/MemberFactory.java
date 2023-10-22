@@ -18,11 +18,6 @@ public class MemberFactory {
 
         User user = UserFactory.buildUser(firstName, lastName,address, cellNo, email);
 
-        if(!Helper.isValidEmail(username)){
-            return null;
-        }
-
-
         String memberID = Helper.generateMemberID();
         return new Member.Builder()
                 .setMemberID(memberID)

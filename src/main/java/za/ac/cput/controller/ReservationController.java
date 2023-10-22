@@ -43,7 +43,7 @@ public class ReservationController {
         HotelLocation hotelLocation= HotelLocationFactory.createHotelLocation("51 Miltion Street Tygervalley", "Cape Town", "Western Cape", 7411, "0213109070");
         Review review = ReviewFactory.buildReview(4,"The best experience I've ever had!");
         // create guest object
-        Guest guest = GuestFactory.createGuest();
+        Guest guest = GuestFactory.createGuest("Damon", "Salvatore", "1420 Walnut Drive", "0846254695", "damonsalvatore@gmail.com");
         // putting the guest object in db
         guestService.create(guest);
 

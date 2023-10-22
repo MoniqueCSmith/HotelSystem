@@ -1,3 +1,4 @@
+/*
 package za.ac.cput.security;
 
 import org.springframework.context.annotation.Configuration;
@@ -23,6 +24,7 @@ public class SecurityConfig {
                 .password("{noop}12345")
                 .roles("USER");
     }
+*/
 
 //    @Override
 //    protected void configure(HttpSecurity http) throws Exception{
@@ -36,4 +38,4 @@ public class SecurityConfig {
 //
 //    }
 
-}
+/*}*/

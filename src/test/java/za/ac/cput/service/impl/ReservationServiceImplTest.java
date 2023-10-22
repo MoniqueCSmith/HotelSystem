@@ -26,7 +26,7 @@ class ReservationServiceImplTest {
 
     private static ReservationDate reservationDate= ReservationDateFactory.buildReservationDate(LocalDate.of(2024, 3 , 1),  LocalDate.of(2024,3,4), LocalTime.of(15, 30));
 
-  private static Guest guest = GuestFactory.createGuest();
+  private static Guest guest = GuestFactory.createGuest("Damon", "Salvatore", "1420 Walnut Drive", "0846254695", "damonsalvatore@gmail.com");
 
   //private static Member member = MemberFactory.buildMember("ffloppy@gmail.com", "carrot");
 

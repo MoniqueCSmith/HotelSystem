@@ -167,11 +167,10 @@ public class Helper {
     public static boolean isDateRangeValid(LocalDate checkInDate, LocalDate checkOutDate) {
         return !checkOutDate.isBefore(checkInDate);
     }
-    public static boolean isCheckInTimeValid(LocalDateTime estCheckInTime) {
-        LocalTime checkInTime = estCheckInTime.toLocalTime();
+    public static boolean isCheckInTimeValid(LocalTime estCheckInTime) {
         LocalTime startTime = LocalTime.of(0, 0);
         LocalTime endTime = LocalTime.of(10, 0);
-        return checkInTime.isBefore(startTime) || checkInTime.isAfter(endTime);
+        return estCheckInTime.isBefore(startTime) || estCheckInTime.isAfter(endTime);
     }
 
 }

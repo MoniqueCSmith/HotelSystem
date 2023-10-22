@@ -21,7 +21,7 @@ class ReservationFactoryTest {
 
     public void createReservation(){
         ReservationDate reservationDate = ReservationDateFactory.buildReservationDate(LocalDate.of(2023, 9 , 1),  LocalDate.of(2023,9,4),     LocalTime.of(15, 30));
-        Guest guest = GuestFactory.createGuest();
+        Guest guest = GuestFactory.createGuest("Damon", "Salvatore", "1420 Walnut Drive", "0846254695", "damonsalvatore@gmail.com");
         //Member member = MemberFactory.buildMember("ffloppy@gmail.com", "carrot");
         Review review = ReviewFactory.buildReview(4, "This was a very pleasant stay. Would recommend");
         HotelLocation hotelLocation= HotelLocationFactory.createHotelLocation("32 Burger Street Camps Bay", "Cape Town", "Western Cape", 7301, "0215900310");

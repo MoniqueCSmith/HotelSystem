@@ -3,6 +3,7 @@ package za.ac.cput.domain;
 import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToOne;
 
 import java.io.Serializable;
 import java.util.Objects;
@@ -13,6 +14,9 @@ public class Guest implements Serializable {
     private String guestID;
     @Embedded
     private User user;
+
+    @OneToOne(mappedBy = "guest")
+    private Reservation reservation;
 
     public static int nextGuestId = 1;
     public Guest() {

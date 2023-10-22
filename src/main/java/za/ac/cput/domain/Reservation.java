@@ -27,7 +27,7 @@ public class Reservation {
     public static int nextReservationId = 1;
 
     // Default values for guest, hotelLocation, and review
-    private static Guest defaultGuest = GuestFactory.createGuest();
+    private static Guest defaultGuest = GuestFactory.createGuest("Damon", "Salvatore", "1420 Walnut Drive", "0846254695", "damonsalvatore@gmail.com");
     private static HotelLocation defaultHotelLocation = HotelLocationFactory.createHotelLocation("51 Miltion Street Tygervalley", "Cape Town", "Western Cape", 7411, "0213109070");
     private static Review defaultReview = ReviewFactory.buildReview(5, "The best experience I've ever had!");
 

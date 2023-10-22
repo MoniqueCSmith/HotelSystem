@@ -9,17 +9,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import za.ac.cput.domain.HotelLocation;
 import za.ac.cput.factory.HotelLocationFactory;
-import za.ac.cput.service.HotelLocationService;
+import za.ac.cput.service.impl.HotelLocationServiceImpl;
 
 import java.util.List;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:8081")
 @RequestMapping("/hotellocation")
 public class HotelLocationController {
 
     @Autowired
-    private HotelLocationService hotelLocationService;
-
+    private HotelLocationServiceImpl hotelLocationService;
+    @CrossOrigin("http://localhost/8081")
     @PostMapping("/create")
     public HotelLocation create(@RequestBody HotelLocation hotelLocation){
        HotelLocation HotelLocationCreated = HotelLocationFactory.createHotelLocation(hotelLocation.getAddress(), hotelLocation.getCity(),

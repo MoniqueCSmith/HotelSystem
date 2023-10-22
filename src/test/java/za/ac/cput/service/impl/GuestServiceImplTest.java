@@ -17,7 +17,7 @@ class GuestServiceImplTest {
     @Autowired
     private GuestServiceImpl service;
 
-    private static Guest guest = GuestFactory.createGuest();
+    private static Guest guest = GuestFactory.createGuest("Elena", "Gilbert", "1864 Mystic Falls", "0607544654", "elenagilbert@gmail.com");
     @Test
     void a_create() {
         Guest created = service.create(guest);

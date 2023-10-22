@@ -30,6 +30,7 @@ class MealPlanControllerTest {
     private final String baseURL = "http://localhost:8080/mealPlan";
     @Test
     void a_create() {
+        System.out.println(mealPlan);
         String url = baseURL + "/create";
         ResponseEntity<MealPlan> postResponse = restTemplate.postForEntity(url, mealPlan, MealPlan.class);
         assertNotNull(postResponse);

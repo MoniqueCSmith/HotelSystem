@@ -9,12 +9,14 @@ import za.ac.cput.service.impl.MealPlanServiceImpl;
 import java.util.List;
 
 @RestController
+//@CrossOrigin(origins = "http://localhost:8083")
 @RequestMapping("/mealPlan")
 public class MealPlanController {
 
     @Autowired
     private MealPlanServiceImpl mealPlanService;
 
+    @CrossOrigin(origins = "http://localhost:8083")
     @PostMapping("/create")
     public MealPlan create(@RequestBody MealPlan mealPlan) {
         MealPlan created = MealPlanFactory.createMealPlan(mealPlan.getName(), mealPlan.getDescription(), mealPlan.getMealType(), mealPlan.getPrice(), mealPlan.getDietaryRequirementEnum());

@@ -21,14 +21,17 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class GuestControllerTest {
 
-    private static Guest guest = GuestFactory.createGuest();
+
 
     @Autowired
     private TestRestTemplate restTemplate;
+
+    private static Guest guest = GuestFactory.createGuest("Bonnie", "Bennett", "2136 Conyers Street", "0724123265", "bonniebennett@gmail.com");
     private final String baseURL = "http://localhost:8080/guest";
 
     @Test
     void a_create() {
+        System.out.println(guest);
         String url = baseURL + "/create";
         ResponseEntity<Guest> postResponse = restTemplate.postForEntity(url, guest, Guest.class);
         assertNotNull(postResponse);

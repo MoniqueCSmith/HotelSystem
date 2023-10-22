@@ -17,7 +17,7 @@ public class GuestController {
 
     @PostMapping("/create")
     public Guest create(@RequestBody Guest guest) {
-        Guest created = GuestFactory.createGuest();
+        Guest created = GuestFactory.createGuest(guest.getUser().getFirstName(), guest.getUser().getLastName(), guest.getUser().getAddress(), guest.getUser().getUserContact().getCellNo(), guest.getUser().getUserContact().getEmail());
         return guestService.create(created);
     }
 

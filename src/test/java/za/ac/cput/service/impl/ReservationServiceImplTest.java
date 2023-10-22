@@ -6,10 +6,15 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import za.ac.cput.domain.Reservation;
+import za.ac.cput.domain.ReservationDate;
+import za.ac.cput.factory.ReservationDateFactory;
+import za.ac.cput.factory.ReservationFactory;
 
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -17,11 +22,11 @@ import static org.junit.jupiter.api.Assertions.*;
 @TestMethodOrder(MethodOrderer.MethodName.class)
 @SpringBootTest
 class ReservationServiceImplTest {
-    /*@Autowired
+    @Autowired
     private ReservationServiceImpl service;
 
-    private static ReservationDate reservationDate= ReservationDateFactory.buildReservationDate(LocalDate.of(2024, 03 , 1),  LocalDate.of(2024,03,4),     LocalDateTime.of(2024, 03, 1, 15, 30));
-    private static Reservation reservation= ReservationFactory.buildReservation( LocalDateTime.now(), "Waiting List" , false, true, reservationDate);
+    private static ReservationDate reservationDate= ReservationDateFactory.buildReservationDate(LocalDate.of(2024, 3 , 1),  LocalDate.of(2024,3,4), LocalTime.of(15, 30));
+    private static Reservation reservation= ReservationFactory.buildReservation( LocalDateTime.now(), "Waiting List" , true, true, reservationDate);
     @Test
     void a_create() {
         Reservation created= service.create(reservation);
@@ -56,5 +61,5 @@ class ReservationServiceImplTest {
         System.out.println("Get All: ");
         System.out.println(service.getAll());
 
-    }*/
+    }
 }

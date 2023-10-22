@@ -12,17 +12,14 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import za.ac.cput.domain.Employee;
-import za.ac.cput.domain.HotelLocation;
 import za.ac.cput.factory.EmployeeFactory;
-import za.ac.cput.factory.HotelLocationFactory;
 
 import static org.junit.jupiter.api.Assertions.*;
 @TestMethodOrder(MethodOrderer.MethodName.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class EmployeeControllerTest {
 
-    private static Employee employee= EmployeeFactory.createEmployee("James", "Limb123", "Cleaner");
-
+    private static Employee employee= EmployeeFactory.createEmployee("Shanlynn", "Smith", "10 Church Street, Town", "0813647484", "test2134@gmail.com", "Shanlynn123", "Shanlynn!123", "Developer", false);
     @Autowired
     private TestRestTemplate restTemplate;
 

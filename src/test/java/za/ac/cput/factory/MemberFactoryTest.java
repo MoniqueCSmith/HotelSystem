@@ -15,7 +15,7 @@ public class MemberFactoryTest {
     @Test
     void createMember() {
 
-        Member member = MemberFactory.buildMember("ffloppy@gmail.com", "carrot");
+        Member member = MemberFactory.buildMember("carrot", "12456", "Carol", "Carrot", "45 Roll Street", "0816489752", "ccarrot@gmail.com");
         System.out.println(member);
         assertNotNull(member);
 

@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class EmployeeFactoryTest {
     @Test
     void createEmployee() {
-        Employee employee= EmployeeFactory.createEmployee("JamesReger", "7yR9019", "Secratary");
+        Employee employee= EmployeeFactory.createEmployee("James", "Reger", "Secratary", "0678901111", "James@gmail.com", "JamesR","09Yui", "Developer", false);
         assertNotNull(employee);
         System.out.println(employee);
         }

@@ -7,8 +7,7 @@ Date : 5 April 2023
 
 package za.ac.cput.factory;
 
-import za.ac.cput.domain.Reservation;
-import za.ac.cput.domain.ReservationDate;
+import za.ac.cput.domain.*;
 import za.ac.cput.util.Helper;
 
 import java.time.LocalDateTime;
@@ -16,7 +15,13 @@ import java.time.LocalDateTime;
 public class ReservationFactory {
 
     //Reservation objects
-    public static Reservation buildReservation(LocalDateTime reservationTimeCreated, String reservationStatus , Boolean termsAndConditions, Boolean isChild,ReservationDate reservationDate ) {
+    public static Reservation buildReservation(LocalDateTime reservationTimeCreated
+            , String reservationStatus
+            , Boolean termsAndConditions, Boolean isChild
+            ,ReservationDate reservationDate, Guest guest
+            , HotelLocation hotelLocation
+            /*, Member member*/
+            , Review review) {
 
         String reservationID=Helper.generateReservationID();
 
@@ -36,6 +41,10 @@ public class ReservationFactory {
                 .setIsChild(isChild)
                 .setReservationStatus(reservationStatus)
                 .setReservationDate(reservationDate)
+                .setGuest(guest)
+                .setHotelLocation(hotelLocation)
+                //.setMember(member)
+                .setReview(review)
                 .build();
 
 

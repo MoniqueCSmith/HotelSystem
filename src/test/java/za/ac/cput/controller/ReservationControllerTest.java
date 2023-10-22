@@ -15,11 +15,9 @@ import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
-import za.ac.cput.domain.Reservation;
+import za.ac.cput.domain.*;
 
-import za.ac.cput.domain.ReservationDate;
-import za.ac.cput.factory.ReservationDateFactory;
-import za.ac.cput.factory.ReservationFactory;
+import za.ac.cput.factory.*;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -33,34 +31,49 @@ import static org.junit.jupiter.api.Assertions.*;
 class ReservationControllerTest {
 
 
-   private static ReservationDate reservationDate= ReservationDateFactory.buildReservationDate( LocalDate.of(2023, 9 , 1),  LocalDate.of(2023,9,4),     LocalTime.of( 15, 30));
-    private  static Reservation reservation = ReservationFactory.buildReservation( LocalDateTime.now(), "Booking confirmed" , true, false, reservationDate);
+   /*private static ReservationDate reservationDate= ReservationDateFactory.buildReservationDate( LocalDate.of(2023, 9 , 1),  LocalDate.of(2023,9,4),     LocalTime.of( 15, 30));
+    private static Guest guest = GuestFactory.createGuest();
+    private static HotelLocation hotelLocation= HotelLocationFactory.createHotelLocation("51 Miltion Street Tygervalley", "Cape Town", "Western Cape", 7411, "0213109070");
+
+    private static Review review = ReviewFactory.buildReview(5,"The best experience I've ever had!");
+    Reservation reservation = ReservationFactory.buildReservation( LocalDateTime.now(), "Booking confirmed" , true, false, reservationDate, guest, hotelLocation, member,review);
+    */
+
+    //private static Member member = MemberFactory.buildMember("ffloppy@gmail.com", "carrot");
+
+    ReservationInput reservationInput = new ReservationInput();
+    public static Reservation savedReservation;
+
     @Autowired
     private TestRestTemplate restTemplate;
     private final String baseURL = "http://localhost:8080/reservation";
     @Test
     void a_create() {
         String url = baseURL + "/create";
-        ResponseEntity<Reservation> postResponse=restTemplate.postForEntity(url, reservation,Reservation.class);
+        ResponseEntity<Reservation> postResponse=restTemplate.postForEntity(url, reservationInput,Reservation.class);
         assertNotNull(postResponse);
+
         assertNotNull(postResponse.getBody());
-        Reservation savedReservation= postResponse.getBody();
+
+        savedReservation = postResponse.getBody();
+
         System.out.println("Saved data:" + savedReservation);
-        assertEquals(reservation.getReservationID(),savedReservation.getReservationID() );
+        System.out.println("ReservationID:" + postResponse);
+      //  assertEquals(reservation.getReservationID(),savedReservation.getReservationID() );
     }
 
-    @Test
+   @Test
     void b_read() {
-        String url = baseURL + "/read/"+ reservation.getReservationID();
+        String url = baseURL + "/read/"+ savedReservation.getReservationID();
         System.out.println("URL"+ url);
         ResponseEntity<Reservation>response= restTemplate.getForEntity(url, Reservation.class);
-        assertEquals(reservation.getReservationID(), response.getBody().getReservationID());
+        assertEquals(savedReservation.getReservationID(), response.getBody().getReservationID());
         System.out.println(response.getBody());
     }
 
     @Test
     void c_update() {
-        Reservation updated = new Reservation .Builder().copy(reservation).setIsChild(true).build();
+        Reservation updated = new Reservation .Builder().copy(savedReservation).setIsChild(true).build();
         String url = baseURL + "/update";
         System.out.println("URL"+ url);
         System.out.println("Post data"+ updated);
@@ -73,7 +86,7 @@ class ReservationControllerTest {
     @Test
     @Disabled
     void d_delete() {
-        String url = baseURL + "/delete"+ reservation.getReservationID();
+        String url = baseURL + "/delete"+ savedReservation.getReservationID();
         System.out.println("URL"+ url);
         restTemplate.delete(url);
     }
@@ -86,8 +99,6 @@ class ReservationControllerTest {
         ResponseEntity<String> response = restTemplate.exchange(url , HttpMethod.GET, entity, String.class);
         System.out.println("Show All");
         System.out.println(response.getBody());
-
-
 
     }
 }

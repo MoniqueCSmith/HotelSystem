@@ -19,7 +19,6 @@ import static za.ac.cput.domain.Review.nextReviewId;
 import static za.ac.cput.domain.Room.currentRoomNumber;
 import static za.ac.cput.domain.HotelLocation.nextHotelId;
 import static za.ac.cput.domain.Employee.nextEmployeeID;
-import static za.ac.cput.domain.User.nextUserId;
 
 
 public class Helper {
@@ -43,15 +42,7 @@ public class Helper {
         }
         return id;
     }
-    public static String generateUserID() {
-        String id = String.format("%06d", nextUserId);
-        if (nextUserId == 999999) {
-            nextUserId = 1;
-        } else {
-            nextUserId++;
-        }
-        return id;
-    }
+
 
     public static String generateReviewID() {
         String id = String.format("%06d", nextReviewId);
@@ -176,12 +167,11 @@ public class Helper {
     public static boolean isDateRangeValid(LocalDate checkInDate, LocalDate checkOutDate) {
         return !checkOutDate.isBefore(checkInDate);
     }
-    public static boolean isCheckInTimeValid(LocalTime estCheckInTime) {
+    public static boolean isCheckInTimeValid(LocalDateTime estCheckInTime) {
+        LocalTime checkInTime = estCheckInTime.toLocalTime();
         LocalTime startTime = LocalTime.of(0, 0);
         LocalTime endTime = LocalTime.of(10, 0);
-        return estCheckInTime.isBefore(startTime) || estCheckInTime.isAfter(endTime);
+        return checkInTime.isBefore(startTime) || checkInTime.isAfter(endTime);
     }
 
-
 }
-

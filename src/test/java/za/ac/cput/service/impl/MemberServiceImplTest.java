@@ -25,7 +25,7 @@ class MemberServiceImplTest {
     @Autowired
     private MemberServiceImpl service;
 
-    private static Member member = MemberFactory.buildMember("ffloppy@gmail.com", "carrot");
+    private static Member member = MemberFactory.buildMember("ffloppy@gmail.com", "carrot", "Ken", "Barbie", "97 Barbie World", "0641254975", "kenough@gmail.com");
 
     @Test
     void a_create(){

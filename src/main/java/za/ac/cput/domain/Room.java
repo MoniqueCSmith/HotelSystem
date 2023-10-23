@@ -6,13 +6,12 @@
  */
 package za.ac.cput.domain;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.io.Serializable;
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
 @Entity
 public class Room implements Serializable {
@@ -22,6 +21,8 @@ public class Room implements Serializable {
     @Enumerated(EnumType.STRING)
     private RoomType roomType;
     private double price;
+    @ManyToMany(mappedBy = "rooms")
+    private Set<Reservation> reservations = new HashSet<>();
 
     public static int currentRoomNumber = 101;
     protected Room(){}

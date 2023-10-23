@@ -24,7 +24,7 @@ public class MemberController {
 
     @PostMapping("/create")
     public Member create(@RequestBody Member member){
-        Member memberCreated = MemberFactory.buildMember(member.getUsername(), member.getPassword());
+        Member memberCreated = MemberFactory.buildMember(member.getUsername(), member.getPassword(), member.getUser().getFirstName(), member.getUser().getLastName(), member.getUser().getAddress(), member.getUser().getUserContact().getCellNo(), member.getUser().getUserContact().getEmail());
         return memberService.create(memberCreated);
 
     }

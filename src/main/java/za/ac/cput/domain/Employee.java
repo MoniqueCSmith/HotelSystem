@@ -1,5 +1,6 @@
 package za.ac.cput.domain;
 
+import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
@@ -10,21 +11,26 @@ import java.util.Objects;
 @Entity
 @Table(name = "Employee")
 public class Employee implements Serializable{
-@Id
-private String EmployeeID;
-private String Username;
-private String Password;
-private String JobTitle;
 
+    @Id
+    private String EmployeeID;
+    @Embedded
+    private User user;
+    private String Username;
+    private String Password;
+    private String JobTitle;
+    private Boolean isAdmin;
     public static int nextEmployeeID = 1;
-protected Employee(){}
+    protected Employee(){}
 
     private Employee(Builder builder){
 
-    this.EmployeeID= builder.EmployeeID;
-    this.Username= builder.Username;
-    this.Password= builder.Password;
-    this.JobTitle= builder.JobTitle;
+        this.EmployeeID= builder.EmployeeID;
+        this.user= builder.user;
+        this.Username= builder.Username;
+        this.Password= builder.Password;
+        this.JobTitle= builder.JobTitle;
+        this.isAdmin= builder.isAdmin;
     }
 
     public String getEmployeeID() {
@@ -59,37 +65,57 @@ protected Employee(){}
         JobTitle = jobTitle;
     }
 
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public Boolean getAdmin() {
+        return isAdmin;
+    }
+
+
+
+    public void setAdmin(Boolean admin) {
+        isAdmin = admin;
+    }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        if (!super.equals(o)) return false;
         Employee employee = (Employee) o;
-        return Objects.equals(EmployeeID, employee.EmployeeID) && Objects.equals(Username, employee.Username) && Objects.equals(Password, employee.Password) && Objects.equals(JobTitle, employee.JobTitle);
+        return Objects.equals(EmployeeID, employee.EmployeeID) && Objects.equals(user, employee.user) && Objects.equals(Username, employee.Username) && Objects.equals(Password, employee.Password) && Objects.equals(JobTitle, employee.JobTitle) && Objects.equals(isAdmin, employee.isAdmin);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), EmployeeID, Username, Password, JobTitle);
+        return Objects.hash(EmployeeID, user, Username, Password, JobTitle, isAdmin);
     }
 
     @Override
     public String toString() {
         return "Employee{" +
                 "EmployeeID='" + EmployeeID + '\'' +
+                ", user=" + user +
                 ", Username='" + Username + '\'' +
                 ", Password='" + Password + '\'' +
                 ", JobTitle='" + JobTitle + '\'' +
+                ", isAdmin=" + isAdmin +
                 '}';
     }
 
     public static class Builder{
 
         private String EmployeeID;
+        private User user;
         private String Username;
         private String Password;
         private String JobTitle;
+        private Boolean isAdmin;
 
         public Builder setEmployeeID(String employeeID) {
             EmployeeID = employeeID;
@@ -111,11 +137,23 @@ protected Employee(){}
             return this;
         }
 
+        public Builder setUser(User user) {
+            this.user = user;
+            return this;
+        }
+
+        public Builder setAdmin(Boolean admin) {
+            isAdmin = admin;
+            return this;
+        }
+
         public Builder copy(Employee employee){
             this.EmployeeID= employee.EmployeeID;
+            this.user= employee.user;
             this.Username= employee.Username;
             this.Password = employee.Password;
             this.JobTitle= employee.JobTitle;
+            this.isAdmin= employee.isAdmin;
             return this;
         }
 

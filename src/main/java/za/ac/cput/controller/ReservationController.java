@@ -11,14 +11,10 @@ package za.ac.cput.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
-import za.ac.cput.domain.Reservation;
-import za.ac.cput.domain.ReservationDate;
-import za.ac.cput.factory.ReservationFactory;
-
+import za.ac.cput.domain.*;
+import za.ac.cput.factory.*;
+import za.ac.cput.service.impl.GuestServiceImpl;
 import za.ac.cput.service.impl.ReservationServiceImpl;
-
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -26,26 +22,41 @@ import java.util.List;
 @RequestMapping("/reservation")
 
 public class ReservationController {
+
     @Autowired
     private ReservationServiceImpl reservationService;
-    private ReservationDate reservationDate = new ReservationDate.Builder()
-            .setCheckInDate(LocalDate.of(2023, 6, 15))
-            .setCheckOutDate(LocalDate.of(2023, 6, 20))
-            .setEstCheckInTime(LocalDateTime.of(2023, 6, 15, 14, 30))
-            .build();
+    @Autowired
+    private GuestServiceImpl guestService;
+
+    @CrossOrigin(origins = "http://localhost:8081")
+    @PostMapping("/create")
+    public Reservation create (@RequestBody ReservationInput reservationInput){
+        System.out.println("Received ReservationInput: " + reservationInput);
+
+        /*
+        Front end data example
+        {checkInDate: '2023-10-05', checkOutDate: '2023-10-25', estCheckInTime: '18:31', hasChild: false, acceptTerms: true}
+
+        */
+
+        ReservationDate reservationDate= ReservationDateFactory.buildReservationDate( reservationInput.getCheckInDate(),  reservationInput.getCheckOutDate(), reservationInput.getEstCheckInTime());
+        HotelLocation hotelLocation= HotelLocationFactory.createHotelLocation("51 Miltion Street Tygervalley", "Cape Town", "Western Cape", 7411, "0213109070");
+        Review review = ReviewFactory.buildReview(4,"The best experience I've ever had!");
+        // create guest object
+        Guest guest = GuestFactory.createGuest("Damon", "Salvatore", "1420 Walnut Drive", "0846254695", "damonsalvatore@gmail.com");
+        // putting the guest object in db
+        guestService.create(guest);
 
 
+        Reservation reservationCreated = ReservationFactory.buildReservation( LocalDateTime.now(), "Confirmed",reservationInput.getTermsAndConditions(),reservationInput.getChild(),reservationDate, guest, hotelLocation/*, member*/,review );
 
-    @PostMapping("/crLocalDateTimeDate")
-    public Reservation create (@RequestBody Reservation reservation){
-        Reservation reservationCreated= ReservationFactory.buildReservation( reservation.getReservationTimeCreated(),reservation.getReservationStatus(),reservation.getTermsAndConditions(),reservation.getIsChild(),reservationDate );
 
-        return reservationService.create(reservationCreated);
+         return reservationService.create(reservationCreated);
     }
 
-    @GetMapping("/read/{ID}")
-    public Reservation read(@PathVariable String ID){
-        return reservationService.read(ID);
+    @GetMapping("/read/{id}")
+    public Reservation read(@PathVariable String id){
+        return reservationService.read(id);
     }
 
     @PostMapping("/update")
@@ -53,9 +64,9 @@ public class ReservationController {
         return reservationService.update(reservation);
     }
 
-    @DeleteMapping("delete/{ID}")
-    public boolean delete(@PathVariable String ID){
-        return reservationService.delete(ID);
+    @DeleteMapping("/delete/{id}")
+    public boolean delete(@PathVariable String id){
+        return reservationService.delete(id);
     }
 
     @RequestMapping({"/getall"})
@@ -64,3 +75,4 @@ public class ReservationController {
 
     }
 }
+

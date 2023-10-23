@@ -17,7 +17,7 @@ class EmployeeServiceImplTest {
 
     @Autowired
     private EmployeeServiceImpl service;
-    private static Employee employee= EmployeeFactory.createEmployee("StephanSteve", "908KLmn@", "Cleaner");
+    private static Employee employee= EmployeeFactory.createEmployee("Stephan", "Steve", "89 Nassua Street Bothasig", "0932394308", "Linked@gmail.com", "JSteve", "098jke", "Secratary", false);
     @Test
     void a_create() {
         Employee created = service.create(employee);
